@@ -1,0 +1,62 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="股票新闻.PivotvideoPage1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+       xmlns:googlead="clr-namespace:GoogleAds;assembly=GoogleAds"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot 是包含所有页面内容的根网格-->
+    <Grid x:Name="LayoutRoot"   Background="Transparent">
+        <!--枢轴控件-->
+        <phone:Pivot  x:Name="pivot" SelectionChanged="Pivot_SelectionChanged">
+            <!--枢轴项一-->
+            <phone:PivotItem Header="土豆">
+                <phone:WebBrowser x:Name="b1"  IsScriptEnabled="True" Source="http://www.tudou.com/"></phone:WebBrowser>
+            </phone:PivotItem>
+
+            <!--枢轴项二-->
+            
+            <phone:PivotItem Header="乐视" Loaded="PivotItem_Loaded_1">
+                <phone:WebBrowser x:Name="WB2" IsScriptEnabled="True"></phone:WebBrowser>
+            </phone:PivotItem>
+            <phone:PivotItem Header="爱奇艺" Loaded="PivotItem_Loaded_1">
+                <phone:WebBrowser x:Name="WB3" IsScriptEnabled="True"></phone:WebBrowser>
+            </phone:PivotItem>
+            <phone:PivotItem Header="pptv" Loaded="PivotItem_Loaded_1">
+                <phone:WebBrowser x:Name="WB4" IsScriptEnabled="True"></phone:WebBrowser>
+            </phone:PivotItem>
+            <phone:PivotItem Header="ku6" Loaded="PivotItem_Loaded_1">
+                <phone:WebBrowser x:Name="WB5" IsScriptEnabled="True"></phone:WebBrowser>
+            </phone:PivotItem>
+            <!--<phone:PivotItem Header="globaltimes" Loaded="PivotItem_Loaded_1">
+                <phone:WebBrowser x:Name="WB6" IsScriptEnabled="True"></phone:WebBrowser>
+            </phone:PivotItem>
+            <phone:PivotItem Header="yahoo" Loaded="PivotItem_Loaded_1">
+                <phone:WebBrowser x:Name="WB7" IsScriptEnabled="True"></phone:WebBrowser>
+            </phone:PivotItem>-->
+            <phone:PivotItem Header="ad">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <googlead:AdView  ReceivedAd="AdView_ReceivedAd" Grid.Row="0"  Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
+                    <googlead:AdView   FailedToReceiveAd="AdView_FailedToReceiveAd"  Grid.Row="1"  Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
+                    <googlead:AdView    Grid.Row="2"   Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
+                </Grid>
+
+            </phone:PivotItem>
+        </phone:Pivot>
+    </Grid>
+    
+</phone:PhoneApplicationPage>
