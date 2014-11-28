@@ -16,5 +16,14 @@ namespace 股票新闻
         {
             InitializeComponent();
         }
+        private void AdView_ReceivedAd(object sender, GoogleAds.AdEventArgs e)
+        {
+
+        }
+
+        private void AdView_FailedToReceiveAd(object sender, GoogleAds.AdErrorEventArgs e)
+        {
+
+        }
     }
 }

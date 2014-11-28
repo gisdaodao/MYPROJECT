@@ -20,7 +20,7 @@
         <phone:Pivot  x:Name="pivot" SelectionChanged="Pivot_SelectionChanged">
             <!--枢轴项一-->
             <phone:PivotItem Header="土豆">
-                <phone:WebBrowser x:Name="b1"  IsScriptEnabled="True" Source="http://www.tudou.com/"></phone:WebBrowser>
+                <phone:WebBrowser x:Name="b1"  IsScriptEnabled="True" Source="http://m.tudou.com/"></phone:WebBrowser>
             </phone:PivotItem>
 
             <!--枢轴项二-->

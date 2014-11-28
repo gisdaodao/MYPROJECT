@@ -79,44 +79,52 @@ namespace 股票新闻
           }
           private void panoroma_SelectionChanged(object sender, SelectionChangedEventArgs e)
           {
-              if (panoroma.SelectedIndex == 0)
+              try
               {
-                  b1.GoBack();
-              }
-              if (panoroma.SelectedIndex == 1 && b2.Source == null)
-              {
-                  b2.Navigate(new Uri("http://i.ifeng.com/finance/financei?&vt=5&mid=1Nmkbp", UriKind.Absolute));
-              }
-              if (panoroma.SelectedIndex == 2 && b3.Source == null)
-              {
-                  b3.Navigate(new Uri("http://wap.stcn.com/", UriKind.Absolute));
-              }
-              if (panoroma.SelectedIndex == 3 && b4.Source == null)
-              {
-                  b4.Navigate(new Uri("http://m.caixin.com/m/", UriKind.Absolute));
-              }
-              if (panoroma.SelectedIndex == 4 && b5.Source == null)
-              {
-                  b5.Navigate(new Uri("http://m.hexun.com/", UriKind.Absolute));
-              }
-              if (panoroma.SelectedIndex == 5 && b6.Source == null)
-              {
-                  b6.Navigate(new Uri("http://m.nbd.com.cn/", UriKind.Absolute));
-              }
-              if (panoroma.SelectedIndex == 6 && b7.Source == null)
-              {
-                  b7.Navigate(new Uri("http://m.china.com.cn/1/wm/2/list_2_1_30.html", UriKind.Absolute));
-              }
+                  if (panoroma.SelectedIndex == 0)
+                  {
+                      //  b1.GoBack();
+                  }
+                  if (panoroma.SelectedIndex == 1 && b2.Source == null)
+                  {
+                      b2.Navigate(new Uri("http://i.ifeng.com/finance/financei?&vt=5&mid=1Nmkbp", UriKind.Absolute));
+                  }
+                  if (panoroma.SelectedIndex == 2 && b3.Source == null)
+                  {
+                      b3.Navigate(new Uri("http://wap.stcn.com/", UriKind.Absolute));
+                  }
+                  if (panoroma.SelectedIndex == 3 && b4.Source == null)
+                  {
+                      b4.Navigate(new Uri("http://m.caixin.com/", UriKind.Absolute));
+                  }
+                  if (panoroma.SelectedIndex == 4 && b5.Source == null)
+                  {
+                      b5.Navigate(new Uri("http://m.hexun.com/", UriKind.Absolute));
+                  }
+                  if (panoroma.SelectedIndex == 5 && b6.Source == null)
+                  {
+                      b6.Navigate(new Uri("http://m.nbd.com.cn/", UriKind.Absolute));
+                  }
+                  if (panoroma.SelectedIndex == 6 && b7.Source == null)
+                  {
+                      b7.Navigate(new Uri("http://m.china.com.cn/1/wm/2/list_2_1_30.html", UriKind.Absolute));
+                  }
 
-              if (panoroma.SelectedIndex == 7 && b8.Source == null)
-              {
-                  b8.Navigate(new Uri("http://m.caijing.com.cn/index.html", UriKind.Absolute));
-              }
-              if (panoroma.SelectedIndex == 8 && b9.Source == null)
-              {
-                  b9.Navigate(new Uri("http://m.21jingji.com/", UriKind.Absolute));
-              }
+                  if (panoroma.SelectedIndex == 7 && b8.Source == null)
+                  {
+                      b8.Navigate(new Uri("http://m.caijing.com.cn/index.html", UriKind.Absolute));
+                  }
+                  if (panoroma.SelectedIndex == 8 && b9.Source == null)
+                  {
+                      b9.Navigate(new Uri("http://m.21jingji.com/", UriKind.Absolute));
+                  }
 
+              }
+              catch (Exception)
+              {
+                
+              }
+              
 
           }
 

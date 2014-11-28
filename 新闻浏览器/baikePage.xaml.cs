@@ -33,27 +33,27 @@ namespace 股票新闻
             }
             if (panoroma.SelectedIndex == 1 && b2.Source == null)
             {
-                b2.Navigate(new Uri("http://m.tianya.cn/", UriKind.Absolute));
+                b2.Navigate(new Uri("http://en.m.wikipedia.org/wiki/Main_Page", UriKind.Absolute));
             }
             if (panoroma.SelectedIndex == 2 && b3.Source == null)
             {
-                b3.Navigate(new Uri("http://sina.cn/", UriKind.Absolute));
+                b3.Navigate(new Uri("http://m.zhihu.com/read", UriKind.Absolute));
             }
             if (panoroma.SelectedIndex == 3 && b4.Source == null)
             {
-                b4.Navigate(new Uri("http://i.ifeng.com/", UriKind.Absolute));
+                b4.Navigate(new Uri("http://m.baike.com/", UriKind.Absolute));
             }
             if (panoroma.SelectedIndex == 4 && b5.Source == null)
             {
-                b5.Navigate(new Uri("http://m.sohu.com/", UriKind.Absolute));
+                b5.Navigate(new Uri("http://m.baike.so.com/", UriKind.Absolute));
             }
             if (panoroma.SelectedIndex == 5 && b6.Source == null)
             {
-                b6.Navigate(new Uri("http://3g.163.com/", UriKind.Absolute));
+                b6.Navigate(new Uri("http://baike.m.sogou.com/", UriKind.Absolute));
             }
             if (panoroma.SelectedIndex == 6 && b7.Source == null)
             {
-                b7.Navigate(new Uri("http://m.baidu.com/ssid=0/from=0/bd_page_type=1/uid=0/pu=sz%40224_220%2Cta%40middle___3_537/news?idx=20000&itj=22", UriKind.Absolute));
+                b7.Navigate(new Uri("http://wapwenku.baidu.com/", UriKind.Absolute));
             }
         }
         protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)

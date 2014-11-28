@@ -70,27 +70,27 @@ namespace 股票新闻
             Pivot OBJ = sender as Pivot;
             if (OBJ.SelectedIndex == 1 && WB2.Source == null)
             {
-                WB2.Navigate(new Uri(" http://m.reuters.com", UriKind.Absolute));
+                WB2.Navigate(new Uri(" http://m.qidian.com/", UriKind.Absolute));
             }
             if (OBJ.SelectedIndex == 2 && WB3.Source == null)
             {
-                WB3.Navigate(new Uri("http://t.msn.com/", UriKind.Absolute));
+                WB3.Navigate(new Uri("http://m.hongxiu.com", UriKind.Absolute));
             }
             if (OBJ.SelectedIndex == 3 && WB4.Source == null)
             {
-                WB4.Navigate(new Uri("https://m.facebook.com/", UriKind.Absolute));
+                WB4.Navigate(new Uri("http://wap.17kts.com/", UriKind.Absolute));
             }
             if (OBJ.SelectedIndex == 4 && WB5.Source == null)
             {
-                WB5.Navigate(new Uri("http://mobile.news.com.au/", UriKind.Absolute));
+                WB5.Navigate(new Uri("http://m.xxsy.net/", UriKind.Absolute));
             }
             if (OBJ.SelectedIndex == 5 && WB6.Source == null)
             {
-                WB6.Navigate(new Uri("http://mobile.globaltimes.cn/", UriKind.Absolute));
+                WB6.Navigate(new Uri("http://book.3g.cn/xuan/index.php", UriKind.Absolute));
             }
             if (OBJ.SelectedIndex == 6 && WB7.Source == null)
             {
-                WB7.Navigate(new Uri("https://m.yahoo.com/", UriKind.Absolute));
+                WB7.Navigate(new Uri("http://ifeng.fm/?mid=1bS9SS", UriKind.Absolute));
             }
         }
     }

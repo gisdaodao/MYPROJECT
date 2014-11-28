@@ -39,23 +39,40 @@ namespace 股票新闻
 
         private void inputtb_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
         {
-            if (e.Key == System.Windows.Input.Key.Enter && (!string.IsNullOrEmpty(inputtb.Text)))
+            try
             {
-                fullurl = urlscheme1 + inputtb.Text + list.SelectedItem.ToString();
-                wb.Navigate(new Uri(fullurl, UriKind.RelativeOrAbsolute));
-                e.Handled = true;
+                if (e.Key == System.Windows.Input.Key.Enter && (!string.IsNullOrEmpty(inputtb.Text)))
+                {
+                    fullurl = urlscheme1 + inputtb.Text + list.SelectedItem.ToString();
+                    wb.Navigate(new Uri(fullurl, UriKind.RelativeOrAbsolute));
+                    e.Handled = true;
+                }
             }
+            catch (Exception)
+            {
+                
+               
+            }
+           
         }
 
         private void ListPicker_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (inputtb!=null&&(!string.IsNullOrEmpty(inputtb.Text)))
+            try
             {
-                fullurl = urlscheme1 + inputtb.Text + list.SelectedItem.ToString();
-                
-                wb.Navigate(new Uri(fullurl, UriKind.RelativeOrAbsolute));
+                if (inputtb != null && (!string.IsNullOrEmpty(inputtb.Text)))
+                {
+                    fullurl = urlscheme1 + inputtb.Text + list.SelectedItem.ToString();
 
+                    wb.Navigate(new Uri(fullurl, UriKind.RelativeOrAbsolute));
+
+                }
             }
+            catch (Exception)
+            {                
+               
+            }
+           
         }
     }
 }

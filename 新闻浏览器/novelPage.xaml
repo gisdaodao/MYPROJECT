@@ -37,13 +37,13 @@
             <phone:PivotItem Header="17k" Loaded="PivotItem_Loaded_1">
                 <phone:WebBrowser x:Name="WB4" IsScriptEnabled="True"></phone:WebBrowser>
             </phone:PivotItem>
-            <phone:PivotItem Header="潇湘" Loaded="PivotItem_Loaded_1">
+            <phone:PivotItem Header="潇湘书院" Loaded="PivotItem_Loaded_1">
                 <phone:WebBrowser x:Name="WB5" IsScriptEnabled="True"></phone:WebBrowser>
             </phone:PivotItem>
             <phone:PivotItem Header="3g书城" Loaded="PivotItem_Loaded_1">
                 <phone:WebBrowser x:Name="WB6" IsScriptEnabled="True"></phone:WebBrowser>
             </phone:PivotItem>
-            <phone:PivotItem Header="yahoo" Loaded="PivotItem_Loaded_1">
+            <phone:PivotItem Header="凤凰fm" Loaded="PivotItem_Loaded_1">
                 <phone:WebBrowser x:Name="WB7" IsScriptEnabled="True"></phone:WebBrowser>
             </phone:PivotItem>
             <phone:PivotItem Header="ad">

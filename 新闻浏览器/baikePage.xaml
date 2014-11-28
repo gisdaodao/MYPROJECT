@@ -19,27 +19,27 @@
         <phone:Panorama  x:Name="panoroma" Foreground="Black">
 
             <!--Panorama 项目一-->
-            <phone:PanoramaItem Header="wiki">
-                <phone:WebBrowser x:Name="b1" IsScriptEnabled="True" Source="http://3gqq.qq.com/" />
+            <phone:PanoramaItem Header="百度百科">
+                <phone:WebBrowser x:Name="b1" IsScriptEnabled="True" Source="http://wbk.baidu.com" />
             </phone:PanoramaItem>
 
             <!--Panorama 项目二-->
-            <phone:PanoramaItem Header="百度百科">
+            <phone:PanoramaItem Header="wiki">
                 <phone:WebBrowser x:Name="b2" IsScriptEnabled="True" />
             </phone:PanoramaItem>
             <phone:PanoramaItem Header="知乎">
                 <phone:WebBrowser x:Name="b3" IsScriptEnabled="True" />
             </phone:PanoramaItem>
-            <phone:PanoramaItem Header="搜狗百科">
+            <phone:PanoramaItem Header="互动百科">
                 <phone:WebBrowser x:Name="b4" IsScriptEnabled="True"/>
             </phone:PanoramaItem>
             <phone:PanoramaItem Header="360百科">
                 <phone:WebBrowser x:Name="b5" IsScriptEnabled="True"/>
             </phone:PanoramaItem>
-            <phone:PanoramaItem Header="网易">
+            <phone:PanoramaItem Header="搜狗百科">
                 <phone:WebBrowser x:Name="b6" IsScriptEnabled="True"/>
             </phone:PanoramaItem>
-            <phone:PanoramaItem Header="百度新闻">
+            <phone:PanoramaItem Header="百度文库">
                 <phone:WebBrowser x:Name="b7" IsScriptEnabled="True"/>
             </phone:PanoramaItem>
             <phone:PanoramaItem>

@@ -7,6 +7,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+     xmlns:googlead="clr-namespace:GoogleAds;assembly=GoogleAds"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -15,17 +16,51 @@
 
     <!--LayoutRoot 包含根网格，其他所有页面内容都位于根网格中-->
     <Grid x:Name="LayoutRoot">
-        <phone:Panorama Title="我的应用程序">
-
+        <phone:Panorama  x:Name="panoroma" >
+            <!--<phone:Panorama.TitleTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Margin="0,30,0,0" Text="滑动请滑这里" FontSize="66"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </phone:Panorama.TitleTemplate>-->
+            <phone:Panorama.Background>
+                <ImageBrush ImageSource="Assets/PanoramaBackground.png"/>
+            </phone:Panorama.Background>
             <!--Panorama 项目一-->
-            <phone:PanoramaItem Header="item1">
-                <Grid/>
+            <phone:PanoramaItem Header="IT之家">
+                <phone:WebBrowser x:Name="b1" IsScriptEnabled="True" Source="http://wap.ithome.com/" />
             </phone:PanoramaItem>
 
             <!--Panorama 项目二-->
-            <phone:PanoramaItem Header="item2">
-                <Grid/>
+            <!--<phone:PanoramaItem Header="天涯">
+                <phone:WebBrowser x:Name="b2" IsScriptEnabled="True" />
             </phone:PanoramaItem>
+            <phone:PanoramaItem Header="新浪">
+                <phone:WebBrowser x:Name="b3" IsScriptEnabled="True" />
+            </phone:PanoramaItem>
+            <phone:PanoramaItem Header="凤凰网">
+                <phone:WebBrowser x:Name="b4" IsScriptEnabled="True"/>
+            </phone:PanoramaItem>
+            <phone:PanoramaItem Header="搜狐">
+                <phone:WebBrowser x:Name="b5" IsScriptEnabled="True"/>
+            </phone:PanoramaItem>
+            <phone:PanoramaItem Header="网易">
+                <phone:WebBrowser x:Name="b6" IsScriptEnabled="True"/>
+            </phone:PanoramaItem>
+            <phone:PanoramaItem Header="百度新闻">
+                <phone:WebBrowser x:Name="b7" IsScriptEnabled="True"/>
+            </phone:PanoramaItem>-->
+            <phone:PanoramaItem>
+                <StackPanel>
+                    <TextBlock  FontSize="36" Text="直接从这里退出"></TextBlock>
+                    <googlead:AdView  ReceivedAd="AdView_ReceivedAd" Grid.Row="0"  Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
+                    <googlead:AdView   FailedToReceiveAd="AdView_FailedToReceiveAd"  Grid.Row="1"  Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
+                    <googlead:AdView    Grid.Row="2"   Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
+                </StackPanel>
+
+            </phone:PanoramaItem>
+
         </phone:Panorama>
     </Grid>
 

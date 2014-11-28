@@ -24,6 +24,13 @@
                     </StackPanel>
                 </DataTemplate>
             </phone:Panorama.TitleTemplate>-->
+            <phone:Panorama.TitleTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Margin="0,30,0,0" Text="滑动请滑这里" FontSize="66"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </phone:Panorama.TitleTemplate>
             <phone:Panorama.Background>
                 <ImageBrush ImageSource="Assets/PanoramaBackground.png"/>
             </phone:Panorama.Background>
