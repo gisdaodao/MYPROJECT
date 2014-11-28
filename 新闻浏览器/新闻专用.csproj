@@ -94,11 +94,20 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="baikePage.xaml.cs">
+      <DependentUpon>baikePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="dacxiao.xaml.cs">
       <DependentUpon>dacxiao.xaml</DependentUpon>
     </Compile>
     <Compile Include="inputPanoramaPage.xaml.cs">
       <DependentUpon>inputPanoramaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="jingjiPanoramaPage.xaml.cs">
+      <DependentUpon>jingjiPanoramaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="kejiPanoramaPage.xaml.cs">
+      <DependentUpon>kejiPanoramaPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="LocalizedStrings.cs" />
     <Compile Include="MainPage.xaml.cs">
@@ -106,6 +115,9 @@
     </Compile>
     <Compile Include="menhuPanoramaPage.xaml.cs">
       <DependentUpon>menhuPanoramaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="novelPage.xaml.cs">
+      <DependentUpon>novelPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Ot.xaml.cs">
       <DependentUpon>Ot.xaml</DependentUpon>
@@ -137,6 +149,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="baikePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="dacxiao.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -145,11 +161,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="jingjiPanoramaPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="kejiPanoramaPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="menhuPanoramaPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="novelPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -228,10 +256,12 @@
     <Reference Include="GoogleAds">
       <HintPath>F:\迅雷下载\googlemobileadssdkwindowsphone8\lib\windowsphone8\GoogleAds.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Expression.Interactions, Version=3.9.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone.Controls, Version=8.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone.Controls.Toolkit">
       <HintPath>F:\newapp\美女大尺寸\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Interactivity, Version=3.9.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />

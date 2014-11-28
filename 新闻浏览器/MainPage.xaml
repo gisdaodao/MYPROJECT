@@ -96,7 +96,35 @@
                     </StackPanel>
                 </Grid>
             </phone:PanoramaItem>
+            <phone:PanoramaItem>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <StackPanel Orientation="Horizontal">
+                        <Border x:Name="baikeborder" Tap="baikeborder_Tap" Background="Orange" Width="399" Height="100">
+                            <TextBlock  FontSize="36" Text="百科集合" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                            
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,21,0,0">
+                        <Border Tap="readbook_Tap" x:Name="readbook" Height="100" Background="Orange" Width="100">
+                            <TextBlock  FontSize="36" Text="小说" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
 
+                        </Border>
+                       
+                        <Border Height="100" x:Name="jingjiborder" Margin="21,0,21,0" Background="Orange" Width="100"  Tap="jingjiborder_Tap">
+                            <TextBlock  FontSize="36" Text="经济" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        </Border>
+                        <Border Tap="kejiborder_Tap" Height="100" Background="Orange" Width="100" x:Name="kejiborder">
+                            <TextBlock  FontSize="36" Text="科技" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Grid.Row="2" Background="Orange"  Margin="0,21,0,0"  Height="100"></StackPanel>
+                </Grid>
+            </phone:PanoramaItem>
 
 
         </phone:Panorama>

@@ -272,6 +272,26 @@ namespace 股票新闻
         {
             this.NavigationService.Navigate(new Uri("/PivotvideoPage1.xaml", UriKind.Relative));
         }
+
+        private void baikeborder_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("/baikePage.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void readbook_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("/novelPage.xaml",UriKind.RelativeOrAbsolute));
+        }
+
+        private void jingjiborder_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("/jingjiPanoramaPage.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void kejiborder_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("/kejiPanoramaPage.xaml", UriKind.RelativeOrAbsolute));
+        }
         //protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)
         //{
         //    PhoneApplicationFrame myFrame = Application.Current.RootVisual as PhoneApplicationFrame;
