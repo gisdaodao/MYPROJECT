@@ -99,11 +99,12 @@ namespace 股票新闻
                   }
                   if (panoroma.SelectedIndex == 4 && b5.Source == null)
                   {
-                      b5.Navigate(new Uri("http://m.hexun.com/", UriKind.Absolute));
+                      b5.Navigate(new Uri("http://m.sohu.com/c/5/", UriKind.Absolute));
                   }
                   if (panoroma.SelectedIndex == 5 && b6.Source == null)
                   {
-                      b6.Navigate(new Uri("http://m.nbd.com.cn/", UriKind.Absolute));
+                      b6.Navigate(new Uri("http://www.chinadaily.com.cn/bizchina/economy.html", UriKind.Absolute));
+                    //  b6.Navigate(new Uri("http://www.chinadaily.com.cn/bizchina/economy.html", UriKind.Absolute));
                   }
                   if (panoroma.SelectedIndex == 6 && b7.Source == null)
                   {
@@ -112,7 +113,7 @@ namespace 股票新闻
 
                   if (panoroma.SelectedIndex == 7 && b8.Source == null)
                   {
-                      b8.Navigate(new Uri("http://m.caijing.com.cn/index.html", UriKind.Absolute));
+                      b8.Navigate(new Uri("http://m.caijing.com.cn/", UriKind.Absolute));
                   }
                   if (panoroma.SelectedIndex == 8 && b9.Source == null)
                   {

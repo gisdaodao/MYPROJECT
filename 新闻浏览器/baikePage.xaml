@@ -16,7 +16,7 @@
 
     <!--LayoutRoot 包含根网格，其他所有页面内容都位于根网格中-->
     <Grid x:Name="LayoutRoot" Background="White">
-        <phone:Panorama  x:Name="panoroma" Foreground="Black">
+        <phone:Panorama  x:Name="panoroma" Foreground="Black" SelectionChanged="panoroma_SelectionChanged">
 
             <!--Panorama 项目一-->
             <phone:PanoramaItem Header="百度百科">
