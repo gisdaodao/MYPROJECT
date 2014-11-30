@@ -143,6 +143,9 @@
     <Compile Include="ShenghuoPanoramaPage.xaml.cs">
       <DependentUpon>ShenghuoPanoramaPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TiebalistPage.xaml.cs">
+      <DependentUpon>TiebalistPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -202,6 +205,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ShenghuoPanoramaPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TiebalistPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
