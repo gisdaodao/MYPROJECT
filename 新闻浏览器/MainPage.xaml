@@ -86,11 +86,16 @@
                             <TextBlock  FontSize="36" Text="科技" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                         </Border>
                     </StackPanel>
-                    <StackPanel Grid.Row="2" Background="Orange"  Margin="0,21,0,0"  Height="100"></StackPanel>
+                    <StackPanel Grid.Row="2"    Margin="0,21,0,0"  Height="100">
+                        <Border Tap="tiebaborder_Tap" Height="100" Background="Orange" Width="100" x:Name="tiebaborder">
+                            <TextBlock  FontSize="36" Text="贴吧" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        </Border>
+                    </StackPanel>
                     <StackPanel Grid.Row="3">
 
                         <googlead:AdView  ReceivedAd="AdView_ReceivedAd" Grid.Row="0"  Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
                     </StackPanel>
+                    
                 </Grid>
             </phone:PanoramaItem>
             <phone:PanoramaItem>

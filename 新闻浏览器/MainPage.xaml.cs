@@ -292,6 +292,11 @@ namespace 股票新闻
         {
             this.NavigationService.Navigate(new Uri("/kejiPanoramaPage.xaml", UriKind.RelativeOrAbsolute));
         }
+
+        private void tiebaborder_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("/TiebalistPage.xaml", UriKind.RelativeOrAbsolute));
+        }
         //protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)
         //{
         //    PhoneApplicationFrame myFrame = Application.Current.RootVisual as PhoneApplicationFrame;

@@ -11,6 +11,7 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
+     xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" 
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot 是包含所有页面内容的根网格-->
@@ -22,13 +23,35 @@
 
         <!--TitlePanel 包含应用程序的名称和页标题-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="贴吧推荐" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <!--<TextBlock Text="页面名称" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>-->
+            <!--<TextBlock Text="贴吧推荐" Style="{StaticResource PhoneTextNormalStyle}"/>
+            --><!--<TextBlock Text="页面名称" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>-->
         </StackPanel>
 
         <!--ContentPanel - 在此处放置其他内容-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-
+            <!--<ListBox x:Name="lstbox">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Border  Width="100" Height="65" Background="Orange" Tap="Border_Tap">
+                            <TextBlock Text="{Binding text}"></TextBlock>
+                        </Border>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <toolkit:WrapPanel MinHeight="65" Width="100"></toolkit:WrapPanel>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+            </ListBox>-->
+            <phone:LongListSelector x:Name="lstbox" LayoutMode="Grid"  GridCellSize="150,100">
+                <phone:LongListSelector.ItemTemplate>
+                    <DataTemplate>
+                        <Border  Margin="12,0,12,12" Width="150" Height="100" Background="Orange" Tap="Border_Tap">
+                            <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding text}"></TextBlock>
+                        </Border>
+                    </DataTemplate>
+                </phone:LongListSelector.ItemTemplate>
+            </phone:LongListSelector>
         </Grid>
     </Grid>
 
