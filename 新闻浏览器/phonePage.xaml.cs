@@ -7,28 +7,27 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-using System.IO;
 using System.Xml.Linq;
-using System.Diagnostics;
+using System.IO;
 using Microsoft.Phone.Tasks;
+using System.Diagnostics;
 
 namespace 股票新闻
 {
-    public partial class TiebalistPage : PhoneApplicationPage
+    public partial class phonePage : PhoneApplicationPage
     {
-        public TiebalistPage()
+        public phonePage()
         {
             InitializeComponent();
             Pclient.OpenReadCompleted += Pclient_OpenReadCompleted;
-            Pclient.OpenReadAsync(new Uri("https://raw.githubusercontent.com/gisdaodao/MYPROJECT/master/data/baidutiebalist.xml", UriKind.Absolute));  
+            Pclient.OpenReadAsync(new Uri("https://raw.githubusercontent.com/gisdaodao/MYPROJECT/master/data/phonenumbers.xml", UriKind.Absolute));  
         }
-   
-WebClient Pclient = new WebClient();
+        WebClient Pclient = new WebClient();
         List<string> urls = new List<string>();
-        List<Info> items = new List<Info>(); 
+        List<Info> items = new List<Info>();
 
 
- void Pclient_OpenReadCompleted(object sender, OpenReadCompletedEventArgs e)
+        void Pclient_OpenReadCompleted(object sender, OpenReadCompletedEventArgs e)
         {
             try
             {
@@ -42,35 +41,35 @@ WebClient Pclient = new WebClient();
                     //{
                     //    urls.Add(a.Value);
                     //}
-                   // Deployment.Current.Dispatcher.BeginInvoke(() => { lstbox.ItemsSource = urls; });
+                    // Deployment.Current.Dispatcher.BeginInvoke(() => { lstbox.ItemsSource = urls; });
                     XName xitemname = XName.Get("item");
                     IEnumerable<XElement> itemnodes = p.Descendants(xitemname).ToList<XElement>();
                     foreach (var b in itemnodes)
                     {
                         XName xname = XName.Get("url");
-                        items.Add(new Info() { text = b.FirstAttribute.Value, info = b.LastAttribute.Value,dataurl=b.Descendants(xname).First().Value });
+                        items.Add(new Info() { text = b.FirstAttribute.Value, info = b.LastAttribute.Value, dataurl = b.Descendants(xname).First().Value });
                     }
                     Deployment.Current.Dispatcher.BeginInvoke(() => { lstbox.ItemsSource = items; });
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);              
-               
+                MessageBox.Show(ex.Message);
+
             }
-           
-       
+
+
         }
 
- private void Border_Tap(object sender, System.Windows.Input.GestureEventArgs e)
- {
-     Border border = sender as Border;
-  Info info=   border.DataContext as Info;
-  Debug.WriteLine(info.dataurl);
-  WebBrowserTask task = new WebBrowserTask();
-     task.Uri=new Uri(info.dataurl,UriKind.RelativeOrAbsolute);
-     task.Show();
+        private void Border_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            Border border = sender as Border;
+            Info info = border.DataContext as Info;
+            Debug.WriteLine(info.dataurl);
+            WebBrowserTask task = new WebBrowserTask();
+            task.Uri = new Uri(info.dataurl, UriKind.RelativeOrAbsolute);
+            task.Show();
 
- }
+        }
     }
 }

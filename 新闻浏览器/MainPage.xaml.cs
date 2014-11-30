@@ -297,6 +297,38 @@ namespace 股票新闻
         {
             this.NavigationService.Navigate(new Uri("/TiebalistPage.xaml", UriKind.RelativeOrAbsolute));
         }
+
+        private void tuijianwangzhan_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("/ReommendWebSitePage.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void tuijianyingyon_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("/ApplistPage.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void ApplicationBarMenuItem_Click(object sender, EventArgs e)
+        {
+            ApplicationBarMenuItem obj = sender as ApplicationBarMenuItem;
+           if(obj.Text=="更多")
+           {
+               this.NavigationService.Navigate(new Uri("/MorePage.xaml", UriKind.RelativeOrAbsolute));
+           }
+           if (obj.Text == "联系我")
+           {
+               EmailComposeTask task = new EmailComposeTask();
+
+               task.Subject = "你好";
+               task.To = "nan06jing06ok@hotmail.com";
+               task.Show();
+
+              // task.Cc = "875867090@qq.com";
+
+
+            
+           }
+        }
         //protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)
         //{
         //    PhoneApplicationFrame myFrame = Application.Current.RootVisual as PhoneApplicationFrame;

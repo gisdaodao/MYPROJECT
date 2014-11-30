@@ -94,12 +94,16 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ApplistPage.xaml.cs">
+      <DependentUpon>ApplistPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="baikePage.xaml.cs">
       <DependentUpon>baikePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="dacxiao.xaml.cs">
       <DependentUpon>dacxiao.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Info.cs" />
     <Compile Include="inputPanoramaPage.xaml.cs">
       <DependentUpon>inputPanoramaPage.xaml</DependentUpon>
     </Compile>
@@ -116,11 +120,17 @@
     <Compile Include="menhuPanoramaPage.xaml.cs">
       <DependentUpon>menhuPanoramaPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MorePage.xaml.cs">
+      <DependentUpon>MorePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="novelPage.xaml.cs">
       <DependentUpon>novelPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Ot.xaml.cs">
       <DependentUpon>Ot.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="phonePage.xaml.cs">
+      <DependentUpon>phonePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="PivotPageenlish.xaml.cs">
       <DependentUpon>PivotPageenlish.xaml</DependentUpon>
@@ -131,6 +141,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegionPage.xaml.cs">
       <DependentUpon>RegionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ReommendWebSitePage.xaml.cs">
+      <DependentUpon>ReommendWebSitePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Resources\AppResources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -152,6 +165,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="ApplistPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="baikePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -180,11 +197,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MorePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="novelPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Ot.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="phonePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -197,6 +222,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="RegionPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReommendWebSitePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

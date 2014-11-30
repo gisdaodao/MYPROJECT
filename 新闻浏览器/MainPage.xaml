@@ -75,20 +75,27 @@
                     </StackPanel>
                     <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,21,0,0">
                         <Border Tap="readbook_Tap" x:Name="readbook" Height="100" Background="Orange" Width="100">
-                            <TextBlock  FontSize="36" Text="小说" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                            <TextBlock  FontSize="25" Text="小说" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
 
                         </Border>
 
                         <Border Height="100" x:Name="jingjiborder" Margin="21,0,21,0" Background="Orange" Width="100"  Tap="jingjiborder_Tap">
-                            <TextBlock  FontSize="36" Text="经济" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                            <TextBlock  FontSize="25" Text="经济" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                         </Border>
                         <Border Tap="kejiborder_Tap" Height="100" Background="Orange" Width="100" x:Name="kejiborder">
-                            <TextBlock  FontSize="36" Text="科技" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                            <TextBlock  FontSize="25" Text="科技" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                         </Border>
                     </StackPanel>
-                    <StackPanel Grid.Row="2"    Margin="0,21,0,0"  Height="100">
+                    <StackPanel Grid.Row="2"  Orientation="Horizontal"  Margin="0,21,0,0"  Height="100">
                         <Border Tap="tiebaborder_Tap" Height="100" Background="Orange" Width="100" x:Name="tiebaborder">
-                            <TextBlock  FontSize="36" Text="贴吧" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                            <TextBlock  FontSize="25" Text="贴吧" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        </Border>
+
+                        <Border Height="100" Tap="tuijianwangzhan_Tap" x:Name="tuijianwangzhan" Margin="21,0,21,0" Background="Orange" Width="100"  >
+                            <TextBlock  FontSize="25" Text="推荐网站" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        </Border>
+                        <Border  Tap="tuijianyingyon_Tap" Height="100" Background="Orange" Width="100" x:Name="tuijianyingyon">
+                            <TextBlock  FontSize="25" Text="推荐应用" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                         </Border>
                     </StackPanel>
                     <StackPanel Grid.Row="3">
@@ -155,7 +162,12 @@
             <shell:ApplicationBarIconButton Text="支持一下" IconUri="/Assets1/AppBar/favs.png" Click="rate_Click" x:Name="rate" IsEnabled="True"></shell:ApplicationBarIconButton>
             <shell:ApplicationBarIconButton Text="后退" IconUri="/Assets1/AppBar/back.png" Click="ApplicationBarIconButton_Click_1" IsEnabled="True"></shell:ApplicationBarIconButton>
             <shell:ApplicationBarIconButton Text="搜索" x:Name="seracbar" IconUri="/Assets2/AppBar/feature.search.png" Click="seracbar_Click" IsEnabled="True"></shell:ApplicationBarIconButton>
+        
             <shell:ApplicationBarIconButton Text="打开" x:Name="inputbar" IconUri="/Assets3/AppBar/edit.png" Click="inputbar_Click" IsEnabled="True"></shell:ApplicationBarIconButton>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="更多"  Click="ApplicationBarMenuItem_Click"></shell:ApplicationBarMenuItem>
+                <shell:ApplicationBarMenuItem Text="联系我"  Click="ApplicationBarMenuItem_Click"></shell:ApplicationBarMenuItem>
+            </shell:ApplicationBar.MenuItems>
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>
     
