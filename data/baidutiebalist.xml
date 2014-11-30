@@ -1,7 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Items>
-   <item text="北京"      des="">
+   <item text="北京吧"      des="">
  <url>http://tieba.baidu.com/f?kw=%E5%8C%97%E4%BA%AC</url> 
+  </item> 
+ <item text="英语吧"      des="">
+ <url>http://tieba.baidu.com/f?kw=%E8%8B%B1%E8%AF%AD</url> 
+  </item> 
+ <item text="舞蹈吧"      des="">
+ <url>http://tieba.baidu.com/f?kw=%E8%88%9E%E8%B9%88</url> 
+  </item> 
+ <item text="新加坡吧"      des="">
+ <url>http://tieba.baidu.com/f?kw=%E6%96%B0%E5%8A%A0%E5%9D%A1</url> 
+  </item> 
+ <item text="读书吧"      des="">
+ <url>http://tieba.baidu.com/f?kw=%E8%AF%BB%E4%B9%A6</url> 
+  </item> 
+ <item text="唱歌吧"      des="">
+ <url>http://tieba.baidu.com/f?kw=%E5%94%B1%E6%AD%8C</url> 
+  </item> 
+ <item text="诺记吧"      des="">
+ <url>http://tieba.baidu.com/f?kw=%E8%AF%BA%E8%AE%B0</url> 
+  </item> 
+ <item text="windowsphone吧"      des="">
+ <url>http://tieba.baidu.com/f?kw=windowsphone</url> 
+  </item> 
+ <item text="科技吧"      des="">
+ <url>http://tieba.baidu.com/f?kw=%E7%A7%91%E6%8A%80</url> 
+  </item> 
+ <item text="美国把"      des="">
+ <url>http://tieba.baidu.com/f?kw=%E7%BE%8E%E5%9B%BD</url> 
   </item> 
 </Items>
 
