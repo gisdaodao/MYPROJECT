@@ -1,4 +1,5 @@
 ﻿<phone:PhoneApplicationPage
+     xmlns:UI="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI"
     x:Class="股票新闻.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -7,6 +8,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+      xmlns:oxlad="clr-namespace:OpenXLive.Advertising;assembly=OpenXLive.Advertising"
     xmlns:googlead="clr-namespace:GoogleAds;assembly=GoogleAds"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
@@ -138,7 +140,18 @@
                         <Border  Margin="0,30,60,0" x:Name="countryboaerder" Tap="countryboaerder_Tap"  Background="YellowGreen" Height="60">
                             <TextBlock Text="全国各地" Margin="30,20,0,0"></TextBlock>
                         </Border>
-                        <googlead:AdView  ReceivedAd="AdView_ReceivedAd" Grid.Row="0"  Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
+                        <!--<UI:AdControl  ErrorOccurred="AdControl_ErrorOccurred"        IsEnabled="True" IsAutoRefreshEnabled="True"   AdRefreshed="AdControl_AdRefreshed"  ApplicationId="774e1a85-5f27-4670-a525-82d3a9aa4108" 
+         AdUnitId="197288"         HorizontalAlignment="Left" 
+         Height="80"                  VerticalAlignment="Top" 
+         Width="480"/>-->
+                        <oxlad:AdControl 
+            x:Name="AdControl"
+            ApplicationId="fa09f586-cf51-4c6a-af19-03c39d149464"
+            AdUnitId="b7dfd8f6-f900-4ebd-a2cd-f222c6df73b2" AdCompleted="AdControl_AdCompleted"
+            Type="Banner"   ErrorOccurred="AdControl_ErrorOccurred_1"
+                           Height="100"
+            IsCloseIconEnabled="True" 
+          />
                     </StackPanel>
                 </Grid>
             </phone:PanoramaItem>

@@ -11,6 +11,7 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
+    xmlns:UI="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI" 
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot 是包含所有页面内容的根网格-->

@@ -8,6 +8,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
+    xmlns:UI="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI" 
     Foreground="{StaticResource PhoneForegroundBrush}"
       xmlns:googlead="clr-namespace:GoogleAds;assembly=GoogleAds"
     SupportedOrientations="Portrait" Orientation="Portrait"
@@ -65,7 +66,7 @@
                 <StackPanel>
                     <TextBlock  FontSize="36" Text="直接从这里退出"></TextBlock>
                     <googlead:AdView  ReceivedAd="AdView_ReceivedAd" Grid.Row="0"  Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
-                    <googlead:AdView   FailedToReceiveAd="AdView_FailedToReceiveAd"  Grid.Row="1"  Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
+                    <UI:AdControl x:Name="newsad" Height="80" ApplicationId="774e1a85-5f27-4670-a525-82d3a9aa4108" AdUnitId="197288" />
                     <googlead:AdView    Grid.Row="2"   Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
                 </StackPanel>
                

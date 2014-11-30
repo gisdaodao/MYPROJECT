@@ -12,6 +12,7 @@
     xmlns:googlead="clr-namespace:GoogleAds;assembly=GoogleAds"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
+    xmlns:UI="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI" 
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot 是包含所有页面内容的根网格-->
@@ -60,7 +61,7 @@
                         <RowDefinition Height="Auto"></RowDefinition>
                     </Grid.RowDefinitions>
                     <googlead:AdView  Grid.Row="0"  ReceivedAd="AdView_ReceivedAd" FailedToReceiveAd="AdView_FailedToReceiveAd" Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
-                    <googlead:AdView   Grid.Row="1"  ReceivedAd="AdView_ReceivedAd" FailedToReceiveAd="AdView_FailedToReceiveAd"   Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
+                    <UI:AdControl ApplicationId="774e1a85-5f27-4670-a525-82d3a9aa4108" AdUnitId="197288" Height="80" x:Name="newsad"/>
                     <googlead:AdView    Grid.Row="2"   Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
                 </Grid>
                

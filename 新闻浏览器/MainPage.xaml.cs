@@ -329,6 +329,26 @@ namespace 股票新闻
             
            }
         }
+
+        private void AdControl_ErrorOccurred(object sender, Microsoft.Advertising.AdErrorEventArgs e)
+        {
+
+        }
+
+        private void AdControl_AdRefreshed(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AdControl_ErrorOccurred_1(object sender, OpenXLive.Advertising.AdErrorEventArgs e)
+        {
+
+        }
+
+        private void AdControl_AdCompleted(object sender, EventArgs e)
+        {
+
+        }
         //protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)
         //{
         //    PhoneApplicationFrame myFrame = Application.Current.RootVisual as PhoneApplicationFrame;

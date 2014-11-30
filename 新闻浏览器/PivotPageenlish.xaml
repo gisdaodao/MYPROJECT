@@ -7,6 +7,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+    xmlns:UI="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI" 
        xmlns:googlead="clr-namespace:GoogleAds;assembly=GoogleAds"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
@@ -54,7 +55,7 @@
                         <RowDefinition Height="Auto"></RowDefinition>
                     </Grid.RowDefinitions>
                     <googlead:AdView  ReceivedAd="AdView_ReceivedAd" Grid.Row="0"  Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
-                    <googlead:AdView   FailedToReceiveAd="AdView_FailedToReceiveAd"  Grid.Row="1"  Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
+                    <UI:AdControl ApplicationId="774e1a85-5f27-4670-a525-82d3a9aa4108" x:Name="newsad" AdUnitId="197288" Height="80"/>
                     <googlead:AdView    Grid.Row="2"   Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
                 </Grid>
 
