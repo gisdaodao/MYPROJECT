@@ -20,7 +20,7 @@ namespace 股票新闻
         {
             InitializeComponent();
             Pclient.OpenReadCompleted += Pclient_OpenReadCompleted;
-            Pclient.OpenReadAsync(new Uri("https://raw.githubusercontent.com/gisdaodao/jiwu/master/jiewu/femalebisai.xml", UriKind.Absolute));  
+            Pclient.OpenReadAsync(new Uri("https://raw.githubusercontent.com/gisdaodao/MYPROJECT/master/data/baidutiebalist.xml", UriKind.Absolute));  
         }
          public class Info
     {
