@@ -47,7 +47,8 @@ namespace 股票新闻
                     foreach (var b in itemnodes)
                     {
                         XName xname = XName.Get("url");
-                        items.Add(new Info() { text = b.FirstAttribute.Value, info = b.LastAttribute.Value, dataurl = b.Descendants(xname).First().Value });
+                          XName xpicname = XName.Get("picurl");
+                          items.Add(new Info() { text = b.FirstAttribute.Value, info = b.LastAttribute.Value, dataurl = b.Descendants(xname).First().Value, picurl = b.Descendants(xpicname).First().Value });
                     }
                     Deployment.Current.Dispatcher.BeginInvoke(() => { lstbox.ItemsSource = items; });
                 }

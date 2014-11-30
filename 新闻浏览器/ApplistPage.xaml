@@ -38,14 +38,14 @@
                                     <ColumnDefinition Width="100"></ColumnDefinition>
                                     <ColumnDefinition Width="*"></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
-                                <Image  Grid.Column="0"></Image>
+                                <Image Stretch="Fill" Height="100"  Grid.Column="0" Source="{Binding picurl}"></Image>
                                 <Grid Grid.Column="1">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="50"></RowDefinition>
                                         <RowDefinition Height="*"></RowDefinition>
                                     </Grid.RowDefinitions>
                                     <TextBlock  Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding text}"></TextBlock>
-                                    <TextBlock  Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding infp}"></TextBlock>
+                                    <TextBlock  Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding info}"></TextBlock>
                                 </Grid>
                                
                             </Grid>
