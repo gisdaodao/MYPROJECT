@@ -32,7 +32,7 @@
             </phone:Panorama.Background>
             <!--Panorama 项目一-->
             <phone:PanoramaItem Header="腾讯">
-                <phone:WebBrowser x:Name="b1" IsScriptEnabled="True" Source="http://3gqq.qq.com/" />
+                <phone:WebBrowser x:Name="b1" IsScriptEnabled="True" Source="http://qq.com/" />
             </phone:PanoramaItem>
 
             <!--Panorama 项目二-->

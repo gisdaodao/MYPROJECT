@@ -20,7 +20,10 @@ namespace 股票新闻
         {
             InitializeComponent();
             Pclient.OpenReadCompleted += Pclient_OpenReadCompleted;
-            Pclient.OpenReadAsync(new Uri("https://raw.githubusercontent.com/gisdaodao/MYPROJECT/master/data/recoomendapplist.xml", UriKind.Absolute));  
+            Pclient.OpenReadAsync(new Uri("https://raw.githubusercontent.com/gisdaodao/MYPROJECT/master/data/recoomendapplist.xml", UriKind.Absolute));
+            indicator.Text = "请求中...";
+            indicator.IsVisible = true;
+            indicator.IsIndeterminate = true;
         }
         WebClient Pclient = new WebClient();
         List<string> urls = new List<string>();
@@ -50,7 +53,11 @@ namespace 股票新闻
                           XName xpicname = XName.Get("picurl");
                           items.Add(new Info() { text = b.FirstAttribute.Value, info = b.LastAttribute.Value, dataurl = b.Descendants(xname).First().Value, picurl = b.Descendants(xpicname).First().Value });
                     }
-                    Deployment.Current.Dispatcher.BeginInvoke(() => { lstbox.ItemsSource = items; });
+                    Deployment.Current.Dispatcher.BeginInvoke(() =>
+                    {
+                        lstbox.ItemsSource = items; indicator.IsVisible = false;
+                        indicator.IsIndeterminate = false;
+                    });
                 }
             }
             catch (Exception ex)

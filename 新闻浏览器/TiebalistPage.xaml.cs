@@ -20,6 +20,9 @@ namespace 股票新闻
         {
             InitializeComponent();
             Pclient.OpenReadCompleted += Pclient_OpenReadCompleted;
+            indicator.Text = "请求中...";
+            indicator.IsVisible = true;
+            indicator.IsIndeterminate = true;
             Pclient.OpenReadAsync(new Uri("https://raw.githubusercontent.com/gisdaodao/MYPROJECT/master/data/baidutiebalist.xml", UriKind.Absolute));  
         }
    
@@ -50,7 +53,10 @@ WebClient Pclient = new WebClient();
                         XName xname = XName.Get("url");
                         items.Add(new Info() { text = b.FirstAttribute.Value, info = b.LastAttribute.Value,dataurl=b.Descendants(xname).First().Value });
                     }
-                    Deployment.Current.Dispatcher.BeginInvoke(() => { lstbox.ItemsSource = items; });
+                    Deployment.Current.Dispatcher.BeginInvoke(() => { lstbox.ItemsSource = items;
+                    indicator.IsVisible = false;
+                    indicator.IsIndeterminate = false;
+                    });
                 }
             }
             catch (Exception ex)
