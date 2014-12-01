@@ -9,6 +9,7 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using GoogleAds;
 using Microsoft.Phone.Tasks;
+using SurfaceAd.SDK.WP;
 
 namespace 股票新闻
 {
@@ -47,6 +48,7 @@ namespace 股票新闻
             {
                 return;
             }
+            this.surfaceAdImageXaml.InitAdControl(AdModeType.Debug); 
         }
         protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)
         {
@@ -346,6 +348,26 @@ namespace 股票新闻
         }
 
         private void AdControl_AdCompleted(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AdView_AdSdkExceptionEvent(object sender, MSNADSDK.AD.ADExceptionEventArgs e)
+        {
+
+        }
+
+        private void AdView_AdRequestSuccessEvent(object sender, MSNADSDK.AD.AdRequestStatesEventArgs args)
+        {
+
+        }
+
+        private void jyad_GetAdBackMessageEvent(object sender, JiuYouWp8Ad.GetAdBackMessage e)
+        {
+
+        }
+
+        private void jyad_ClickBackMessageEvent(object sender, JiuYouWp8Ad.ClickBackMessage e)
         {
 
         }

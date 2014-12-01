@@ -13,6 +13,9 @@
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
+     xmlns:MsnAD="clr-namespace:MSNADSDK.AD;assembly=MSNADSDK"
+    xmlns:SurfaceAdw="clr-namespace:SurfaceAd.SDK.WP;assembly=SurfaceAd.SDK.WP"
+       xmlns:JiuYou="clr-namespace:JiuYouWp8Ad;assembly=JiuYouWp8Ad"
     SupportedOrientations="Portrait"  Orientation="Portrait"
     shell:SystemTray.IsVisible="False">
 
@@ -101,8 +104,15 @@
                         </Border>
                     </StackPanel>
                     <StackPanel Grid.Row="3">
-
+                        <SurfaceAdw:SurfaceAdControl Grid.Row="0" Name="surfaceAdImageXaml"
+                             AdPosition="6c70b8ebbaad92f8c47bcf58d21898c5"
+                             AdToken="MF04XWUBNl8wUThaZRc2XzBD"
+                             IsShowCloseIcon="False"
+                             AdRefreshInterval="10"/>
+                        <oxlad:AdControl  x:Name="Ad1Control" ApplicationId="fa09f586-cf51-4c6a-af19-03c39d149464" AdUnitId="b7dfd8f6-f900-4ebd-a2cd-f222c6df73b2" AdCompleted="AdControl_AdCompleted"      Type="Banner"  ErrorOccurred="AdControl_ErrorOccurred_1"  Height="100"  IsCloseIconEnabled="True" />
+                        <MsnAD:AdView Margin="12,21,0,0" TelCapability="True" AdSdkExceptionEvent="AdView_AdSdkExceptionEvent" AdRequestSuccessEvent="AdView_AdRequestSuccessEvent" StorePic="True" SecretKey="9f245ae267794ffba5771ba06ad71304" Adid="190892" Appid="145004" SizeForAd="Normal"></MsnAD:AdView>                            
                         <googlead:AdView  ReceivedAd="AdView_ReceivedAd" Grid.Row="0"  Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
+                        <!--<JiuYou:JiuYouWp8AdControl x:Name="jyad" VerticalAlignment="Bottom"  ClickBackMessageEvent="jyad_ClickBackMessageEvent" DeveloperAdID="9a85f5305c905536cc578a782da0808e" GetAdBackMessageEvent="jyad_GetAdBackMessageEvent" />-->
                     </StackPanel>
                     
                 </Grid>

@@ -289,8 +289,29 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Google.ProtocolBuffersLite">
+      <HintPath>libs\msnaiasdk\MSNADSDK\Google.ProtocolBuffersLite.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.ProtocolBuffersLite.Serialization">
+      <HintPath>libs\msnaiasdk\MSNADSDK\Google.ProtocolBuffersLite.Serialization.dll</HintPath>
+    </Reference>
     <Reference Include="GoogleAds">
-      <HintPath>F:\迅雷下载\googlemobileadssdkwindowsphone8\lib\windowsphone8\GoogleAds.dll</HintPath>
+      <HintPath>libs\GoogleAds.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageTools">
+      <HintPath>libs\msnaiasdk\MSNADSDK\ImageTools.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageTools.Controls">
+      <HintPath>libs\msnaiasdk\MSNADSDK\ImageTools.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageTools.IO.Gif">
+      <HintPath>libs\msnaiasdk\MSNADSDK\ImageTools.IO.Gif.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageTools.IO.Png">
+      <HintPath>libs\msnaiasdk\MSNADSDK\ImageTools.IO.Png.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageTools.Utils">
+      <HintPath>libs\msnaiasdk\MSNADSDK\ImageTools.Utils.dll</HintPath>
     </Reference>
     <Reference Include="JiuYouWp8Ad">
       <HintPath>libs\SDK\JiuYouWp8Ad.dll</HintPath>
@@ -299,7 +320,10 @@
     <Reference Include="Microsoft.Phone.Controls, Version=8.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone.Controls.Maps, Version=8.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone.Controls.Toolkit">
-      <HintPath>F:\newapp\美女大尺寸\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+      <HintPath>libs\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="MSNADSDK">
+      <HintPath>libs\msnaiasdk\MSNADSDK\MSNADSDK.dll</HintPath>
     </Reference>
     <Reference Include="OpenXLive.Advertising, Version=1.0.4.0, Culture=neutral, PublicKeyToken=504c25bea0398335, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
