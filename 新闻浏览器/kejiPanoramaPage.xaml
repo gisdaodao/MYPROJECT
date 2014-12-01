@@ -7,6 +7,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+     xmlns:MsnAD="clr-namespace:MSNADSDK.AD;assembly=MSNADSDK"
      xmlns:googlead="clr-namespace:GoogleAds;assembly=GoogleAds"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
@@ -55,8 +56,7 @@
                 <StackPanel>
                     <TextBlock  FontSize="36" Text="直接从这里退出"></TextBlock>
                     <googlead:AdView  ReceivedAd="AdView_ReceivedAd" Grid.Row="0"  Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
-                    <googlead:AdView   FailedToReceiveAd="AdView_FailedToReceiveAd"  Grid.Row="1"  Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
-                    <googlead:AdView    Grid.Row="2"   Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
+                    <MsnAD:AdView Margin="12,21,0,0" TelCapability="True"  StorePic="True" SecretKey="9f245ae267794ffba5771ba06ad71304" Adid="190892" Appid="145004" SizeForAd="Normal"></MsnAD:AdView>
                 </StackPanel>
 
             </phone:PanoramaItem>

@@ -7,6 +7,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+    xmlns:SurfaceAdw="clr-namespace:SurfaceAd.SDK.WP;assembly=SurfaceAd.SDK.WP"
     xmlns:googlead="clr-namespace:GoogleAds;assembly=GoogleAds"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
@@ -78,9 +79,11 @@
                             <RowDefinition Height="Auto"></RowDefinition>
                             <RowDefinition Height="Auto"></RowDefinition>
                         </Grid.RowDefinitions>
-                        <googlead:AdView  Grid.Row="0"  ReceivedAd="AdView_ReceivedAd" FailedToReceiveAd="AdView_FailedToReceiveAd" Format="Banner" AdUnitID="ca-app-pub-1598808565430684/7268984852" ></googlead:AdView>
-                        <googlead:AdView   Grid.Row="1"  ReceivedAd="AdView_ReceivedAd" FailedToReceiveAd="AdView_FailedToReceiveAd"   Format="Banner" AdUnitID="ca-app-pub-1598808565430684/7268984852" ></googlead:AdView>
-                        <googlead:AdView    Grid.Row="2"   Format="Banner" AdUnitID="ca-app-pub-1598808565430684/7268984852" ></googlead:AdView>
+                        <SurfaceAdw:SurfaceAdControl Grid.Row="0" Name="surfaceAdImageXaml"
+                             AdPosition="6c70b8ebbaad92f8c47bcf58d21898c5"
+                             AdToken="MF04XWUBNl8wUThaZRc2XzBD"
+                             IsShowCloseIcon="False"
+                             AdRefreshInterval="10"/>
                     </Grid>
                 </Grid>
             </phone:PanoramaItem>

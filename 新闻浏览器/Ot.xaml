@@ -59,9 +59,7 @@
             <phone:PanoramaItem>
                 <StackPanel>
                     <TextBlock  FontSize="36" Text="直接从这里退出"></TextBlock>
-                    <googlead:AdView  ReceivedAd="AdView_ReceivedAd" Grid.Row="0"  Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
-                    <googlead:AdView   FailedToReceiveAd="AdView_FailedToReceiveAd"  Grid.Row="1"  Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
-                    <googlead:AdView    Grid.Row="2"   Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
+                  
                 </StackPanel>
 
             </phone:PanoramaItem>

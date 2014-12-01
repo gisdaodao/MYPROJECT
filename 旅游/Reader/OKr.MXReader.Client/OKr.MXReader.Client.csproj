@@ -18,10 +18,11 @@
     </TargetFrameworkProfile>
     <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
     <SilverlightApplication>true</SilverlightApplication>
-    <SupportedCultures>zh-Hans</SupportedCultures>
+    <SupportedCultures>
+    </SupportedCultures>
     <XapOutputs>true</XapOutputs>
     <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
-    <XapFilename>世界风景名胜纵览.xap</XapFilename>
+    <XapFilename>Birds and Nature.txt.xap</XapFilename>
     <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
     <SilverlightAppEntry>OKr.MXReader.Client.App</SilverlightAppEntry>
     <ValidateXaml>true</ValidateXaml>
@@ -108,10 +109,10 @@
       <HintPath>..\..\_build\OKr.Lib\FlurryWP7SDK.dll</HintPath>
     </Reference>
     <Reference Include="GoogleAds">
-      <HintPath>..\..\..\..\..\迅雷下载\googlemobileadssdkwindowsphone8\lib\windowsphone8\GoogleAds.dll</HintPath>
+      <HintPath>..\..\..\新闻浏览器\libs\GoogleAds.dll</HintPath>
     </Reference>
     <Reference Include="JiuYouWp8Ad">
-      <HintPath>C:\Users\zhangch\Desktop\新闻专用app\JiuYouWp8Ad.dll</HintPath>
+      <HintPath>..\..\..\新闻浏览器\libs\SDK\JiuYouWp8Ad.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Phone.Controls, Version=8.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone.Controls.Toolkit">
@@ -164,18 +165,10 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="book.png" />
     <Content Include="chuy.png" />
+    <Content Include="_static\data\book\Birds and Nature.txt" />
     <Content Include="_static\data\book\category.txt" />
-    <Content Include="_static\data\book\canada.txt" />
-    <Content Include="_static\data\book\saineijiaer.txt" />
-    <Content Include="_static\data\book\niboer.txt" />
-    <Content Include="_static\data\book\xinjiapo.txt" />
-    <Content Include="_static\data\book\riben.txt" />
-    <Content Include="_static\data\book\france.txt" />
-    <Content Include="_static\data\book\taiguo.txt" />
-    <Content Include="_static\data\book\austra.txt" />
-    <Content Include="_static\data\book\meiguo.txt" />
-    <Content Include="_static\data\book\laowo.txt" />
     <Content Include="_static\img\SplashScreen.png" />
     <None Include="Properties\AppManifest.xml" />
     <None Include="Properties\WMAppManifest.xml">

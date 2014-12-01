@@ -52,9 +52,9 @@
             <phone:PanoramaItem>
                 <StackPanel>
                     <TextBlock  FontSize="36" Text="直接从这里退出"></TextBlock>
-                    <UI:AdControl ApplicationId="774e1a85-5f27-4670-a525-82d3a9aa4108" AdUnitId="197288" />
+                    <!--<UI:AdControl ApplicationId="774e1a85-5f27-4670-a525-82d3a9aa4108" AdUnitId="197288" />
                     <googlead:AdView   FailedToReceiveAd="AdView_FailedToReceiveAd"  Grid.Row="1"  Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
-                    <googlead:AdView    Grid.Row="2"   Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
+                    <googlead:AdView    Grid.Row="2"   Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>-->
                 </StackPanel>
 
             </phone:PanoramaItem>

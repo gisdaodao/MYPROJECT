@@ -8,6 +8,7 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using GoogleAds;
+using SurfaceAd.SDK.WP;
 
 namespace 股票新闻
 {
@@ -16,6 +17,7 @@ namespace 股票新闻
         public jingjiPanoramaPage()
         {
             InitializeComponent();
+            this.surfaceAdImageXaml.InitAdControl(AdModeType.Normal); 
         }
           protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)
         {

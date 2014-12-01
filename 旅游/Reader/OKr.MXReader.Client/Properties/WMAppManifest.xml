@@ -4,8 +4,8 @@
   <Languages xmlns="">
     <Language code="zh-Hans" />
   </Languages>
-  <App xmlns="" ProductID="{f7a27227-afa9-43b4-9eca-fd5ada3c7675}" Title="世界风景名胜纵览" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="OKr Works" Description="世界风景名胜纵览" Publisher="OKr Inc." PublisherID="{6cd5d726-7844-4804-82c5-dfdf1488d162}">
-    <IconPath IsRelative="true" IsResource="false">chuy.png</IconPath>
+  <App xmlns="" ProductID="{f7a27227-afa9-43b4-9eca-fd5ada3c7675}" Title="Birds and Nature.txt" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="OKr Works" Description="Birds and Nature.txt" Publisher="OKr Inc." PublisherID="{6cd5d726-7844-4804-82c5-dfdf1488d162}">
+    <IconPath IsRelative="true" IsResource="false">book.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_IDENTITY_DEVICE" />
       <Capability Name="ID_CAP_IDENTITY_USER" />
@@ -20,9 +20,9 @@
     <Tokens>
       <PrimaryToken TokenID="OKr.MXReader.ClientToken" TaskName="_default">
         <TemplateFlip>
-          <SmallImageURI IsResource="false" IsRelative="true">chuy.png</SmallImageURI>
+          <SmallImageURI IsResource="false" IsRelative="true">book.png</SmallImageURI>
           <Count>0</Count>
-          <BackgroundImageURI IsResource="false" IsRelative="true">chuy.png</BackgroundImageURI>
+          <BackgroundImageURI IsResource="false" IsRelative="true">book.png</BackgroundImageURI>
           <Title>世界风景名胜纵览</Title>
           <BackContent>
           </BackContent>

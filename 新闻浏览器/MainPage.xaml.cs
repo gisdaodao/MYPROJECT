@@ -35,8 +35,8 @@ namespace 股票新闻
         private void OnAdReceived(object sender, AdEventArgs e)
         {
             Random adrandeom = new Random();
-            int i = adrandeom.Next(1, 22);
-            if(i<6)
+            int i = adrandeom.Next(1, 100);
+            if(i<=10)
             {
                 interstitialAd.ShowAd();
             }          
@@ -48,7 +48,8 @@ namespace 股票新闻
             {
                 return;
             }
-            this.surfaceAdImageXaml.InitAdControl(AdModeType.Debug); 
+            this.surfaceAdImageXaml.InitAdControl(AdModeType.Normal); 
+           // this.surfaceAdImageXaml.InitAdControl(AdModeType.Debug); 
         }
         protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)
         {

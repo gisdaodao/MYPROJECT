@@ -7,6 +7,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+    xmlns:oxlad="clr-namespace:OpenXLive.Advertising;assembly=OpenXLive.Advertising"
     xmlns:UI="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI" 
        xmlns:googlead="clr-namespace:GoogleAds;assembly=GoogleAds"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
@@ -54,9 +55,9 @@
                         <RowDefinition Height="Auto"></RowDefinition>
                         <RowDefinition Height="Auto"></RowDefinition>
                     </Grid.RowDefinitions>
-                    <googlead:AdView  ReceivedAd="AdView_ReceivedAd" Grid.Row="0"  Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
-                    <UI:AdControl ApplicationId="774e1a85-5f27-4670-a525-82d3a9aa4108" x:Name="newsad" AdUnitId="197288" Height="80"/>
-                    <googlead:AdView    Grid.Row="2"   Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
+                    <googlead:AdView Grid.Row="0"  ReceivedAd="AdView_ReceivedAd"   Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
+                    <UI:AdControl  Grid.Row="1" ApplicationId="774e1a85-5f27-4670-a525-82d3a9aa4108" x:Name="newsad" AdUnitId="197288" Height="80"/>
+                    <oxlad:AdControl x:Name="AdControl22"  Grid.Row="2" ApplicationId="48557996-85ed-4cbf-a38a-d7a8f7e953f1" AdUnitId="f8725d4d-05eb-4776-b14e-59dd4ee7da46" Type="Banner" IsCloseIconEnabled="True" />
                 </Grid>
 
             </phone:PivotItem>

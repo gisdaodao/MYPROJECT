@@ -103,16 +103,20 @@
                             <TextBlock  FontSize="25" Text="推荐应用" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                         </Border>
                     </StackPanel>
-                    <StackPanel Grid.Row="3">
+                    <StackPanel Grid.Row="3" Margin="0,36,0,0">
                         <SurfaceAdw:SurfaceAdControl Grid.Row="0" Name="surfaceAdImageXaml"
                              AdPosition="6c70b8ebbaad92f8c47bcf58d21898c5"
                              AdToken="MF04XWUBNl8wUThaZRc2XzBD"
                              IsShowCloseIcon="False"
                              AdRefreshInterval="10"/>
-                        <oxlad:AdControl  x:Name="Ad1Control" ApplicationId="fa09f586-cf51-4c6a-af19-03c39d149464" AdUnitId="b7dfd8f6-f900-4ebd-a2cd-f222c6df73b2" AdCompleted="AdControl_AdCompleted"      Type="Banner"  ErrorOccurred="AdControl_ErrorOccurred_1"  Height="100"  IsCloseIconEnabled="True" />
+                      
+                        <!--<oxlad:AdControl  x:Name="Ad1Control" ApplicationId="fa09f586-cf51-4c6a-af19-03c39d149464" AdUnitId="b7dfd8f6-f900-4ebd-a2cd-f222c6df73b2" AdCompleted="AdControl_AdCompleted"      Type="Banner"  ErrorOccurred="AdControl_ErrorOccurred_1"  Height="100"  IsCloseIconEnabled="True" />-->
                         <MsnAD:AdView Margin="12,21,0,0" TelCapability="True" AdSdkExceptionEvent="AdView_AdSdkExceptionEvent" AdRequestSuccessEvent="AdView_AdRequestSuccessEvent" StorePic="True" SecretKey="9f245ae267794ffba5771ba06ad71304" Adid="190892" Appid="145004" SizeForAd="Normal"></MsnAD:AdView>                            
                         <googlead:AdView  ReceivedAd="AdView_ReceivedAd" Grid.Row="0"  Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
                         <!--<JiuYou:JiuYouWp8AdControl x:Name="jyad" VerticalAlignment="Bottom"  ClickBackMessageEvent="jyad_ClickBackMessageEvent" DeveloperAdID="9a85f5305c905536cc578a782da0808e" GetAdBackMessageEvent="jyad_GetAdBackMessageEvent" />-->
+                        <!--<oxlad:AdControl  x:Name="AdControl22" ApplicationId="48557996-85ed-4cbf-a38a-d7a8f7e953f1"    AdUnitId="f8725d4d-05eb-4776-b14e-59dd4ee7da46" Type="Banner"    IsCloseIconEnabled="True"  />-->
+                        <!--<UI:AdControl   IsEnabled="True" IsAutoRefreshEnabled="True"   ApplicationId="774e1a85-5f27-4670-a525-82d3a9aa4108" 
+         AdUnitId="197288"         HorizontalAlignment="Left"          Height="80"                  VerticalAlignment="Top"          Width="480"/>-->
                     </StackPanel>
                     
                 </Grid>
@@ -150,18 +154,9 @@
                         <Border  Margin="0,30,60,0" x:Name="countryboaerder" Tap="countryboaerder_Tap"  Background="YellowGreen" Height="60">
                             <TextBlock Text="全国各地" Margin="30,20,0,0"></TextBlock>
                         </Border>
-                        <!--<UI:AdControl  ErrorOccurred="AdControl_ErrorOccurred"        IsEnabled="True" IsAutoRefreshEnabled="True"   AdRefreshed="AdControl_AdRefreshed"  ApplicationId="774e1a85-5f27-4670-a525-82d3a9aa4108" 
-         AdUnitId="197288"         HorizontalAlignment="Left" 
-         Height="80"                  VerticalAlignment="Top" 
-         Width="480"/>-->
-                        <oxlad:AdControl 
-            x:Name="AdControl"
-            ApplicationId="fa09f586-cf51-4c6a-af19-03c39d149464"
-            AdUnitId="b7dfd8f6-f900-4ebd-a2cd-f222c6df73b2" AdCompleted="AdControl_AdCompleted"
-            Type="Banner"   ErrorOccurred="AdControl_ErrorOccurred_1"
-                           Height="100"
-            IsCloseIconEnabled="True" 
-          />
+                        <oxlad:AdControl  x:Name="AdControl2" ApplicationId="48557996-85ed-4cbf-a38a-d7a8f7e953f1"    AdUnitId="f8725d4d-05eb-4776-b14e-59dd4ee7da46" Type="Banner"    IsCloseIconEnabled="True"  />
+                      
+                 
                     </StackPanel>
                 </Grid>
             </phone:PanoramaItem>

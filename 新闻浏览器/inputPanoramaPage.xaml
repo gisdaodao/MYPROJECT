@@ -16,6 +16,9 @@
    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" 
     SupportedOrientations="Portrait"  Orientation="Portrait"
     shell:SystemTray.IsVisible="False">
+    <shell:SystemTray.ProgressIndicator>
+        <shell:ProgressIndicator x:Name="indicator" />
+    </shell:SystemTray.ProgressIndicator>
 
     <!--LayoutRoot 包含根网格，其他所有页面内容都位于根网格中-->
     <Grid x:Name="LayoutRoot">
@@ -61,7 +64,7 @@
                         </toolkit:ListPicker>
                     </Grid>
 
-                    <phone:WebBrowser Grid.Row="0"  IsScriptEnabled="True" x:Name="wb"/>
+                    <phone:WebBrowser Grid.Row="0"  NavigationFailed="wb_NavigationFailed" IsScriptEnabled="True" LoadCompleted="wb_LoadCompleted" x:Name="wb"/>
                 </Grid>
             </phone:PanoramaItem>
 
@@ -72,9 +75,9 @@
             <phone:PanoramaItem>
                 <StackPanel>
                     <TextBlock  FontSize="36" Text="直接从这里退出"></TextBlock>
-                    <googlead:AdView  ReceivedAd="AdView_ReceivedAd" Grid.Row="0"  Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
+                    <!--<googlead:AdView  ReceivedAd="AdView_ReceivedAd" Grid.Row="0"  Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
                     <googlead:AdView   FailedToReceiveAd="AdView_FailedToReceiveAd"  Grid.Row="1"  Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
-                    <googlead:AdView    Grid.Row="2"   Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
+                    <googlead:AdView    Grid.Row="2"   Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>-->
                 </StackPanel>
 
             </phone:PanoramaItem>

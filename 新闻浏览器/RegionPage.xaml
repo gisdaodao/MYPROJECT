@@ -7,6 +7,10 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
+     xmlns:MsnAD="clr-namespace:MSNADSDK.AD;assembly=MSNADSDK"
+  xmlns:oxlad="clr-namespace:OpenXLive.Advertising;assembly=OpenXLive.Advertising"
+  
+    xmlns:SurfaceAdw="clr-namespace:SurfaceAd.SDK.WP;assembly=SurfaceAd.SDK.WP"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     xmlns:googlead="clr-namespace:GoogleAds;assembly=GoogleAds"
@@ -60,9 +64,10 @@
                         <RowDefinition Height="Auto"></RowDefinition>
                         <RowDefinition Height="Auto"></RowDefinition>
                     </Grid.RowDefinitions>
-                    <googlead:AdView  Grid.Row="0"  ReceivedAd="AdView_ReceivedAd" FailedToReceiveAd="AdView_FailedToReceiveAd" Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
-                    <UI:AdControl ApplicationId="774e1a85-5f27-4670-a525-82d3a9aa4108" AdUnitId="197288" Height="80" x:Name="newsad"/>
-                    <googlead:AdView    Grid.Row="2"   Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
+                    <MsnAD:AdView  Grid.Row="0" Margin="12,21,0,0" TelCapability="True"  StorePic="True" SecretKey="9f245ae267794ffba5771ba06ad71304" Adid="190892" Appid="145004" SizeForAd="Normal"></MsnAD:AdView>
+                    <googlead:AdView Grid.Row="1" ReceivedAd="AdView_ReceivedAd"  Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
+                    <!--<JiuYou:JiuYouWp8AdControl x:Name="jyad" VerticalAlignment="Bottom" ClickBackMessageEvent="jyad_ClickBackMessageEvent" DeveloperAdID="9a85f5305c905536cc578a782da0808e" GetAdBackMessageEvent="jyad_GetAdBackMessageEvent" />-->
+                    <oxlad:AdControl Grid.Row="2" x:Name="AdControl22" ApplicationId="48557996-85ed-4cbf-a38a-d7a8f7e953f1" AdUnitId="f8725d4d-05eb-4776-b14e-59dd4ee7da46" Type="Banner" IsCloseIconEnabled="True" />
                 </Grid>
                
             </phone:PivotItem>

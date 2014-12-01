@@ -32,6 +32,9 @@ namespace 股票新闻
         {
             if ((!string.IsNullOrEmpty(inputtb.Text)))
             {
+                indicator.Text = "加载中...";
+                indicator.IsVisible = true;
+                indicator.IsIndeterminate = true;
                 fullurl = urlscheme1 + inputtb.Text + list.DisplayMemberPath;
                 wb.Navigate(new Uri(fullurl, UriKind.RelativeOrAbsolute));
             }
@@ -43,6 +46,9 @@ namespace 股票新闻
             {
                 if (e.Key == System.Windows.Input.Key.Enter && (!string.IsNullOrEmpty(inputtb.Text)))
                 {
+                    indicator.Text = "加载中...";
+                    indicator.IsVisible = true;
+                    indicator.IsIndeterminate = true;
                     fullurl = urlscheme1 + inputtb.Text + list.SelectedItem.ToString();
                     wb.Navigate(new Uri(fullurl, UriKind.RelativeOrAbsolute));
                     e.Handled = true;
@@ -73,6 +79,20 @@ namespace 股票新闻
                
             }
            
+        }
+
+        private void wb_LoadCompleted(object sender, NavigationEventArgs e)
+        {
+            indicator.Text = "加载完成...";
+            indicator.IsVisible = false;
+            indicator.IsIndeterminate = false;
+        }
+
+        private void wb_NavigationFailed(object sender, NavigationFailedEventArgs e)
+        {
+            indicator.Text = "加载失败...";
+            indicator.IsVisible = true;
+            indicator.IsIndeterminate = true;
         }
     }
 }

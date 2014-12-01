@@ -7,6 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using SurfaceAd.SDK.WP;
 
 namespace 股票新闻
 {
@@ -15,6 +16,7 @@ namespace 股票新闻
         public novelPage()
         {
             InitializeComponent();
+            this.surfaceAdImageXaml.InitAdControl(AdModeType.Normal); 
         }
         private void AdView_ReceivedAd(object sender, GoogleAds.AdEventArgs e)
         {
