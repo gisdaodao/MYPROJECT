@@ -32,9 +32,9 @@ namespace OKr.MXReader.Client.View
 
         private void Init()
         {
-            this.tbApp.Text = "好阅：" + OkrBookContext.Current.App.AppName + ", v" + OkrBookContext.Current.App.Version;
-            //this.tbBuild.Text = "Build: " + OkrBookContext.Current.App.Build;
-            this.tbUs.Text = OkrBookContext.Current.App.Us;
+            //this.tbApp.Text = "好阅：" + OkrBookContext.Current.App.AppName + ", v" + OkrBookContext.Current.App.Version;
+            ////this.tbBuild.Text = "Build: " + OkrBookContext.Current.App.Build;
+            //this.tbUs.Text = OkrBookContext.Current.App.Us;
         }
 
         private void OnUs(object sender, RoutedEventArgs e)

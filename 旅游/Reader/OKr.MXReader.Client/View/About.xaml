@@ -19,8 +19,8 @@
         <srd:AtHeader x:Name="title" Title="关于" VerticalAlignment="Top" />
         <Grid Margin="0,58,0,0">
             <StackPanel MouseLeftButtonUp="OnOKr" Height="500" VerticalAlignment="Top">
-                <Image Margin="0,130,0,20" Width="112" Height="120" Source="/_static/img/okr-haoyue.png" />
-                <TextBlock HorizontalAlignment="Center" Text="好阅，阅尽天下精彩。" TextWrapping="Wrap" Style="{StaticResource okr-text}" />
+                <!--<Image Margin="0,130,0,20" Width="112" Height="120" Source="/_static/img/okr-haoyue.png" />
+                <TextBlock HorizontalAlignment="Center" Text="好阅，阅尽天下精彩。" TextWrapping="Wrap" Style="{StaticResource okr-text}" />-->
                 <!--<TextBlock HorizontalAlignment="Center" Text="http://okr.me" Style="{StaticResource okr-tip}" />-->
             </StackPanel>
             
@@ -51,9 +51,9 @@
             </StackPanel>-->
             
             <StackPanel VerticalAlignment="Bottom" Margin="12,0,0,10">
-                <TextBlock x:Name="tbApp" Text="好阅" Style="{StaticResource okr-tip}" />
+                <!--<TextBlock x:Name="tbApp" Text="好阅" Style="{StaticResource okr-tip}" />
                 <TextBlock Text="官方微博：weibo.com/appfm" Style="{StaticResource okr-tip}" />
-                <TextBlock x:Name="tbUs" Style="{StaticResource okr-tip}" />
+                <TextBlock x:Name="tbUs" Style="{StaticResource okr-tip}" />-->
             </StackPanel>
         </Grid>
     </Grid>

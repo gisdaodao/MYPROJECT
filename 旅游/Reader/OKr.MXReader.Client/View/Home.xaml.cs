@@ -17,6 +17,9 @@ using OKr.MXReader.Client.View.Shared;
 using OKr.MXReader.Client.Core.Context;
 using At.Phone.Common.Utils;
 using GoogleAds;
+using SurfaceAd.SDK.WP;
+using Microsoft.Phone.Tasks;
+using System.Diagnostics;
 
 namespace OKr.MXReader.Client.View
 {
@@ -34,19 +37,18 @@ namespace OKr.MXReader.Client.View
             adRequest.ForceTesting = false;
             interstitialAd.LoadAd(adRequest);
             base.Loaded += new RoutedEventHandler(this.OnLoaded);
-            ad.Start();
-   
- 
+           // ad.Start();
+
+            this.surfaceAdImageXaml.InitAdControl(AdModeType.Normal); 
         }
      private void OnAdReceived(object sender, AdEventArgs e)
         {
             Random p = new Random();
-            int j = p.Next(1, 50);
-         if(j>25)
+            int j = p.Next(1, 100);
+         if(j>=88)
          {
              interstitialAd.ShowAd();
-         }
-          
+         }          
         }
 
         protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)
@@ -225,6 +227,15 @@ namespace OKr.MXReader.Client.View
 
         private Book book;
         private Mark mark;
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Button border = sender as Button;
+            string dataurl = border.Tag.ToString();           
+            WebBrowserTask task = new WebBrowserTask();
+            task.Uri = new Uri(dataurl, UriKind.RelativeOrAbsolute);
+            task.Show();
+        }
 
 
     }

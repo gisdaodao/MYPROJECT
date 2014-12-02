@@ -1,16 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Items>
-  <item text="平凡的世界"      des="《平凡的世界》是中国著名作家路遥创作的一部百万字的长篇巨著。这是一部全景式地表现中国当代城乡社会生活的长篇小说，全书共三部。">
-    <url>http://www.windowsphone.com/zh-cn/store/app/%E5%B9%B3%E5%87%A1%E7%9A%84%E4%B8%96%E7%95%8C/fdbd79f7-84a6-4a9c-bcd8-be2cedaf36a3</url>
-    <picurl>http://cdn.marketplaceimages.windowsphone.com/v8/images/a43f2115-7b10-43d8-ad79-61855021b790?imageType=ws_icon_small</picurl>
-  </item>
-  <item text="儿童电台"      des="儿童电台正式版是一个包含大量儿歌，童话，故事，幼教的一个有助于宝宝成长得电台">
-    <url>http://www.windowsphone.com/zh-cn/store/app/%E5%84%BF%E7%AB%A5%E7%94%B5%E5%8F%B0/21fd008f-14c2-4051-8870-d6b2cdec3c43</url>
-<picurl>http://cdn.marketplaceimages.windowsphone.com/v8/images/a43f2115-7b10-43d8-ad79-61855021b790?imageType=ws_icon_large</picurl>
-  </item>
-  <item text="首度"      des="首度是一个全新的摄影社区，是汇聚了摄影发烧友、专业摄影师、模特和视觉爱好者组成的互动交流平台，包含了摄影作品分享，摄影技巧交流，摄影活动和比赛等栏目。">
-    <url>http://www.windowsphone.com/zh-cn/store/app/%E9%A6%96%E5%BA%A6/b0a1e824-e495-46d0-b0d7-f01a6461c0ea</url>
-    <picurl>http://cdn.marketplaceimages.windowsphone.com/v8/images/03550b13-3b65-46f2-9273-af60fd52b30d?imageType=ws_icon_tiny</picurl>
+<Items> 
+  <item text="唱歌技巧"      des="麦克风 技巧 初学者唱歌入门 唱歌技巧和发声方法发声方法 浅谈声乐发声技巧">
+    <url>http://www.windowsphone.com/zh-cn/store/app/%E5%94%B1%E6%AD%8C%E6%8A%80%E5%B7%A7/4bfce42a-60a3-460c-b752-df4c1bfc368d</url>
+    <picurl>http://cdn.marketplaceimages.windowsphone.com/v8/images/aea972d0-1863-473a-912e-ef99e14b2429?imageType=ws_icon_large</picurl>
   </item>
 </Items>
 

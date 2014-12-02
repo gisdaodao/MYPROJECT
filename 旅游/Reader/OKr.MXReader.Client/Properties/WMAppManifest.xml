@@ -4,15 +4,19 @@
   <Languages xmlns="">
     <Language code="zh-Hans" />
   </Languages>
-  <App xmlns="" ProductID="{f7a27227-afa9-43b4-9eca-fd5ada3c7675}" Title="Birds and Nature.txt" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="OKr Works" Description="Birds and Nature.txt" Publisher="OKr Inc." PublisherID="{6cd5d726-7844-4804-82c5-dfdf1488d162}">
-    <IconPath IsRelative="true" IsResource="false">book.png</IconPath>
+  <App xmlns="" ProductID="{f7a27227-afa9-43b4-9eca-fd5ada3c7675}" Title="唱歌技巧2" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="OKr Works" Description="唱歌技巧2" Publisher="OKr Inc." PublisherID="{6cd5d726-7844-4804-82c5-dfdf1488d162}">
+    <IconPath IsRelative="true" IsResource="false">chang2.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_IDENTITY_DEVICE" />
       <Capability Name="ID_CAP_IDENTITY_USER" />
-      <Capability Name="ID_CAP_LOCATION" />
       <Capability Name="ID_CAP_MICROPHONE" />
       <Capability Name="ID_CAP_NETWORKING" />
       <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
+      <Capability Name="ID_CAP_MEDIALIB_PHOTO" />
+      <Capability Name="ID_CAP_MEDIALIB_AUDIO" />
+      <Capability Name="ID_CAP_MEDIALIB_PLAYBACK" />
+      <Capability Name="ID_CAP_SENSORS" />
+      <Capability Name="ID_CAP_LOCATION" />
     </Capabilities>
     <Tasks>
       <DefaultTask Name="_default" NavigationPage="/View/Splash.xaml" />
@@ -20,10 +24,10 @@
     <Tokens>
       <PrimaryToken TokenID="OKr.MXReader.ClientToken" TaskName="_default">
         <TemplateFlip>
-          <SmallImageURI IsResource="false" IsRelative="true">book.png</SmallImageURI>
+          <SmallImageURI IsResource="false" IsRelative="true">chang2.png</SmallImageURI>
           <Count>0</Count>
-          <BackgroundImageURI IsResource="false" IsRelative="true">book.png</BackgroundImageURI>
-          <Title>世界风景名胜纵览</Title>
+          <BackgroundImageURI IsResource="false" IsRelative="true">chang2.png</BackgroundImageURI>
+          <Title>唱歌技巧2</Title>
           <BackContent>
           </BackContent>
           <BackBackgroundImageURI>
