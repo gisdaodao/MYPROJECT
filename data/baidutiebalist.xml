@@ -27,8 +27,26 @@
  <item text="科技吧"      des="">
  <url>http://tieba.baidu.com/f?kw=%E7%A7%91%E6%8A%80</url> 
   </item> 
- <item text="美国把"      des="">
+ <item text="美国吧"      des="">
  <url>http://tieba.baidu.com/f?kw=%E7%BE%8E%E5%9B%BD</url> 
+  </item> 
+<item text="李毅吧"      des="">
+ <url>http://tieba.baidu.com/f?kw=%C0%EE%D2%E3</url> 
+  </item> 
+<item text="地理吧"      des="">
+ <url>http://tieba.baidu.com/f?kw=%E5%9C%B0%E7%90%86</url> 
+  </item> 
+<item text="历史吧"      des="">
+ <url>http://tieba.baidu.com/f?kw=%E5%8E%86%E5%8F%B2</url> 
+  </item> 
+<item text="物理吧"      des="">
+ <url>http://tieba.baidu.com/f?kw=%E7%89%A9%E7%90%86</url> 
+  </item> 
+<item text="医学吧"      des="">
+ <url>http://tieba.baidu.com/f?kw=%E5%8C%BB%E5%AD%A6</url> 
+  </item> 
+<item text="管理学吧"      des="">
+ <url>http://tieba.baidu.com/f?kw=%E7%AE%A1%E7%90%86%E5%AD%A6</url> 
   </item> 
 </Items>
 

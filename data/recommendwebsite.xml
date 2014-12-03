@@ -1,13 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Items>
-  <item text="wap天天图"      des="">
-    <url>http://www.waptt.com/</url>
+  <item text="cnbeta"      des="">
+    <url>http://m.cnbeta.com/</url>
   </item>
   <item text="3G泡泡"      des="">
     <url>http://3gpp.com.cn </url>
   </item>
   <item text="空中网"      des="">
     <url>http://kong.net/</url>
+  </item>
+  <item text="wap天天图"      des="">
+    <url>http://www.waptt.com/</url>
   </item>
 </Items>
 
