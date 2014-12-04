@@ -104,6 +104,7 @@
                     <oxlad:AdControl x:Name="Ad1Control" ApplicationId="a2712121-5ef6-44e8-8271-c9eccee7ca70" AdUnitId="8c9dbc8d-66a9-4a35-b5f8-3c6fc137bea1"  Type="Banner"  Height="100" IsCloseIconEnabled="True" />
                     <!--<MsnAD:AdView Margin="12,21,0,0" TelCapability="True" StorePic="True" SecretKey="9f245ae267794ffba5771ba06ad71304" Adid="190892" Appid="145004" SizeForAd="Normal"></MsnAD:AdView>-->
                     <googlead:AdView  Grid.Row="0" Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
+                    <MediaElement x:Name="media" Source="/Assets/qiche.wav" AutoPlay="True"></MediaElement>
                 </StackPanel>
                 <!--具有大型图像占位符的双倍宽度的全景-->
                
