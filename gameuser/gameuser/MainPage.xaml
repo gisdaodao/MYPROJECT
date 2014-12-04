@@ -7,7 +7,11 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    d:DataContext="{d:DesignData SampleData/MainViewModelSampleData.xaml}"
+  
+  xmlns:oxlad="clr-namespace:OpenXLive.Advertising;assembly=OpenXLive.Advertising"
+  
+    xmlns:SurfaceAdw="clr-namespace:SurfaceAd.SDK.WP;assembly=SurfaceAd.SDK.WP"
+   xmlns:googlead="clr-namespace:GoogleAds;assembly=GoogleAds"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -52,10 +56,10 @@
             <!--Panorama 项目一-->
             <phone:PanoramaItem >
                 <!--具有文字环绕的单行列表-->
-                <phone:LongListSelector x:Name="lstbox" LayoutMode="List"  GridCellSize="150,100">
+                <phone:LongListSelector x:Name="lstbox" LayoutMode="List"  >
                     <phone:LongListSelector.ItemTemplate>
                         <DataTemplate>
-                            <Border  Margin="0,0,0,12"  HorizontalAlignment="Left" Height="100" Background="Orange" Tap="Border_Tap">
+                            <Border  Margin="0,0,0,12" Width="460" HorizontalAlignment="Left" Height="100" Background="Orange" Tap="Border_Tap">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="100"></ColumnDefinition>
@@ -81,12 +85,26 @@
 
             <!--Panorama 项目二-->
             <!--<phone:PanoramaItem>
-                --><!--包含图像占位符和文字环绕并使用带有内容滚动的浮动标题的双线列表--><!--
-             
+
+                <oxlad:AdControl x:Name="AdControlbig" Grid.Row="0" Grid.RowSpan="2" AdUnitId="0b4366da-9279-47d1-974f-b1fd662ca762"
+                         IsCloseIconEnabled="True" ApplicationId="a2712121-5ef6-44e8-8271-c9eccee7ca70"
+                         Type="FullScreen"/>
+
             </phone:PanoramaItem>-->
 
             <!--全景项目三-->
             <phone:PanoramaItem  Orientation="Horizontal">
+                <StackPanel>
+                    <SurfaceAdw:SurfaceAdControl Grid.Row="0" Name="surfaceAdImageXaml"
+                             AdPosition="482288798da2673fbbfe1ee1f1f248ce"
+                             AdToken="MF04XWUBNl8wUThaZRc2XzBD"
+                             IsShowCloseIcon="False"
+                             AdRefreshInterval="10"/>
+
+                    <oxlad:AdControl x:Name="Ad1Control" ApplicationId="a2712121-5ef6-44e8-8271-c9eccee7ca70" AdUnitId="8c9dbc8d-66a9-4a35-b5f8-3c6fc137bea1"  Type="Banner"  Height="100" IsCloseIconEnabled="True" />
+                    <!--<MsnAD:AdView Margin="12,21,0,0" TelCapability="True" StorePic="True" SecretKey="9f245ae267794ffba5771ba06ad71304" Adid="190892" Appid="145004" SizeForAd="Normal"></MsnAD:AdView>-->
+                    <googlead:AdView  Grid.Row="0" Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
+                </StackPanel>
                 <!--具有大型图像占位符的双倍宽度的全景-->
                
             </phone:PanoramaItem>

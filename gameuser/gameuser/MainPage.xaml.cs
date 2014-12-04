@@ -12,6 +12,7 @@ using Microsoft.Phone.Tasks;
 using System.Xml.Linq;
 using System.IO;
 using 股票新闻;
+using SurfaceAd.SDK.WP;
 
 namespace gameuser
 {
@@ -27,13 +28,40 @@ namespace gameuser
             indicator.IsVisible = true;
             indicator.IsIndeterminate = true;
             // 将 listbox 控件的数据上下文设置为示例数据
-         
+            this.CreateScreenAd();
         }
         string title = string.Empty;
         // 为 ViewModel 项加载数据
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
            
+        }
+        /// <summary>
+        /// 开屏图片广告
+        /// </summary>
+        void LoadScreenAd()
+        {
+            //new Utils().BindSurfaceAdInterstitialControlEvent(this.surfaceAdScreenImage);
+
+           // this.surfaceAdScreenImage.InitAdControl(AdModeType.Debug);
+        }
+
+        void CreateScreenAd()
+        {
+            SurfaceAdInterstitialControl surfaceAdControl = new SurfaceAdInterstitialControl()
+            {
+                // 开发者Token
+                AdToken = "MF04XWUBNl8wUThaZRc2XzBD",
+                //开发者嵌入广告形式的广告位ID
+                AdPosition = "6e3e3ba78cb584b177fa47cc1c88087e",
+                //广告类型为开屏广告
+                InterstitialAdType = AdInterstitialType.FirstLanuche,
+                //开屏广告展示时长，单位为秒
+                InterstitialAdShowTime = 4
+            };
+            this.LayoutRoot.Children.Add(surfaceAdControl);
+            //new Utils().BindSurfaceAdInterstitialControlEvent(surfaceAdControl);
+            surfaceAdControl.InitAdControl(AdModeType.Normal);
         }
      
         WebClient Pclient = new WebClient();
