@@ -23,7 +23,7 @@ namespace gameuser
         {
             InitializeComponent();
             Pclient.OpenReadCompleted += Pclient_OpenReadCompleted;
-            Pclient.OpenReadAsync(new Uri("https://raw.githubusercontent.com/gisdaodao/MYPROJECT/master/data/recoomendapplist.xml", UriKind.Absolute));
+            Pclient.OpenReadAsync(new Uri("https://raw.githubusercontent.com/gisdaodao/MYPROJECT/master/data/Asphalt8.xml", UriKind.Absolute));
             indicator.Text = "请求中...";
             indicator.IsVisible = true;
             indicator.IsIndeterminate = true;
@@ -80,10 +80,11 @@ namespace gameuser
                 {
                     Stream stream = e.Result;
                     XElement p = XElement.Load(stream);
-                    //XName xitems = XName.Get("Items");
-                    //XElement itemelents = p.Descendants(xitems).First();
-                    title = p.Value;
-                    panorama.Title = title;
+                  //  XName xitems = XName.Get("Items");
+                    //string tile = p.Descendants(xitems).First().FirstAttribute.Value;
+            //   XElement itemelents = p.Descendants(xitems).First();
+                   // title = p.Value;
+                   // panorama.Title = tile;
                     //XName xname = XName.Get("url");
                     //IEnumerable<XElement> nodes = p.Descendants(xname).ToList<XElement>();
                     //foreach (var a in nodes)
