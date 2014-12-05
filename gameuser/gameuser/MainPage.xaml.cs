@@ -28,7 +28,7 @@ namespace gameuser
             indicator.IsVisible = true;
             indicator.IsIndeterminate = true;
             // 将 listbox 控件的数据上下文设置为示例数据
-            this.CreateScreenAd();
+          //  this.CreateScreenAd();
         }
         string title = string.Empty;
         // 为 ViewModel 项加载数据
@@ -45,7 +45,10 @@ namespace gameuser
 
            // this.surfaceAdScreenImage.InitAdControl(AdModeType.Debug);
         }
-
+        void SetRateMenuItem_Click(object sender, EventArgs e)
+        {
+            MarketplaceReviewTask marketplaceReviewTask = new MarketplaceReviewTask(); marketplaceReviewTask.Show();
+        }
         void CreateScreenAd()
         {
             SurfaceAdInterstitialControl surfaceAdControl = new SurfaceAdInterstitialControl()
@@ -80,7 +83,7 @@ namespace gameuser
                     //XName xitems = XName.Get("Items");
                     //XElement itemelents = p.Descendants(xitems).First();
                     title = p.Value;
-
+                    panorama.Title = title;
                     //XName xname = XName.Get("url");
                     //IEnumerable<XElement> nodes = p.Descendants(xname).ToList<XElement>();
                     //foreach (var a in nodes)
@@ -117,10 +120,10 @@ namespace gameuser
            
             Border border = sender as Border;
             Info info = border.DataContext as Info;
-            this.NavigationService.Navigate(new Uri("/VideoPage.xaml?url="+info.dataurl, UriKind.RelativeOrAbsolute));
-            Debug.WriteLine(info.dataurl);
-            App.tranferinfo = info;
-            return;
+            //this.NavigationService.Navigate(new Uri("/VideoPage.xaml?url="+info.dataurl, UriKind.RelativeOrAbsolute));
+            //Debug.WriteLine(info.dataurl);
+            //App.tranferinfo = info;
+           // return;
             WebBrowserTask task = new WebBrowserTask();
             task.Uri = new Uri(info.dataurl, UriKind.RelativeOrAbsolute);
             task.Show();

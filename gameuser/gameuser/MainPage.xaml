@@ -1,4 +1,4 @@
-﻿<phone:PhoneApplicationPage
+﻿<phone:PhoneApplicationPage xmlns:UI="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI" 
     x:Class="gameuser.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -104,7 +104,10 @@
                     <oxlad:AdControl x:Name="Ad1Control" ApplicationId="a2712121-5ef6-44e8-8271-c9eccee7ca70" AdUnitId="8c9dbc8d-66a9-4a35-b5f8-3c6fc137bea1"  Type="Banner"  Height="100" IsCloseIconEnabled="True" />
                     <!--<MsnAD:AdView Margin="12,21,0,0" TelCapability="True" StorePic="True" SecretKey="9f245ae267794ffba5771ba06ad71304" Adid="190892" Appid="145004" SizeForAd="Normal"></MsnAD:AdView>-->
                     <googlead:AdView  Grid.Row="0" Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
+                    <googlead:AdView  Grid.Row="0" Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
                     <MediaElement x:Name="media" Source="/Assets/qiche.wav" AutoPlay="True"></MediaElement>
+                    <UI:AdControl  AdUnitId="197747" ApplicationId="774e1a85-5f27-4670-a525-82d3a9aa4108"/>   
+                    <TextBlock Text="点击广告支持一下"></TextBlock>
                 </StackPanel>
                 <!--具有大型图像占位符的双倍宽度的全景-->
                
@@ -118,6 +121,12 @@
 
             在发送之前删除此 XAML 和图像本身。-->
         <!--<Image Source="/Assets/AlignmentGrid.png" VerticalAlignment="Top" Height="800" Width="480" Margin="0" Grid.Row="0" Grid.RowSpan="2" IsHitTestVisible="False" />-->
-
+  
     </Grid>
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar Opacity="0.7" BackgroundColor="Gray" x:Name="appbar" Mode="Default">
+            <shell:ApplicationBarIconButton Text="点评一下" x:Name="SendweixinBar" Click="SetRateMenuItem_Click" IconUri="/Assets/favs.png"></shell:ApplicationBarIconButton>
+        </shell:ApplicationBar>
+           
+    </phone:PhoneApplicationPage.ApplicationBar>
 </phone:PhoneApplicationPage>

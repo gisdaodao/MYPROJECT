@@ -1,8 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="zh-CN" />
-  <App xmlns="" ProductID="{29cab672-5dcd-48c8-bb57-73c475d97994}" Title="gameuser" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="gameuser author" Description="Sample description" Publisher="gameuser" PublisherID="{8d8d93d8-f0d0-4390-8ac4-37665007d9f4}">
-    <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
+  <Languages xmlns="">
+    <Language code="en-US" />
+  </Languages>
+  <App xmlns="" ProductID="{29cab672-5dcd-48c8-bb57-73c475d97994}" Title="Video of game Strategy(游戏视频攻略)" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="gameuser author" Description="Video of game Strategy(游戏视频攻略)" Publisher="gameuser" PublisherID="{8d8d93d8-f0d0-4390-8ac4-37665007d9f4}">
+    <IconPath IsRelative="true" IsResource="false">300.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
       <Capability Name="ID_CAP_MEDIALIB_AUDIO" />
@@ -19,10 +22,10 @@
     <Tokens>
       <PrimaryToken TokenID="gameuserToken" TaskName="_default">
         <TemplateFlip>
-          <SmallImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileSmall.png</SmallImageURI>
+          <SmallImageURI IsRelative="true" IsResource="false">300.png</SmallImageURI>
           <Count>0</Count>
-          <BackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileMedium.png</BackgroundImageURI>
-          <Title>gameuser</Title>
+          <BackgroundImageURI IsRelative="true" IsResource="false">300.png</BackgroundImageURI>
+          <Title>Video of game Strategy(游戏视频攻略)</Title>
           <BackContent>
           </BackContent>
           <BackBackgroundImageURI>
