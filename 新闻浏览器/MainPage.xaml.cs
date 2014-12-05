@@ -10,6 +10,7 @@ using Microsoft.Phone.Shell;
 using GoogleAds;
 using Microsoft.Phone.Tasks;
 using SurfaceAd.SDK.WP;
+using System.Windows.Media;
 
 namespace 股票新闻
 {
@@ -225,7 +226,60 @@ namespace 股票新闻
         {
 
         }
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            List<WebBrowser>  listbrower=new List<WebBrowser>();
+            GetVisualChildCollection(panoroma, listbrower);
+            if(listbrower.Count>0)
+            {
+               for(int I=0; I<listbrower.Count;I++)
+               {
+                   listbrower[I] = null;
+               }
+            }
 
+        }
+        private static void GetVisualChildCollection<T>(DependencyObject parent, List<T> visualCollection) where T : UIElement
+        {
+            //查找parent的子控件集合中存在的子级数目
+            int count = VisualTreeHelper.GetChildrenCount(parent);
+            for (int i = 0; i < count; i++)
+            {
+                //获取parent控件的i级子控件
+                DependencyObject child = VisualTreeHelper.GetChild(parent, i);
+                if (child is T)
+                {
+                    //若子控件属于ScrollBar控件则将之添加到结果List中
+                    visualCollection.Add(child as T);
+                }
+                else if (child != null)
+                {
+                    //若子控件不属于ScrollBar控件，且不是null，则使用递归方法再次查询该子控件的子控件
+                    GetVisualChildCollection(child, visualCollection);
+                }
+            }
+        }
+        public static T FindChildOfType<T>(DependencyObject root) where T : class
+        {
+            var queue = new Queue<DependencyObject>();
+            queue.Enqueue(root);
+
+            while (queue.Count > 0)
+            {
+                DependencyObject current = queue.Dequeue();
+                for (int i = VisualTreeHelper.GetChildrenCount(current) - 1; 0 <= i; i--)
+                {
+                    var child = VisualTreeHelper.GetChild(current, i);
+                    var typedChild = child as T;
+                    if (typedChild != null)
+                    {
+                        return typedChild;
+                    }
+                    queue.Enqueue(child);
+                }
+            }
+            return null;
+        }
         private void Border_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("/PivotPageenlish.xaml", UriKind.Relative));
