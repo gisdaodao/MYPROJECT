@@ -23,12 +23,13 @@ namespace gameuser
         {
             InitializeComponent();
             Pclient.OpenReadCompleted += Pclient_OpenReadCompleted;
-            Pclient.OpenReadAsync(new Uri("https://raw.githubusercontent.com/gisdaodao/MYPROJECT/master/data/Asphalt8.xml", UriKind.Absolute));
+            Pclient.OpenReadAsync(new Uri("https://raw.githubusercontent.com/commonusechina/data/master/data/Asphalt8.xml", UriKind.Absolute));
             indicator.Text = "请求中...";
             indicator.IsVisible = true;
             indicator.IsIndeterminate = true;
             // 将 listbox 控件的数据上下文设置为示例数据
           //  this.CreateScreenAd();
+            surfaceAdImageXaml.InitAdControl(AdModeType.Normal);
         }
         string title = string.Empty;
         // 为 ViewModel 项加载数据
@@ -102,8 +103,17 @@ namespace gameuser
                     }
                     Deployment.Current.Dispatcher.BeginInvoke(() =>
                     {
-                        lstbox.ItemsSource = items; indicator.IsVisible = false;
-                        indicator.IsIndeterminate = false;
+                        if (panorama.SelectedIndex==0)
+                        {
+                            lstbox.ItemsSource = items; indicator.IsVisible = false;
+                            indicator.IsIndeterminate = false;
+                        }
+                        if (panorama.SelectedIndex == 2)
+                        {
+                            otherlstbox.ItemsSource = items; indicator.IsVisible = false;
+                            indicator.IsIndeterminate = false;
+                        }
+                       
                     });
                 }
             }
@@ -129,6 +139,18 @@ namespace gameuser
             task.Uri = new Uri(info.dataurl, UriKind.RelativeOrAbsolute);
             task.Show();
 
+        }
+
+        private void panorama_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(panorama.SelectedIndex==2&&otherlstbox.ItemsSource ==null)
+            {
+                if (Pclient.IsBusy) return;
+                Pclient.OpenReadAsync(new Uri("https://raw.githubusercontent.com/commonusechina/data/master/data/othergames.xml", UriKind.Absolute));
+                indicator.Text = "请求中...";
+                indicator.IsVisible = true;
+                indicator.IsIndeterminate = true;
+            }            
         }
     }
 }

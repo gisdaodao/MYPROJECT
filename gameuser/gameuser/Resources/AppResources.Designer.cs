@@ -61,7 +61,7 @@ namespace gameuser.Resources {
         }
         
         /// <summary>
-        ///   查找类似 飙车游戏 的本地化字符串。
+        ///   查找类似 游戏视频 的本地化字符串。
         /// </summary>
         public static string ApplicationTitle {
             get {
