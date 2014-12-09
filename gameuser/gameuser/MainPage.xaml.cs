@@ -95,6 +95,7 @@ namespace gameuser
                     // Deployment.Current.Dispatcher.BeginInvoke(() => { lstbox.ItemsSource = urls; });
                     XName xitemname = XName.Get("item");
                     IEnumerable<XElement> itemnodes = p.Descendants(xitemname).ToList<XElement>();
+                    items.Clear();
                     foreach (var b in itemnodes)
                     {
                         XName xname = XName.Get("url");
