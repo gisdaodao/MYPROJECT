@@ -69,8 +69,12 @@ namespace gameuser
         }
      
         WebClient Pclient = new WebClient();
+        WebClient otherPclient = new WebClient();
+        WebClient txtPclient = new WebClient();
         List<string> urls = new List<string>();
         List<Info> items = new List<Info>();
+        List<Info> otheritems = new List<Info>();
+        List<Info> txtinfo = new List<Info>();
 
 
         void Pclient_OpenReadCompleted(object sender, OpenReadCompletedEventArgs e)
@@ -95,7 +99,7 @@ namespace gameuser
                     // Deployment.Current.Dispatcher.BeginInvoke(() => { lstbox.ItemsSource = urls; });
                     XName xitemname = XName.Get("item");
                     IEnumerable<XElement> itemnodes = p.Descendants(xitemname).ToList<XElement>();
-                    items.Clear();
+                    //otheritems.Clear();
                     foreach (var b in itemnodes)
                     {
                         XName xname = XName.Get("url");
@@ -104,16 +108,16 @@ namespace gameuser
                     }
                     Deployment.Current.Dispatcher.BeginInvoke(() =>
                     {
-                        if (panorama.SelectedIndex==0)
+                        if (panorama.SelectedIndex == 0)
                         {
                             lstbox.ItemsSource = items; indicator.IsVisible = false;
                             indicator.IsIndeterminate = false;
                         }
-                        if (panorama.SelectedIndex == 2)
-                        {
-                            otherlstbox.ItemsSource = items; indicator.IsVisible = false;
-                            indicator.IsIndeterminate = false;
-                        }
+                        //if (panorama.SelectedIndex == 2)
+                        //{
+                        //    otherlstbox.ItemsSource = otheritems; indicator.IsVisible = false;
+                        //    indicator.IsIndeterminate = false;
+                        //}
                        
                     });
                 }
@@ -146,12 +150,119 @@ namespace gameuser
         {
             if(panorama.SelectedIndex==2&&otherlstbox.ItemsSource ==null)
             {
-                if (Pclient.IsBusy) return;
-                Pclient.OpenReadAsync(new Uri("https://raw.githubusercontent.com/commonusechina/data/master/data/othergames.xml", UriKind.Absolute));
+              
+                otherPclient.OpenReadCompleted += otherPclient_OpenReadCompleted;
+                otherPclient.OpenReadAsync(new Uri("https://raw.githubusercontent.com/commonusechina/data/master/data/othergames.xml", UriKind.Absolute));
+              
                 indicator.Text = "请求中...";
                 indicator.IsVisible = true;
                 indicator.IsIndeterminate = true;
-            }            
+            }
+            if (panorama.SelectedIndex == 3 && txtlstbox.ItemsSource == null)
+            {
+                txtPclient.OpenReadCompleted += txtPclient_OpenReadCompleted;
+                txtPclient.OpenReadAsync(new Uri("https://raw.githubusercontent.com/commonusechina/data/master/data/txtlist.xml", UriKind.Absolute));
+
+                indicator.Text = "请求中...";
+                indicator.IsVisible = true;
+                indicator.IsIndeterminate = true;
+            }
+        }
+
+        void txtPclient_OpenReadCompleted(object sender, OpenReadCompletedEventArgs e)
+        {
+            try
+            {
+                if (e.Error == null)
+                {
+                    Stream stream = e.Result;
+                    XElement p = XElement.Load(stream);
+                    XName xitemname = XName.Get("item");
+                    IEnumerable<XElement> itemnodes = p.Descendants(xitemname).ToList<XElement>();
+                    foreach (var b in itemnodes)
+                    {
+                        XName xname = XName.Get("url");
+                     //   XName xpicname = XName.Get("picurl");
+                        txtinfo.Add(new Info() { text = b.FirstAttribute.Value, info = b.LastAttribute.Value, dataurl = b.Descendants(xname).First().Value, });
+                    }
+                    Deployment.Current.Dispatcher.BeginInvoke(() =>
+                    {
+
+                        txtlstbox.ItemsSource = txtinfo; indicator.IsVisible = false;
+                        indicator.IsIndeterminate = false;
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        void otherPclient_OpenReadCompleted(object sender, OpenReadCompletedEventArgs e)
+        {
+            try
+            {
+                if (e.Error == null)
+                {
+                    Stream stream = e.Result;
+                    XElement p = XElement.Load(stream);                  
+                    XName xitemname = XName.Get("item");
+                    IEnumerable<XElement> itemnodes = p.Descendants(xitemname).ToList<XElement>();                 
+                    foreach (var b in itemnodes)
+                    {
+                        XName xname = XName.Get("url");
+                        XName xpicname = XName.Get("picurl");
+                        otheritems.Add(new Info() { text = b.FirstAttribute.Value, info = b.LastAttribute.Value, dataurl = b.Descendants(xname).First().Value, picurl = b.Descendants(xpicname).First().Value });
+                    }
+                    Deployment.Current.Dispatcher.BeginInvoke(() =>
+                    {
+                       
+                        otherlstbox.ItemsSource = otheritems; indicator.IsVisible = false;
+                            indicator.IsIndeterminate = false;                      
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void txtborder_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            Border border = sender as Border;
+            Info info = border.DataContext as Info;
+            this.NavigationService.Navigate(new Uri("/txtPage.xaml?url=" + info.dataurl, UriKind.RelativeOrAbsolute));
+            //Debug.WriteLine(info.dataurl);
+        }
+
+        private void freshBar_Click(object sender, EventArgs e)
+        {
+            if (panorama.SelectedIndex == 2 && otherlstbox.ItemsSource == null)
+            {
+
+                //otherPclient.OpenReadCompleted += otherPclient_OpenReadCompleted;
+                otherPclient.OpenReadAsync(new Uri("https://raw.githubusercontent.com/commonusechina/data/master/data/othergames.xml", UriKind.Absolute));
+
+                indicator.Text = "请求中...";
+                indicator.IsVisible = true;
+                indicator.IsIndeterminate = true;
+            }
+            if (panorama.SelectedIndex == 3 && txtlstbox.ItemsSource == null)
+            {
+               // txtPclient.OpenReadCompleted += txtPclient_OpenReadCompleted;
+                txtPclient.OpenReadAsync(new Uri("https://raw.githubusercontent.com/commonusechina/data/master/data/txtlist.xml", UriKind.Absolute));
+
+                indicator.Text = "请求中...";
+                indicator.IsVisible = true;
+                indicator.IsIndeterminate = true;
+            }
+            if (panorama.SelectedIndex == 0 && txtlstbox.ItemsSource == null)
+            {
+               // Pclient.OpenReadCompleted += Pclient_OpenReadCompleted;
+                Pclient.OpenReadAsync(new Uri("https://raw.githubusercontent.com/commonusechina/data/master/data/Asphalt8.xml", UriKind.Absolute));
+            }
         }
     }
 }

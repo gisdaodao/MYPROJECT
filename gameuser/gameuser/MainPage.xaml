@@ -122,6 +122,37 @@
                          Type="FullScreen"/>-->
 
             </phone:PanoramaItem>
+            <phone:PanoramaItem>
+                <phone:LongListSelector x:Name="txtlstbox" LayoutMode="List"  >
+                    <phone:LongListSelector.ItemTemplate>
+                        <DataTemplate>
+                            <Border  Margin="0,0,0,12" Width="460" HorizontalAlignment="Left" Height="100" x:Name="txtborder" Background="BlueViolet" Tap="txtborder_Tap">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <!--<Image Stretch="Fill" Height="100"   Grid.Column="0" Source="{Binding picurl}"></Image>-->
+                                    <Grid Grid.Column="1" Margin="12,0,0,0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="65"></RowDefinition>
+                                            <!--<RowDefinition Height="*"></RowDefinition>-->
+                                        </Grid.RowDefinitions>
+                                        <TextBlock FontSize="30" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding text}"></TextBlock>
+                                        <TextBlock   Grid.Row="1" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding info}"></TextBlock>
+                                    </Grid>
+
+                                </Grid>
+
+                            </Border>
+                        </DataTemplate>
+                    </phone:LongListSelector.ItemTemplate>
+                </phone:LongListSelector>
+                <!--<oxlad:AdControl x:Name="AdControlbig" Grid.Row="0" Grid.RowSpan="2" AdUnitId="0b4366da-9279-47d1-974f-b1fd662ca762"
+                         IsCloseIconEnabled="True" ApplicationId="a2712121-5ef6-44e8-8271-c9eccee7ca70"
+                         Type="FullScreen"/>-->
+
+            </phone:PanoramaItem>
 
             <!--全景项目三-->
             <phone:PanoramaItem  Orientation="Horizontal">
@@ -143,6 +174,7 @@
                 <!--具有大型图像占位符的双倍宽度的全景-->
                
             </phone:PanoramaItem>
+        
         </phone:Panorama>
 
         <!--取消注释，以显示对齐网格，从而帮助确保
@@ -157,6 +189,7 @@
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar Opacity="0.7" BackgroundColor="Gray" x:Name="appbar" Mode="Default">
             <shell:ApplicationBarIconButton Text="点评一下" x:Name="SendweixinBar" Click="SetRateMenuItem_Click" IconUri="/Assets/favs.png"></shell:ApplicationBarIconButton>
+            <shell:ApplicationBarIconButton Text="刷新" x:Name="freshBar" Click="freshBar_Click" IconUri="/Assets/AppBar/refresh.png"></shell:ApplicationBarIconButton>
         </shell:ApplicationBar>
            
     </phone:PhoneApplicationPage.ApplicationBar>

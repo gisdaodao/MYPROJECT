@@ -1,0 +1,53 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="gameuser.txtPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Landscape"
+    mc:Ignorable="d"
+     xmlns:oxlad="clr-namespace:OpenXLive.Advertising;assembly=OpenXLive.Advertising"
+       xmlns:SurfaceAdw="clr-namespace:SurfaceAd.SDK.WP;assembly=SurfaceAd.SDK.WP"
+   xmlns:googlead="clr-namespace:GoogleAds;assembly=GoogleAds"
+    shell:SystemTray.IsVisible="True">
+    <shell:SystemTray.ProgressIndicator>
+        <shell:ProgressIndicator x:Name="indicator" />
+    </shell:SystemTray.ProgressIndicator>
+    <!--LayoutRoot 是包含所有页面内容的根网格-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel 包含应用程序的名称和页标题-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,12">
+          
+            <oxlad:AdControl x:Name="Ad1Control" ApplicationId="a2712121-5ef6-44e8-8271-c9eccee7ca70" AdUnitId="8c9dbc8d-66a9-4a35-b5f8-3c6fc137bea1"  Type="Banner"  Height="100" IsCloseIconEnabled="True" />
+            <!--<MsnAD:AdView Margin="12,21,0,0" TelCapability="True" StorePic="True" SecretKey="9f245ae267794ffba5771ba06ad71304" Adid="190892" Appid="145004" SizeForAd="Normal"></MsnAD:AdView>-->
+            <!--<googlead:AdView  Grid.Row="0" Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>-->
+        </StackPanel>
+
+        <!--ContentPanel - 在此处放置其他内容-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <ListBox x:Name="txtstringbox">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding }" TextWrapping="Wrap"></TextBlock>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+    </Grid>
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar Mode="Minimized" Opacity="0.7" BackgroundColor="Gray" >
+           
+            <shell:ApplicationBarIconButton Text="读帖"  x:Name="Appbarread" Click="Appbarread_Click" IconUri="/Assets/microphone.png"></shell:ApplicationBarIconButton>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+</phone:PhoneApplicationPage>
