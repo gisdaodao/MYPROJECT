@@ -22,6 +22,8 @@ using At.Phone.Common;
 using OKr.MXReader.Client.Core.Context;
 using OKr.MXReader.Client.Core.Config;
 using At.Phone.Control.Loader;
+using Windows.Phone.Speech.Synthesis;
+using System.Diagnostics;
 
 namespace OKr.MXReader.Client.View
 {
@@ -600,6 +602,16 @@ namespace OKr.MXReader.Client.View
             {
                 this.markbtn.Source = brush.ImageSource;
             });
+        }
+        private async void Appbarread_Click(object sender, EventArgs e)
+        {
+            SpeechSynthesizer synth = new SpeechSynthesizer();
+            string str = text_text2.Text;
+            Debug.WriteLine("111" + text_text1.Text);
+            Debug.WriteLine("222"+text_text2.Text);
+            if (string.IsNullOrEmpty(str)) return;
+            await synth.SpeakTextAsync(str);
+
         }
 
         #region Use if needed
