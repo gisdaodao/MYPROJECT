@@ -21,7 +21,9 @@
     mc:Ignorable="d" d:DesignHeight="800" d:DesignWidth="480"
     atutils:OkrTiltEffect.IsTiltEnabled="True"
     shell:SystemTray.IsVisible="False">
-
+    <shell:SystemTray.ProgressIndicator>
+        <shell:ProgressIndicator x:Name="indicator" />
+    </shell:SystemTray.ProgressIndicator>
     <UserControl.Resources>
         <DataTemplate x:Key="okr-panoheader">
             <Image Stretch="None" RenderTransformOrigin="0,0" Height="46" Width="413" Margin="14,45,0,0">
@@ -40,7 +42,7 @@
             </Rectangle.RenderTransform>
         </Rectangle>
 
-        <ctrl:Panorama x:Name="pano" TitleTemplate="{StaticResource okr-panoheader}" SelectionChanged="OnPanoChanged">
+        <ctrl:Panorama x:Name="pano" TitleTemplate="{StaticResource okr-panoheader}" SelectionChanged="pano_SelectionChanged">
             <ctrl:PanoramaItem Margin="12,10,0,0">
                 <Grid Margin="0,-28,-20,0" VerticalAlignment="Top" >
 
@@ -109,7 +111,7 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
-                    <TextBlock Text="Bookmark" VerticalAlignment="Top" HorizontalAlignment="Left" Style="{StaticResource okr-subtitle-yellow}" />
+                    <TextBlock Text="书签" VerticalAlignment="Top" HorizontalAlignment="Left" Style="{StaticResource okr-subtitle-yellow}" />
                     <ListBox x:Name="mlist" Grid.Row="1" Margin="12,10,12,20"/>
                 </Grid>
             </ctrl:PanoramaItem>
@@ -211,13 +213,40 @@
                     <Button BorderBrush="Orange" Height="100" Width="380" Click="Button_Click"  Foreground="Black" Content="演唱技巧" Tag="http://baike.baidu.com/view/562314.htm"></Button>
                 </StackPanel>
             </ctrl:PanoramaItem>
-            <ctrl:PanoramaItem>
+            <!--<ctrl:PanoramaItem>
                 <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
                     <oxlad:AdControl x:Name="AdControl" Grid.Row="0"
                              IsCloseIconEnabled="True"
                              AdUnitId="047361f2-57ac-42a3-836f-7f2822d62e14" Type="Interstitial"
                              ApplicationId="a9101034-badd-42a0-9131-eb9087a83c3c"/>
                 </Grid>
+            </ctrl:PanoramaItem>-->
+            <ctrl:PanoramaItem>
+                <phone:LongListSelector x:Name="txtlstbox" LayoutMode="List"  >
+                    <phone:LongListSelector.ItemTemplate>
+                    <DataTemplate>
+                        <Border  Margin="0,0,0,12" Width="460" HorizontalAlignment="Left" Height="100" x:Name="txtborder" Background="BlueViolet" Tap="txtborder_Tap">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <!--<Image Stretch="Fill" Height="100"   Grid.Column="0" Source="{Binding picurl}"></Image>-->
+                                <Grid Grid.Column="1" Margin="12,0,0,0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="65"></RowDefinition>
+                                        <!--<RowDefinition Height="*"></RowDefinition>-->
+                                    </Grid.RowDefinitions>
+                                    <TextBlock FontSize="30" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding text}"></TextBlock>
+                                    <TextBlock   Grid.Row="1" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding info}"></TextBlock>
+                                </Grid>
+
+                            </Grid>
+
+                        </Border>
+                    </DataTemplate>
+                </phone:LongListSelector.ItemTemplate>
+                </phone:LongListSelector>
             </ctrl:PanoramaItem>
         </ctrl:Panorama>
     </Grid>

@@ -24,6 +24,7 @@
             <!--<shell:ApplicationBarIconButton     Text="回复" x:Name="Appbarnew" Click="Appbarnew_Click" IconUri="/Assets/chat.png"></shell:ApplicationBarIconButton>
             <shell:ApplicationBarIconButton Text="赞"  x:Name="AppbarShoucang" Click="AppbarShoucang_Click" IconUri="/Assets/AppBar/bar_common_like_black.png"></shell:ApplicationBarIconButton>-->
             <shell:ApplicationBarIconButton Text="朗读"  x:Name="Appbarread" Click="Appbarread_Click" IconUri="/Assets/AppBar/microphone.png"></shell:ApplicationBarIconButton>
+            <shell:ApplicationBarIconButton Text="朗读全部"  x:Name="Appbarreadall" Click="Appbarreadreadall_Click" IconUri="/Assets/AppBar/microphone.png"></shell:ApplicationBarIconButton>
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>
 </phone:PhoneApplicationPage>

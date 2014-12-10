@@ -24,6 +24,7 @@ using OKr.MXReader.Client.Core.Config;
 using At.Phone.Control.Loader;
 using Windows.Phone.Speech.Synthesis;
 using System.Diagnostics;
+using System.Text;
 
 namespace OKr.MXReader.Client.View
 {
@@ -611,9 +612,30 @@ namespace OKr.MXReader.Client.View
             Debug.WriteLine("222"+text_text2.Text);
             if (string.IsNullOrEmpty(str)) return;
             await synth.SpeakTextAsync(str);
+            
+        }
+        private async void Appbarreadreadall_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SpeechSynthesizer synth1 = new SpeechSynthesizer();
+                StringBuilder stringb = new StringBuilder();
+                foreach (var a in chapter.PageList)
+                {
+                    stringb.AppendLine(a);
+                }
+                string str = stringb.ToString();
+                if (string.IsNullOrEmpty(str)) return;
+                await synth1.SpeakTextAsync(str);
+            }
+            catch (Exception)
+            {
+
+
+            }
+
 
         }
-
         #region Use if needed
 
         private void ThemeInit()

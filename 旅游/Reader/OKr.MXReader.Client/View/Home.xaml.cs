@@ -20,12 +20,18 @@ using GoogleAds;
 using SurfaceAd.SDK.WP;
 using Microsoft.Phone.Tasks;
 using System.Diagnostics;
+using System.IO;
+using System.Xml.Linq;
+using 股票新闻;
 
 namespace OKr.MXReader.Client.View
 {
     public partial class Home : PhoneApplicationPage
     {
         private InterstitialAd interstitialAd;
+        WebClient txtPclient = new WebClient();
+
+        List<Info> txtinfo = new List<Info>();
         public Home()
         {
             InitializeComponent();
@@ -210,6 +216,20 @@ namespace OKr.MXReader.Client.View
                 this.mlist.Items.Add(item);
             }
         }
+        private void txtborder_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            Border border = sender as Border;
+            Info info = border.DataContext as Info;
+            //this.NavigationService.Navigate(new Uri("/VideoPage.xaml?url="+info.dataurl, UriKind.RelativeOrAbsolute));
+            //Debug.WriteLine(info.dataurl);
+            //App.tranferinfo = info;
+            // return;
+            WebBrowserTask task = new WebBrowserTask();
+            task.Uri = new Uri(info.dataurl, UriKind.RelativeOrAbsolute);
+            task.Show();
+           
+            //Debug.WriteLine(info.dataurl);
+        }
 
         private Mark GetMark()
         {
@@ -236,6 +256,49 @@ namespace OKr.MXReader.Client.View
             task.Uri = new Uri(dataurl, UriKind.RelativeOrAbsolute);
             task.Show();
         }
+
+        private void pano_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (pano.SelectedIndex == 3 && txtlstbox.ItemsSource == null)
+            {
+                txtPclient.OpenReadCompleted += txtPclient_OpenReadCompleted;
+                txtPclient.OpenReadAsync(new Uri("https://raw.githubusercontent.com/commonusechina/data/master/data/music.xml", UriKind.Absolute));
+
+                indicator.Text = "请求中...";
+                indicator.IsVisible = true;
+                indicator.IsIndeterminate = true;
+            }
+        }
+        void txtPclient_OpenReadCompleted(object sender, OpenReadCompletedEventArgs e)
+        {
+            try
+            {
+                if (e.Error == null)
+                {
+                    Stream stream = e.Result;
+                    XElement p = XElement.Load(stream);
+                    XName xitemname = XName.Get("item");
+                    IEnumerable<XElement> itemnodes = p.Descendants(xitemname).ToList<XElement>();
+                    foreach (var b in itemnodes)
+                    {
+                        XName xname = XName.Get("url");
+                        //   XName xpicname = XName.Get("picurl");
+                        txtinfo.Add(new Info() { text = b.FirstAttribute.Value, info = b.LastAttribute.Value, dataurl = b.Descendants(xname).First().Value, });
+                    }
+                    Deployment.Current.Dispatcher.BeginInvoke(() =>
+                    {
+
+                        txtlstbox.ItemsSource = txtinfo; indicator.IsVisible = false;
+                        indicator.IsIndeterminate = false;
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
 
 
     }
