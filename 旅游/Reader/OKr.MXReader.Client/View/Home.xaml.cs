@@ -261,6 +261,7 @@ namespace OKr.MXReader.Client.View
         {
             if (pano.SelectedIndex == 3 && txtlstbox.ItemsSource == null)
             {
+                if (txtPclient.IsBusy) return;
                 txtPclient.OpenReadCompleted += txtPclient_OpenReadCompleted;
                 txtPclient.OpenReadAsync(new Uri("https://raw.githubusercontent.com/commonusechina/data/master/data/music.xml", UriKind.Absolute));
 

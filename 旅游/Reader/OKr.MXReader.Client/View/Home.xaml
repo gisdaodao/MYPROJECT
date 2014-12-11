@@ -77,6 +77,8 @@
                             <TextBlock Margin="12" Style="{StaticResource okr-text}" TextWrapping="Wrap"><Run Text="作者：" /><Run x:Name="tbAuthor" /></TextBlock>
                             <TextBlock x:Name="tbIntro" Margin="12,0,12,20" Style="{StaticResource okr-text}" Text="" TextWrapping="Wrap" />
                             <oxlad:AdControl Margin="0,250,0,0" x:Name="Ad1Control" ApplicationId="a9101034-badd-42a0-9131-eb9087a83c3c" AdUnitId="f7d92042-3d49-4f0e-9e54-5906ac4b3567"  VerticalAlignment="Bottom" Height="100" IsCloseIconEnabled="True" />
+                            <MsnAD:AdView Margin="12,21,0,0" TelCapability="True" StorePic="True" SecretKey="bfac44ffe5c0477a8f52060c9b09a1f1" Adid="190896" Appid="145012" SizeForAd="Normal"></MsnAD:AdView>
+                            <google:AdView  AdUnitID="ca-app-pub-1598808565430684/2935759650"  Format="Banner"></google:AdView>
                         </StackPanel>
                     </ScrollViewer>
                 </Grid>
@@ -211,42 +213,53 @@
                     <Button BorderBrush="Orange" Height="100" Width="380" Click="Button_Click"  Foreground="Black" Content="唱法" Tag="http://baike.baidu.com/view/2365247.htm"></Button>
                     <Button BorderBrush="Orange" Height="100" Width="380" Click="Button_Click"  Foreground="Black" Content="音乐" Tag="http://baike.baidu.com/subview/5434/9397617.htm"></Button>
                     <Button BorderBrush="Orange" Height="100" Width="380" Click="Button_Click"  Foreground="Black" Content="演唱技巧" Tag="http://baike.baidu.com/view/562314.htm"></Button>
+                    <google:AdView  AdUnitID="ca-app-pub-1598808565430684/2935759650"  Format="Banner"></google:AdView>
                 </StackPanel>
             </ctrl:PanoramaItem>
-            <!--<ctrl:PanoramaItem>
+        
+            <ctrl:PanoramaItem>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    
+                    <phone:LongListSelector Grid.Row="0" x:Name="txtlstbox" LayoutMode="List"  >
+                        <phone:LongListSelector.ItemTemplate>
+                            <DataTemplate>
+                                <Border  Margin="0,0,0,12" Width="460" HorizontalAlignment="Left" Height="100" x:Name="txtborder" Background="Orange" Tap="txtborder_Tap">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="100"></ColumnDefinition>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <!--<Image Stretch="Fill" Height="100"   Grid.Column="0" Source="{Binding picurl}"></Image>-->
+                                        <Grid Grid.Column="1" Margin="12,0,0,0">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="65"></RowDefinition>
+                                                <!--<RowDefinition Height="*"></RowDefinition>-->
+                                            </Grid.RowDefinitions>
+                                            <TextBlock FontSize="30" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center" Text="{Binding text}"></TextBlock>
+                                            <TextBlock   Grid.Row="1" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding info}"></TextBlock>
+                                        </Grid>
+                                    </Grid>
+                                </Border>
+                            </DataTemplate>
+                        </phone:LongListSelector.ItemTemplate>
+                    </phone:LongListSelector>
+                    <StackPanel Grid.Row="1">
+                        <google:AdView  AdUnitID="ca-app-pub-1598808565430684/2935759650"  Format="Banner"></google:AdView>
+                    </StackPanel>
+                </Grid>
+               
+            </ctrl:PanoramaItem>
+            <ctrl:PanoramaItem>
                 <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
                     <oxlad:AdControl x:Name="AdControl" Grid.Row="0"
                              IsCloseIconEnabled="True"
                              AdUnitId="047361f2-57ac-42a3-836f-7f2822d62e14" Type="Interstitial"
                              ApplicationId="a9101034-badd-42a0-9131-eb9087a83c3c"/>
                 </Grid>
-            </ctrl:PanoramaItem>-->
-            <ctrl:PanoramaItem>
-                <phone:LongListSelector x:Name="txtlstbox" LayoutMode="List"  >
-                    <phone:LongListSelector.ItemTemplate>
-                    <DataTemplate>
-                        <Border  Margin="0,0,0,12" Width="460" HorizontalAlignment="Left" Height="100" x:Name="txtborder" Background="BlueViolet" Tap="txtborder_Tap">
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="100"></ColumnDefinition>
-                                    <ColumnDefinition Width="*"></ColumnDefinition>
-                                </Grid.ColumnDefinitions>
-                                <!--<Image Stretch="Fill" Height="100"   Grid.Column="0" Source="{Binding picurl}"></Image>-->
-                                <Grid Grid.Column="1" Margin="12,0,0,0">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="65"></RowDefinition>
-                                        <!--<RowDefinition Height="*"></RowDefinition>-->
-                                    </Grid.RowDefinitions>
-                                    <TextBlock FontSize="30" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding text}"></TextBlock>
-                                    <TextBlock   Grid.Row="1" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding info}"></TextBlock>
-                                </Grid>
-
-                            </Grid>
-
-                        </Border>
-                    </DataTemplate>
-                </phone:LongListSelector.ItemTemplate>
-                </phone:LongListSelector>
             </ctrl:PanoramaItem>
         </ctrl:Panorama>
     </Grid>
