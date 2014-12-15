@@ -77,8 +77,9 @@
                             <TextBlock Margin="12" Style="{StaticResource okr-text}" TextWrapping="Wrap"><Run Text="作者：" /><Run x:Name="tbAuthor" /></TextBlock>
                             <TextBlock x:Name="tbIntro" Margin="12,0,12,20" Style="{StaticResource okr-text}" Text="" TextWrapping="Wrap" />
                             <TextBlock Margin="0,200,0,0"  x:Name="tb" Style="{StaticResource okr-text}" Text="总共点击不同的广告5次之后就不会显示了" TextWrapping="Wrap" />
-                            <oxlad:AdControl  Tap="AdtapControl_Tap" x:Name="Ad1Control" ApplicationId="a9101034-badd-42a0-9131-eb9087a83c3c" AdUnitId="f7d92042-3d49-4f0e-9e54-5906ac4b3567"  VerticalAlignment="Bottom" Height="100" IsCloseIconEnabled="True" />
-                            <MsnAD:AdView Tap="AdtapControl_Tap"  Margin="12,21,0,0" TelCapability="True"  x:Name="Ad2Control" StorePic="True" SecretKey="bfac44ffe5c0477a8f52060c9b09a1f1" Adid="190896" Appid="145012" SizeForAd="Normal"></MsnAD:AdView>
+                            <oxlad:AdControl  Tap="AdtapControl_Tap" x:Name="Ad1Control" ApplicationId="6f0415c6-fd7c-47e8-bed1-79f9751162d5" AdUnitId="e929bb03-edc5-4e3b-978a-11c38645178d"  VerticalAlignment="Bottom" Height="100" IsCloseIconEnabled="True" />
+                            <google:AdView  Tap="AdtapControl_Tap"  AdUnitID="ca-app-pub-1598808565430684/2935759650"   x:Name="Ad2Control" Format="Banner"></google:AdView>
+                            <!--<MsnAD:AdView Tap="AdtapControl_Tap"  Margin="12,21,0,0" TelCapability="True"  x:Name="Ad2Control" StorePic="True" SecretKey="bfac44ffe5c0477a8f52060c9b09a1f1" Adid="190896" Appid="145012" SizeForAd="Normal"></MsnAD:AdView>-->
                             <google:AdView  Tap="AdtapControl_Tap"  AdUnitID="ca-app-pub-1598808565430684/2935759650"   x:Name="Ad3Control" Format="Banner"></google:AdView>
                         </StackPanel>
                     </ScrollViewer>
@@ -190,15 +191,17 @@
                         </StackPanel>
 
                         <StackPanel x:Name="spAbout" Height="290" Orientation="Vertical">
+                            <google:AdView  Tap="AdtapControl_Tap"  VerticalAlignment="Top" x:Name="Ad9Control"  AdUnitID="ca-app-pub-1598808565430684/2935759650"  Format="Banner"></google:AdView>
                             <StackPanel HorizontalAlignment="Left" Width="10" Margin="0,10,0,10" Background="{StaticResource okr-color-blue}" />
+                            <google:AdView  x:Name="Ad10Control"  Tap="AdtapControl_Tap"  AdUnitID="ca-app-pub-1598808565430684/2935759650"  Format="Banner"></google:AdView>
                             <SurfaceAdw:SurfaceAdControl Grid.Row="0" Name="surfaceAdImageXaml"
-                             AdPosition="a2973e47900596f139670faa3dd6ccaf" Tap="AdtapControl_Tap" 
+                             AdPosition="fa581f4b8104c49c835387473d9736d8" Tap="AdtapControl_Tap" 
                              AdToken="MF04XWUBNl8wUThaZRc2XzBD"
                              IsShowCloseIcon="False"
                              AdRefreshInterval="10"/>
 
-
-                            <MsnAD:AdView Tap="AdtapControl_Tap"   x:Name="Ad5Control" Margin="12,21,0,0" TelCapability="True" StorePic="True" SecretKey="bfac44ffe5c0477a8f52060c9b09a1f1" Adid="190896" Appid="145012" SizeForAd="Normal"></MsnAD:AdView>
+                            <google:AdView Tap="AdtapControl_Tap"   x:Name="Ad5Control"  AdUnitID="ca-app-pub-1598808565430684/2935759650"  Format="Banner"></google:AdView>
+                            <!--<MsnAD:AdView Tap="AdtapControl_Tap"   x:Name="Ad5Control" Margin="12,21,0,0" TelCapability="True" StorePic="True" SecretKey="bfac44ffe5c0477a8f52060c9b09a1f1" Adid="190896" Appid="145012" SizeForAd="Normal"></MsnAD:AdView>-->
                             <google:AdView Tap="AdtapControl_Tap"   x:Name="Ad6Control"  AdUnitID="ca-app-pub-1598808565430684/2935759650"  Format="Banner"></google:AdView>
                         </StackPanel>
                     </StackPanel>
@@ -206,7 +209,7 @@
                 </StackPanel>
 
             </ctrl:PanoramaItem>
-            <ctrl:PanoramaItem>
+            <!--<ctrl:PanoramaItem>
                 <StackPanel>
                     <Button  BorderBrush="Orange" Height="100" Width="380" Click="Button_Click" Foreground="Black" Content="民族唱法" Tag="http://baike.baidu.com/view/5382.htm"></Button>
                     <Button  BorderBrush="Orange" Height="100" Width="380" Click="Button_Click"  Foreground="Black" Content="美声唱法" Tag="http://baike.baidu.com/view/5314.htm"></Button>
@@ -216,9 +219,9 @@
                     <Button BorderBrush="Orange" Height="100" Width="380" Click="Button_Click"  Foreground="Black" Content="演唱技巧" Tag="http://baike.baidu.com/view/562314.htm"></Button>
                     <google:AdView  x:Name="Ad10Control"  Tap="AdtapControl_Tap"  AdUnitID="ca-app-pub-1598808565430684/2935759650"  Format="Banner"></google:AdView>
                 </StackPanel>
-            </ctrl:PanoramaItem>
+            </ctrl:PanoramaItem>-->
         
-            <ctrl:PanoramaItem>
+            <!--<ctrl:PanoramaItem>
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"></RowDefinition>
@@ -234,11 +237,11 @@
                                             <ColumnDefinition Width="100"></ColumnDefinition>
                                             <ColumnDefinition Width="*"></ColumnDefinition>
                                         </Grid.ColumnDefinitions>
-                                        <!--<Image Stretch="Fill" Height="100"   Grid.Column="0" Source="{Binding picurl}"></Image>-->
+                                        --><!--<Image Stretch="Fill" Height="100"   Grid.Column="0" Source="{Binding picurl}"></Image>--><!--
                                         <Grid Grid.Column="1" Margin="12,0,0,0">
                                             <Grid.RowDefinitions>
                                                 <RowDefinition Height="65"></RowDefinition>
-                                                <!--<RowDefinition Height="*"></RowDefinition>-->
+                                                --><!--<RowDefinition Height="*"></RowDefinition>--><!--
                                             </Grid.RowDefinitions>
                                             <TextBlock FontSize="30" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center" Text="{Binding text}"></TextBlock>
                                             <TextBlock   Grid.Row="1" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding info}"></TextBlock>
@@ -249,17 +252,18 @@
                         </phone:LongListSelector.ItemTemplate>
                     </phone:LongListSelector>
                     <StackPanel Grid.Row="1">
-                        <google:AdView  Tap="AdtapControl_Tap"  x:Name="Ad9Control"  AdUnitID="ca-app-pub-1598808565430684/2935759650"  Format="Banner"></google:AdView>
+                       
                     </StackPanel>
                 </Grid>
                
-            </ctrl:PanoramaItem>
+            </ctrl:PanoramaItem>-->
             <ctrl:PanoramaItem>
                 <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+                 
                     <oxlad:AdControl x:Name="AdControl" Grid.Row="0" Tap="AdtapControl_Tap" 
-                             IsCloseIconEnabled="True"   
-                             AdUnitId="047361f2-57ac-42a3-836f-7f2822d62e14" Type="Interstitial"
-                             ApplicationId="a9101034-badd-42a0-9131-eb9087a83c3c"/>
+                             IsCloseIconEnabled="True"    VerticalAlignment="Bottom"
+                             AdUnitId="b0037411-e225-47da-ad9d-6bd00b39d841" Type="Interstitial"
+                             ApplicationId="6f0415c6-fd7c-47e8-bed1-79f9751162d5"/>
                 </Grid>
             </ctrl:PanoramaItem>
         </ctrl:Panorama>

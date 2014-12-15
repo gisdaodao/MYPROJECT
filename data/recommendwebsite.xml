@@ -3,14 +3,32 @@
   <item text="cnbeta"      des="">
     <url>http://m.cnbeta.com/</url>
   </item>
+<item text="百度图说天下"      des="">
+    <url>http://image.baidu.com/channel/info</url>
+  </item>
+<item text="MBA智库商学院"      des="MBA智库商学院,立足MBA智库,汇聚各大商学院权威信息,研商论道,启迪智慧 。洞悉中国MBA行业发展态势,闻道解惑,集大成而超越。">
+    <url>http://wiki.mbalib.com/wiki/%E9%A6%96%E9%A1%B5</url>
+  </item>
+<item text="爱奇艺教育"      des="">
+    <url>http://edu.iqiyi.com/</url>
+  </item>
   <item text="3G泡泡"      des="">
     <url>http://3gpp.com.cn </url>
+  </item>
+<item text="圣诞节图片"      des="">
+    <url>http://image.baidu.com/i?tn=baiduimage&ipn=r&ct=201326592&cl=2&lm=-1&st=-1&fm=result&fr=&sf=1&fmq=1418632630608_R&pv=&ic=0&nc=1&z=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&ie=utf-8&word=%E5%9C%A3%E8%AF%9E%E8%8A%82</url>
   </item>
   <item text="空中网"      des="">
     <url>http://kong.net/</url>
   </item>
   <item text="wap天天图"      des="">
     <url>http://www.waptt.com/</url>
+  </item>
+<item text="华夏时报"      des="">
+    <url>http://www.chinatimes.cc/</url>
+  </item>
+<item text="美女图片"      des="">
+    <url>http://image.baidu.com/channel?c=%E7%BE%8E%E5%A5%B3&t=%E5%85%A8%E9%83%A8&s=0</url>
   </item>
 </Items>
 

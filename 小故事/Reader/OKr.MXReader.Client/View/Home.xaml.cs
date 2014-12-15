@@ -265,16 +265,16 @@ namespace OKr.MXReader.Client.View
 
         private void pano_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (pano.SelectedIndex == 3 && txtlstbox.ItemsSource == null)
-            {
-                if (txtPclient.IsBusy) return;
-                txtPclient.OpenReadCompleted += txtPclient_OpenReadCompleted;
-                txtPclient.OpenReadAsync(new Uri("https://raw.githubusercontent.com/commonusechina/data/master/data/music.xml", UriKind.Absolute));
+            //if (pano.SelectedIndex == 3 && txtlstbox.ItemsSource == null)
+            //{
+            //    if (txtPclient.IsBusy) return;
+            //    txtPclient.OpenReadCompleted += txtPclient_OpenReadCompleted;
+            //    txtPclient.OpenReadAsync(new Uri("https://raw.githubusercontent.com/commonusechina/data/master/data/music.xml", UriKind.Absolute));
 
-                indicator.Text = "请求中...";
-                indicator.IsVisible = true;
-                indicator.IsIndeterminate = true;
-            }
+            //    indicator.Text = "请求中...";
+            //    indicator.IsVisible = true;
+            //    indicator.IsIndeterminate = true;
+            //}
         }
         void txtPclient_OpenReadCompleted(object sender, OpenReadCompletedEventArgs e)
         {
@@ -295,8 +295,8 @@ namespace OKr.MXReader.Client.View
                     Deployment.Current.Dispatcher.BeginInvoke(() =>
                     {
 
-                        txtlstbox.ItemsSource = txtinfo; indicator.IsVisible = false;
-                        indicator.IsIndeterminate = false;
+                        //txtlstbox.ItemsSource = txtinfo; indicator.IsVisible = false;
+                        //indicator.IsIndeterminate = false;
                     });
                 }
             }
