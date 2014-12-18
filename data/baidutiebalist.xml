@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Items>
+ <item text="微小说吧"      des="">
+ <url>http://tieba.baidu.com/f?kw=%E5%BE%AE%E5%B0%8F%E8%AF%B4</url> 
+  </item> 
    <item text="北京吧"      des="">
  <url>http://tieba.baidu.com/f?kw=%E5%8C%97%E4%BA%AC</url> 
   </item> 
