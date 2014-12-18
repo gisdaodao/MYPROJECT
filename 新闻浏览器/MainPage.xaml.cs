@@ -11,6 +11,7 @@ using GoogleAds;
 using Microsoft.Phone.Tasks;
 using SurfaceAd.SDK.WP;
 using System.Windows.Media;
+using System.IO.IsolatedStorage;
 
 namespace 股票新闻
 {
@@ -42,12 +43,66 @@ namespace 股票新闻
                 interstitialAd.ShowAd();
             }          
         }
+        IsolatedStorageSettings settings = IsolatedStorageSettings.ApplicationSettings;
+        bool isguanggao = true;
         // 为 ViewModel 项加载数据
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            if(e.NavigationMode==NavigationMode.Back)
+
+            try
             {
-                return;
+                if (e.IsNavigationInitiator == false && e.NavigationMode == NavigationMode.Back)
+                {
+                    if (isguanggao)
+                    {
+                        int i = 1;
+                        if (!settings.Contains("number"))
+                        {
+                            settings.Add("number", i);
+                            settings.Save();
+                        }
+                        else
+                        {
+                            int k = (int)settings["number"];
+                            k = k + i;
+                            settings["number"] = k;
+                            settings.Save();
+                        }
+                    }
+                    else
+                    {
+                        int k = (int)settings["number"];
+                        if (k >= 2)
+                        {
+                            SetHIDE();
+                        }
+                    }
+                }
+                if (e.NavigationMode == NavigationMode.New)
+                {
+                    if (!settings.Contains("number"))
+                    {
+                        settings.Add("number", 0);
+                        settings.Save();
+                    }
+                    else
+                    {
+                        int k = (int)settings["number"];
+                        if (k >=2)
+                        {
+                            SetHIDE();
+                        }
+                        //k = k + i;
+                        //settings["number"] = k;
+                        // settings.Save();
+                    }
+                }
+                base.OnNavigatedTo(e);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
             }
             this.surfaceAdImageXaml.InitAdControl(AdModeType.Normal); 
            // this.surfaceAdImageXaml.InitAdControl(AdModeType.Debug); 
@@ -228,15 +283,15 @@ namespace 股票新闻
         }
         protected override void OnNavigatedFrom(NavigationEventArgs e)
         {
-            List<WebBrowser>  listbrower=new List<WebBrowser>();
-            GetVisualChildCollection(panoroma, listbrower);
-            if(listbrower.Count>0)
-            {
-               for(int I=0; I<listbrower.Count;I++)
-               {
-                   listbrower[I] = null;
-               }
-            }
+            //List<WebBrowser>  listbrower=new List<WebBrowser>();
+            //GetVisualChildCollection(panoroma, listbrower);
+            //if(listbrower.Count>0)
+            //{
+            //   for(int I=0; I<listbrower.Count;I++)
+            //   {
+            //       listbrower[I] = null;
+            //   }
+            //}
 
         }
         private static void GetVisualChildCollection<T>(DependencyObject parent, List<T> visualCollection) where T : UIElement
@@ -425,6 +480,25 @@ namespace 股票新闻
         private void jyad_ClickBackMessageEvent(object sender, JiuYouWp8Ad.ClickBackMessage e)
         {
 
+        }
+        private void SetHIDE()
+        {
+            tb.Visibility = Visibility.Collapsed;
+            AdControl2.Visibility = Visibility.Collapsed;
+            Ad1Control.Visibility = Visibility.Collapsed;
+
+            //Ad2Control.Visibility = Visibility.Collapsed;
+            Ad3Control.Visibility = Visibility.Collapsed;
+
+            //Ad5Control.Visibility = Visibility.Collapsed;
+            //Ad6Control.Visibility = Visibility.Collapsed;
+            //Ad9Control.Visibility = Visibility.Collapsed;
+            //Ad10Control.Visibility = Visibility.Collapsed;
+            surfaceAdImageXaml.Visibility = Visibility.Collapsed;
+            //ContentPanel.Children.Remove(AdControl);
+            adpanel.Children.Remove(Ad1Control);
+            adpanel.Children.Remove(Ad3Control);
+            spAbout.Children.Remove(AdControl2);
         }
         //protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)
         //{
