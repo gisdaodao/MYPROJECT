@@ -72,6 +72,66 @@
                         <RowDefinition Height="Auto"></RowDefinition>
                         <RowDefinition Height="Auto"></RowDefinition>
                     </Grid.RowDefinitions>
+                    <StackPanel Orientation="Vertical">
+                        <!--<Border Width="100" Height="100" Background="Orange" x:Name="favaroatetb" Tap="favaroatetb_Tap">
+                            <TextBlock HorizontalAlignment="Center"   VerticalAlignment="Center">我的收藏</TextBlock>
+                        </Border>-->
+                        <!--<Border Width="100" Height="100" Background="Orange" x:Name="addtb" Tap="addtb_Tap">
+                            <TextBlock HorizontalAlignment="Center"   VerticalAlignment="Center">添加网址</TextBlock>
+                        </Border>-->
+                        <phone:LongListSelector LayoutMode="List" x:Name="longlistbox">
+                            <phone:LongListSelector.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Margin="12,0,12,15" Tap="Border_Tap_1" Width="380" Height="65" CornerRadius="5" Background="Orange">
+                                        <TextBlock HorizontalAlignment="Center" FontSize="25" Foreground="Black" Text="{Binding text}"></TextBlock>
+                                    </Border>
+                                </DataTemplate>
+                            </phone:LongListSelector.ItemTemplate>
+                        </phone:LongListSelector>
+                    </StackPanel>
+                    <!--<StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,21,0,0">
+                        <Border Tap="readbook_Tap" x:Name="readbook" Height="100" Background="Orange" Width="100">
+                            <TextBlock  FontSize="25" Text="小说" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+
+                        </Border>
+
+                        <Border Height="100" x:Name="jingjiborder" Margin="21,0,21,0" Background="Orange" Width="100"  Tap="jingjiborder_Tap">
+                            <TextBlock  FontSize="25" Text="经济" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        </Border>
+                        <Border Tap="kejiborder_Tap" Height="100" Background="Orange" Width="100" x:Name="kejiborder">
+                            <TextBlock  FontSize="25" Text="科技" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Grid.Row="2"  Orientation="Horizontal"  Margin="0,21,0,0"  Height="100">
+                        <Border Tap="tiebaborder_Tap" Height="100" Background="Orange" Width="100" x:Name="tiebaborder">
+                            <TextBlock  FontSize="25" Text="贴吧" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        </Border>
+
+                        <Border Height="100" Tap="tuijianwangzhan_Tap" x:Name="tuijianwangzhan" Margin="21,0,21,0" Background="Orange" Width="100"  >
+                            <TextBlock  FontSize="25" Text="推荐网站" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        </Border>
+                        <Border  Tap="tuijianyingyon_Tap" Height="100" Background="Orange" Width="100" x:Name="tuijianyingyon">
+                            <TextBlock  FontSize="25" Text="推荐应用" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        </Border>
+                    </StackPanel>-->
+                
+                     
+                        <!--<JiuYou:JiuYouWp8AdControl x:Name="jyad" VerticalAlignment="Bottom"  ClickBackMessageEvent="jyad_ClickBackMessageEvent" DeveloperAdID="9a85f5305c905536cc578a782da0808e" GetAdBackMessageEvent="jyad_GetAdBackMessageEvent" />-->
+                        <!--<oxlad:AdControl  x:Name="AdControl22" ApplicationId="48557996-85ed-4cbf-a38a-d7a8f7e953f1"    AdUnitId="f8725d4d-05eb-4776-b14e-59dd4ee7da46" Type="Banner"    IsCloseIconEnabled="True"  />-->
+                        <!--<UI:AdControl   IsEnabled="True" IsAutoRefreshEnabled="True"   ApplicationId="774e1a85-5f27-4670-a525-82d3a9aa4108" 
+         AdUnitId="197288"         HorizontalAlignment="Left"          Height="80"                  VerticalAlignment="Top"          Width="480"/>-->
+               
+
+                </Grid>
+            </phone:PanoramaItem>
+            <phone:PanoramaItem>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
                     <StackPanel Orientation="Horizontal">
                         <Border x:Name="baikeborder" Tap="baikeborder_Tap" Background="Orange" Width="399" Height="100">
                             <TextBlock  FontSize="36" Text="百科集合" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
@@ -104,7 +164,8 @@
                         </Border>
                     </StackPanel>
                     <StackPanel Grid.Row="3" Margin="0,36,0,0" x:Name="adpanel">
-                        <TextBlock Margin="0,12,0,0"  x:Name="tb" Text="总共点击不同的广告2次之后就不会显示了" TextWrapping="Wrap" />
+                        <TextBlock Margin="0,12,0,0"  x:Name="tb" Text="评价之后广告就不会显示了" TextWrapping="Wrap" />
+                        <Button x:Name="ratebtn" Click="Button_Click" Content="前去评价"></Button>
                         <SurfaceAdw:SurfaceAdControl Grid.Row="0" Name="surfaceAdImageXaml"
                              AdPosition="6c70b8ebbaad92f8c47bcf58d21898c5"
                              AdToken="MF04XWUBNl8wUThaZRc2XzBD"
@@ -184,7 +245,9 @@
         
             <shell:ApplicationBarIconButton Text="打开" x:Name="inputbar" IconUri="/Assets3/AppBar/edit.png" Click="inputbar_Click" IsEnabled="True"></shell:ApplicationBarIconButton>
             <shell:ApplicationBar.MenuItems>
+                <!--<shell:ApplicationBarMenuItem Text="收藏"  Click="ApplicationBarMenuItem_Click"></shell:ApplicationBarMenuItem>-->
                 <shell:ApplicationBarMenuItem Text="更多"  Click="ApplicationBarMenuItem_Click"></shell:ApplicationBarMenuItem>
+                <shell:ApplicationBarMenuItem Text="添加网址"  Click="ApplicationBarMenuItem_Click"></shell:ApplicationBarMenuItem>
                 <shell:ApplicationBarMenuItem Text="联系我"  Click="ApplicationBarMenuItem_Click"></shell:ApplicationBarMenuItem>
             </shell:ApplicationBar.MenuItems>
         </shell:ApplicationBar>

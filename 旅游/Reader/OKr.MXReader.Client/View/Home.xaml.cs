@@ -322,40 +322,66 @@ namespace OKr.MXReader.Client.View
             {
                 if (e.IsNavigationInitiator == false && e.NavigationMode == NavigationMode.Back)
                 {
-                    if (isguanggao)
+                    //if (isguanggao)
+                    //{
+                    //    int i = 1;
+                    //    if (!settings.Contains("number"))
+                    //    {
+                    //        settings.Add("number", i);
+                    //        settings.Save();
+                    //    }
+                    //    else
+                    //    {
+                    //        int k = (int)settings["number"];
+                    //        k = k + i;
+                    //        settings["number"] = k;
+                    //        settings.Save();
+                    //    }
+                    //}
+                    if (!settings.Contains("reviewbtn"))
                     {
-                        int i = 1;
-                        if (!settings.Contains("number"))
-                        {
-                            settings.Add("number", i);
-                            settings.Save();
-                        }
-                        else
-                        {
-                            int k = (int)settings["number"];
-                            k = k + i;
-                            settings["number"] = k;
-                            settings.Save();
-                        }
+                        settings.Add("reviewbtn", "1");
+                        settings.Save();
+                        SetHIDE();
+                    }
+                    else
+                    {
+                        string k = (string)settings["reviewbtn"];
+                        SetHIDE();
                     }
                 }
                 if (e.NavigationMode == NavigationMode.New)
                 {
-                    if (!settings.Contains("number"))
+                    //if (!settings.Contains("number"))
+                    //{
+                    //    settings.Add("number", 0);
+                    //    settings.Save();
+                    //}
+                    //else
+                    //{
+                    //    int k = (int)settings["number"];
+                    //    if (k >= 5)
+                    //    {
+                    //        SetHIDE();
+                    //    }
+                    //    //k = k + i;
+                    //    //settings["number"] = k;
+                    //    // settings.Save();
+                    //}
+                    if (!settings.Contains("reviewbtn"))
                     {
-                        settings.Add("number", 0);
-                        settings.Save();
+                        //settings.Add("reviewbtn", "1");
+                        //settings.Save();
+                      //  SetHIDE();
                     }
                     else
                     {
-                        int k = (int)settings["number"];
-                        if (k >= 5)
+                        string k = (string)settings["reviewbtn"];
+                        if(k=="1")
                         {
                             SetHIDE();
                         }
-                        //k = k + i;
-                        //settings["number"] = k;
-                        // settings.Save();
+                      
                     }
                 }
                 base.OnNavigatedTo(e);
@@ -384,9 +410,9 @@ namespace OKr.MXReader.Client.View
         private void SetHIDE()
         {
             tb.Visibility = Visibility.Collapsed;
-            AdControl.Visibility = Visibility.Collapsed;
+           // AdControl.Visibility = Visibility.Collapsed;
             Ad1Control.Visibility = Visibility.Collapsed;
-          
+          reviewbtn.Visibility=Visibility.Collapsed;
             Ad2Control.Visibility = Visibility.Collapsed;
             Ad3Control.Visibility = Visibility.Collapsed;
           
@@ -395,10 +421,24 @@ namespace OKr.MXReader.Client.View
             Ad9Control.Visibility = Visibility.Collapsed;
             Ad10Control.Visibility = Visibility.Collapsed;
             surfaceAdImageXaml.Visibility = Visibility.Collapsed;
-            ContentPanel.Children.Remove(AdControl);
+          //  ContentPanel.Children.Remove(AdControl);
             adpanel.Children.Remove(Ad1Control);
             adpanel.Children.Remove(Ad2Control);
             spAbout.Children.Remove(Ad5Control);
+        }
+        bool  isreview = false;
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MarketplaceReviewTask p = new MarketplaceReviewTask();
+            p.Show();
+           // isreview = true;
+        }
+
+        private void searbtn_Click(object sender, RoutedEventArgs e)
+        {
+            string str = "http://baike.baidu.com/search/word?word=" + box.Text;
+            wbsearch.Navigate(new Uri(str,UriKind.RelativeOrAbsolute));
         }
 
 

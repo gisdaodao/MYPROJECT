@@ -13,6 +13,9 @@ using SurfaceAd.SDK.WP;
 using System.Windows.Media;
 using System.IO.IsolatedStorage;
 
+using System.Diagnostics;
+using System.IO;
+
 namespace 股票新闻
 {
     public partial class MainPage : PhoneApplicationPage
@@ -31,9 +34,12 @@ namespace 股票新闻
             AdRequest adRequest = new AdRequest();
             adRequest.ForceTesting = false;
             interstitialAd.LoadAd(adRequest);
-    
+         
         }
+        //IsolatedStorageSettings sitesttings = IsolatedStorageSettings.ApplicationSettings;
+      
         private InterstitialAd interstitialAd;
+        List<Info> mylist = new List<Info>();
         private void OnAdReceived(object sender, AdEventArgs e)
         {
             Random adrandeom = new Random();
@@ -48,13 +54,11 @@ namespace 股票新闻
         // 为 ViewModel 项加载数据
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-
             try
             {
                 if (e.IsNavigationInitiator == false && e.NavigationMode == NavigationMode.Back)
                 {
-                    if (isguanggao)
-                    {
+                   
                         int i = 1;
                         if (!settings.Contains("number"))
                         {
@@ -67,16 +71,11 @@ namespace 股票新闻
                             k = k + i;
                             settings["number"] = k;
                             settings.Save();
-                        }
-                    }
-                    else
-                    {
-                        int k = (int)settings["number"];
-                        if (k >= 2)
-                        {
                             SetHIDE();
                         }
-                    }
+                   
+                       
+                   
                 }
                 if (e.NavigationMode == NavigationMode.New)
                 {
@@ -88,13 +87,51 @@ namespace 股票新闻
                     else
                     {
                         int k = (int)settings["number"];
-                        if (k >=2)
+                        if (k >=1)
                         {
                             SetHIDE();
                         }
                         //k = k + i;
                         //settings["number"] = k;
                         // settings.Save();
+                    }
+
+                   
+
+                }
+                using (IsolatedStorageFile iso = IsolatedStorageFile.GetUserStoreForApplication())
+                {
+
+
+                    if (!iso.FileExists("a.txt"))
+                    {
+                        //using (IsolatedStorageFileStream fs = iso.CreateFile("a.txt"))
+                        //{
+                        //    using (StreamReader reader = new StreamReader(fs))
+                        //    {
+                                
+                        //    }
+
+                        //}
+                    }
+                    else
+                    {
+                        using (IsolatedStorageFileStream fs = iso.OpenFile("a.txt", FileMode.Open))
+                        {
+                            using (StreamReader reader = new StreamReader(fs))
+                            {
+                                 while(!reader.EndOfStream)
+                                 {
+                                     string str = reader.ReadLine();
+                                     string[] result = str.Split(',');
+                                     Info one = new Info() { text = result[0], dataurl = result[1] };
+                                     mylist.Add(one);
+                                 }                              
+                              longlistbox.ItemsSource = mylist;
+                                reader.Close();
+                            }
+
+                        }
                     }
                 }
                 base.OnNavigatedTo(e);
@@ -423,9 +460,71 @@ namespace 股票新闻
         private void ApplicationBarMenuItem_Click(object sender, EventArgs e)
         {
             ApplicationBarMenuItem obj = sender as ApplicationBarMenuItem;
+            if (obj.Text == "收藏")
+            {
+                 List<Info> favaroute = IsolatedStorageSettings.ApplicationSettings["favaouratesite"] as List<Info>;
+                  string fileuri=string.Empty;
+                  //HtmlAgilityPack.HtmlDocument docment = new HtmlAgilityPack.HtmlDocument();
+                 if (panoroma.SelectedIndex == 0)
+                 {
+                     //b1.GoBack();
+
+                     //docment.Load(b1.Source.AbsoluteUri);
+                     ////HtmlNode node = docment.DocumentNode.SelectSingleNode("/html/head/title");
+                     //Debug.WriteLine(node.InnerText);
+                     fileuri = b1.Source.AbsoluteUri;
+                 }
+                 if (panoroma.SelectedIndex == 1 && b2.Source == null)
+                 {
+                     fileuri = b2.Source.AbsoluteUri;
+                     //b2.Navigate(new Uri("http://wap.people.com.cn/", UriKind.Absolute));
+                 }
+                 if (panoroma.SelectedIndex == 2 && b3.Source == null)
+                 {
+                   //  b3.
+                     fileuri = b3.Source.AbsoluteUri;
+                     //b3.Navigate(new Uri("http://wap.cctv.com", UriKind.Absolute));
+                 }
+                 if (panoroma.SelectedIndex == 3 && b4.Source == null)
+                 {
+                     fileuri = b4.Source.AbsoluteUri;
+                     //b4.Navigate(new Uri("http://wap.gmw.cn/", UriKind.Absolute));
+                 }
+                 if (panoroma.SelectedIndex == 4 && b5.Source == null)
+                 {
+                     fileuri = b5.Source.AbsoluteUri;
+                     //b5.Navigate(new Uri("http://wap.ycwb.com/", UriKind.Absolute));
+                 }
+                 if (panoroma.SelectedIndex == 5 && b6.Source == null)
+                 {
+                     fileuri = b6.Source.AbsoluteUri;
+                     //b6.Navigate(new Uri("http://wap.cnhubei.com/", UriKind.Absolute));
+                 }
+                 if (panoroma.SelectedIndex == 6 && b7.Source == null)
+                 {
+                     fileuri = b7.Source.AbsoluteUri;
+                     //b7.Navigate(new Uri("http://wap.cnwest.com/", UriKind.Absolute));
+                 }
+
+                 if (panoroma.SelectedIndex == 7 && b8.Source == null)
+                 {
+                     fileuri = b8.Source.AbsoluteUri;
+                     //b8.Navigate(new Uri("http://m.news.cn/html/", UriKind.Absolute));
+                 }
+                 if (panoroma.SelectedIndex == 8 && b9.Source == null)
+                 {
+                     fileuri = b9.Source.AbsoluteUri;
+                     //b9.Navigate(new Uri("http://m.cnr.cn/", UriKind.Absolute));
+                 }
+                 IsolatedStorageSettings.ApplicationSettings.Save();
+            }
            if(obj.Text=="更多")
            {
                this.NavigationService.Navigate(new Uri("/MorePage.xaml", UriKind.RelativeOrAbsolute));
+           }
+           if (obj.Text == "添加网址")
+           {
+               this.NavigationService.Navigate(new Uri("/AddPage.xaml", UriKind.RelativeOrAbsolute));
            }
            if (obj.Text == "联系我")
            {
@@ -472,15 +571,15 @@ namespace 股票新闻
 
         }
 
-        private void jyad_GetAdBackMessageEvent(object sender, JiuYouWp8Ad.GetAdBackMessage e)
-        {
+        //private void jyad_GetAdBackMessageEvent(object sender, JiuYouWp8Ad.GetAdBackMessage e)
+        //{
 
-        }
+        //}
 
-        private void jyad_ClickBackMessageEvent(object sender, JiuYouWp8Ad.ClickBackMessage e)
-        {
+        //private void jyad_ClickBackMessageEvent(object sender, JiuYouWp8Ad.ClickBackMessage e)
+        //{
 
-        }
+        //}
         private void SetHIDE()
         {
             tb.Visibility = Visibility.Collapsed;
@@ -489,7 +588,7 @@ namespace 股票新闻
 
             //Ad2Control.Visibility = Visibility.Collapsed;
             Ad3Control.Visibility = Visibility.Collapsed;
-
+            ratebtn.Visibility = Visibility.Collapsed;
             //Ad5Control.Visibility = Visibility.Collapsed;
             //Ad6Control.Visibility = Visibility.Collapsed;
             //Ad9Control.Visibility = Visibility.Collapsed;
@@ -499,6 +598,27 @@ namespace 股票新闻
             adpanel.Children.Remove(Ad1Control);
             adpanel.Children.Remove(Ad3Control);
             spAbout.Children.Remove(AdControl2);
+        }
+
+        private void favaroatetb_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("FavouratePage.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void addtb_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MarketplaceReviewTask p = new MarketplaceReviewTask(); p.Show();
+        }
+
+        private void Border_Tap_1(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            Info info = (sender as Border).DataContext as Info;
+            this.NavigationService.Navigate(new Uri("/myurl.xaml?url="+info.dataurl, UriKind.RelativeOrAbsolute));
         }
         //protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)
         //{

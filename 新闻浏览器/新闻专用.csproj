@@ -91,6 +91,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AddPage.xaml.cs">
+      <DependentUpon>AddPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
@@ -102,6 +105,9 @@
     </Compile>
     <Compile Include="dacxiao.xaml.cs">
       <DependentUpon>dacxiao.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FavouratePage.xaml.cs">
+      <DependentUpon>FavouratePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Info.cs" />
     <Compile Include="inputPanoramaPage.xaml.cs">
@@ -122,6 +128,9 @@
     </Compile>
     <Compile Include="MorePage.xaml.cs">
       <DependentUpon>MorePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="myurl.xaml.cs">
+      <DependentUpon>myurl.xaml</DependentUpon>
     </Compile>
     <Compile Include="novelPage.xaml.cs">
       <DependentUpon>novelPage.xaml</DependentUpon>
@@ -165,6 +174,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="AddPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ApplistPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -174,6 +187,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="dacxiao.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FavouratePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -198,6 +215,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MorePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="myurl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -243,6 +264,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Properties\AppManifest.xml" />
     <None Include="Properties\WMAppManifest.xml">
       <SubType>Designer</SubType>
@@ -312,9 +334,6 @@
     </Reference>
     <Reference Include="ImageTools.Utils">
       <HintPath>libs\msnaiasdk\MSNADSDK\ImageTools.Utils.dll</HintPath>
-    </Reference>
-    <Reference Include="JiuYouWp8Ad">
-      <HintPath>libs\SDK\JiuYouWp8Ad.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Expression.Interactions, Version=3.9.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone.Controls, Version=8.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />

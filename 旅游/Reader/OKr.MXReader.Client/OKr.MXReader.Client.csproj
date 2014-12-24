@@ -197,6 +197,8 @@
     <Content Include="_static\data\book\36.txt" />
     <Content Include="_static\data\book\5.txt" />
     <Content Include="_static\data\book\6.txt" />
+    <Content Include="_static\data\book\66.txt" />
+    <Content Include="_static\data\book\68.txt" />
     <Content Include="_static\data\book\8.txt" />
     <Content Include="_static\data\book\9.txt" />
     <Content Include="_static\data\book\category.txt">

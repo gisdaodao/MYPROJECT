@@ -76,7 +76,8 @@
                             </Button>
                             <TextBlock Margin="12" Style="{StaticResource okr-text}" TextWrapping="Wrap"><Run Text="作者：" /><Run x:Name="tbAuthor" /></TextBlock>
                             <TextBlock x:Name="tbIntro" Margin="12,0,12,20" Style="{StaticResource okr-text}" Text="" TextWrapping="Wrap" />
-                            <TextBlock Margin="0,200,0,0"  x:Name="tb" Style="{StaticResource okr-text}" Text="总共点击不同的广告5次之后就不会显示了" TextWrapping="Wrap" />
+                            <TextBlock Margin="0,200,0,0"  x:Name="tb" Style="{StaticResource okr-text}" Text="评价1次之后广告就不会显示了" TextWrapping="Wrap" />
+                            <Button  Foreground="Orange" BorderBrush="Orange" x:Name="reviewbtn" Content="前去评价" Click="Button_Click_1"></Button>
                             <oxlad:AdControl  Tap="AdtapControl_Tap" x:Name="Ad1Control" ApplicationId="a9101034-badd-42a0-9131-eb9087a83c3c" AdUnitId="f7d92042-3d49-4f0e-9e54-5906ac4b3567"  VerticalAlignment="Bottom" Height="100" IsCloseIconEnabled="True" />
                             <MsnAD:AdView Tap="AdtapControl_Tap"  Margin="12,21,0,0" TelCapability="True"  x:Name="Ad2Control" StorePic="True" SecretKey="bfac44ffe5c0477a8f52060c9b09a1f1" Adid="190896" Appid="145012" SizeForAd="Normal"></MsnAD:AdView>
                             <google:AdView  Tap="AdtapControl_Tap"  AdUnitID="ca-app-pub-1598808565430684/2935759650"   x:Name="Ad3Control" Format="Banner"></google:AdView>
@@ -255,12 +256,22 @@
                
             </ctrl:PanoramaItem>
             <ctrl:PanoramaItem>
-                <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-                    <oxlad:AdControl x:Name="AdControl" Grid.Row="0" Tap="AdtapControl_Tap" 
+             
+                    <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBox Text="五线谱" BorderBrush="Orange" x:Name="box" Width="300"></TextBox>
+                            <Button BorderBrush="Orange" Click="searbtn_Click" Foreground="Orange" x:Name="searbtn" Content="搜索"></Button>
+                        </StackPanel>
+                        <phone:WebBrowser Height="660" x:Name="wbsearch">
+                            
+                        </phone:WebBrowser>
+                    </StackPanel>
+                    
+                    <!--<oxlad:AdControl x:Name="AdControl" Grid.Row="0" Tap="AdtapControl_Tap" 
                              IsCloseIconEnabled="True"   
                              AdUnitId="047361f2-57ac-42a3-836f-7f2822d62e14" Type="Interstitial"
-                             ApplicationId="a9101034-badd-42a0-9131-eb9087a83c3c"/>
-                </Grid>
+                             ApplicationId="a9101034-badd-42a0-9131-eb9087a83c3c"/>-->
+              
             </ctrl:PanoramaItem>
         </ctrl:Panorama>
     </Grid>

@@ -604,14 +604,18 @@ namespace OKr.MXReader.Client.View
                 this.markbtn.Source = brush.ImageSource;
             });
         }
+        SpeechSynthesizer synth = new SpeechSynthesizer();
         private async void Appbarread_Click(object sender, EventArgs e)
         {
-            SpeechSynthesizer synth = new SpeechSynthesizer();
+           
             string str = text_text2.Text;
+            string newstr = str.Replace("\n", string.Empty);
+            
             Debug.WriteLine("111" + text_text1.Text);
             Debug.WriteLine("222"+text_text2.Text);
+            Debug.WriteLine("333" + newstr);
             if (string.IsNullOrEmpty(str)) return;
-            await synth.SpeakTextAsync(str);
+            await synth.SpeakTextAsync(newstr);
             
         }
         private async void Appbarreadreadall_Click(object sender, EventArgs e)
@@ -703,5 +707,10 @@ namespace OKr.MXReader.Client.View
         private OkrLoader loader;
 
         #endregion
+
+        private void Appcanlbarread_Click(object sender, EventArgs e)
+        {
+            synth.CancelAll();
+        }
     }
 }
