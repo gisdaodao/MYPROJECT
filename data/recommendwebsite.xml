@@ -66,5 +66,8 @@
 <item text="中国时报网(台湾)"      des="">
     <url>http://www.chinatimes.com/</url>
   </item>
+<item text="朝鲜日报"      des="">
+    <url>http://www.chosunonline.com/index.html</url>
+  </item>
 </Items>
 
