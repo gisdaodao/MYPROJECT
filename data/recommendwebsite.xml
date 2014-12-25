@@ -69,5 +69,32 @@
 <item text="朝鲜日报"      des="">
     <url>http://www.chosunonline.com/index.html</url>
   </item>
+<item text="中华人民共和国中央人民政府门户网站"      des="">
+    <url>http://www.gov.cn/</url>
+  </item>
+<item text="参考消息"      des="">
+    <url>http://m.cankaoxiaoxi.com/</url>
+  </item>
+<item text="cia"      des="">
+    <url>https://www.cia.gov/index.html</url>
+  </item>
+<item text="esa(欧洲航天局)"      des="">
+    <url>http://www.esa.int/ESA</url>
+  </item>
+<item text="美国政府网"      des="">
+    <url>http://www.usa.gov/</url>
+  </item>
+<item text="英国"      des="">
+    <url>https://www.gov.uk/</url>
+  </item>
+<item text="who"      des="">
+    <url>http://www.who.int/</url>
+  </item>
+<item text="中华人民共和国国家卫生和计划生育委员会"      des="">
+    <url>http://www.nhfpc.gov.cn/</url>
+  </item>
+<item text="联合国"      des="">
+    <url>http://www.un.org/zh/</url>
+  </item>
 </Items>
 
