@@ -24,5 +24,35 @@
 <item text="华夏时报"      des="">
     <url>http://www.chinatimes.cc/</url>
   </item>
+<item text="开源中国"      des="">
+    <url>http://m.oschina.net/</url>
+  </item>
+<item text="csdn"      des="">
+    <url>http://m.csdn.net/</url>
+  </item>
+<item text="果壳"      des="">
+    <url>http://m.guokr.com/</url>
+  </item>
+<item text="dospy"      des="">
+    <url>http://bbs.dospy.com/?forceMobile=1</url>
+  </item>
+<item text="煎蛋"      des="">
+    <url>http://jandan.net/</url>
+  </item>
+<item text="澎湃新闻网"      des="">
+    <url>http://www.thepaper.cn/</url>
+  </item>
+<item text="香港文汇网"      des="">
+    <url>http://m.wenweipo.com/</url>
+  </item>
+<item text="译言精选"      des="">
+    <url>http://m.wenweipo.com/</url>
+  </item>
+<item text="联合早报网"      des="">
+    <url>http://m.zaobao.com/</url>
+  </item>
+<item text="中国时报网(台湾)"      des="">
+    <url>http://www.chinatimes.com/</url>
+  </item>
 </Items>
 
