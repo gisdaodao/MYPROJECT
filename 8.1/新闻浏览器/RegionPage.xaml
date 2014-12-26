@@ -1,0 +1,77 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="股票新闻.RegionPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+     xmlns:MsnAD="clr-namespace:MSNADSDK.AD;assembly=MSNADSDK"
+  xmlns:oxlad="clr-namespace:OpenXLive.Advertising;assembly=OpenXLive.Advertising"
+  
+    xmlns:SurfaceAdw="clr-namespace:SurfaceAd.SDK.WP;assembly=SurfaceAd.SDK.WP"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    xmlns:googlead="clr-namespace:GoogleAds;assembly=GoogleAds"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    xmlns:UI="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI" 
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot 是包含所有页面内容的根网格-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+          
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <phone:Pivot  x:Name="pivot" Loaded="pivot_Loaded" SelectionChanged="Pivot_SelectionChanged">
+            <phone:Pivot.Background>
+                <ImageBrush ImageSource="Assets/PanoramaBackground.png"/>
+            </phone:Pivot.Background>
+
+            <!--枢轴项一-->
+            <phone:PivotItem Header="浙江在线" Loaded="PivotItem_Loaded" >
+                <phone:WebBrowser    IsScriptEnabled="True"  x:Name="b1"  Source="http://wap.zjol.com.cn/"></phone:WebBrowser>
+            </phone:PivotItem>
+
+            <!--枢轴项二-->
+            <phone:PivotItem Header="数字四川" Loaded="PivotItem_Loaded_1">
+                <phone:WebBrowser x:Name="WB2" IsScriptEnabled="True"></phone:WebBrowser>
+            </phone:PivotItem>
+            <phone:PivotItem Header="山东大众网" Loaded="PivotItem_Loaded_1">
+                <phone:WebBrowser x:Name="WB3" IsScriptEnabled="True"></phone:WebBrowser>
+            </phone:PivotItem>
+            <phone:PivotItem Header="东北新闻网" Loaded="PivotItem_Loaded_1">
+                <phone:WebBrowser x:Name="WB4" IsScriptEnabled="True"></phone:WebBrowser>
+            </phone:PivotItem>
+            <phone:PivotItem Header="湖南红网" Loaded="PivotItem_Loaded_1">
+                <phone:WebBrowser x:Name="WB5" IsScriptEnabled="True"></phone:WebBrowser>
+            </phone:PivotItem>
+            <phone:PivotItem Header="宁夏新闻网" Loaded="PivotItem_Loaded_1">
+                <phone:WebBrowser x:Name="WB6" IsScriptEnabled="True"></phone:WebBrowser>
+            </phone:PivotItem>
+            <phone:PivotItem Header="广西西新闻网" Loaded="PivotItem_Loaded_1">
+                <phone:WebBrowser x:Name="WB7" IsScriptEnabled="True"></phone:WebBrowser>
+            </phone:PivotItem>
+            <phone:PivotItem Header="山西新闻网" Loaded="PivotItem_Loaded_1">
+                <phone:WebBrowser x:Name="WB8" IsScriptEnabled="True"></phone:WebBrowser>
+            </phone:PivotItem>
+            <phone:PivotItem >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <MsnAD:AdView  Grid.Row="0" Margin="12,21,0,0" TelCapability="True"  StorePic="True" SecretKey="9f245ae267794ffba5771ba06ad71304" Adid="190892" Appid="145004" SizeForAd="Normal"></MsnAD:AdView>
+                    <googlead:AdView Grid.Row="1" ReceivedAd="AdView_ReceivedAd"  Format="Banner" AdUnitID="ca-app-pub-1598808565430684/3283412857" ></googlead:AdView>
+                    <!--<JiuYou:JiuYouWp8AdControl x:Name="jyad" VerticalAlignment="Bottom" ClickBackMessageEvent="jyad_ClickBackMessageEvent" DeveloperAdID="9a85f5305c905536cc578a782da0808e" GetAdBackMessageEvent="jyad_GetAdBackMessageEvent" />-->
+                    <oxlad:AdControl Grid.Row="2" x:Name="AdControl22" ApplicationId="48557996-85ed-4cbf-a38a-d7a8f7e953f1" AdUnitId="f8725d4d-05eb-4776-b14e-59dd4ee7da46" Type="Banner" IsCloseIconEnabled="True" />
+                </Grid>
+               
+            </phone:PivotItem>
+        </phone:Pivot>
+    </Grid>
+
+</phone:PhoneApplicationPage>
