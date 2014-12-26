@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
+  <Identity Name="3519gisyingyong.3267144FDBC1A" Publisher="CN=DD6D176F-F17D-4D4E-A94E-CD837A0F9C7B" Version="1.1.0.3" />
+  <Properties>
+    <DisplayName>唱歌学习</DisplayName>
+    <PublisherDisplayName>gisyingyong</PublisherDisplayName>
+    <Logo>Assets\Data\Logo50x50.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.3.0</OSMinVersion>
+    <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="zh-cn" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="OKr.Win8Book.Client.App">
+      <m2:VisualElements DisplayName="唱歌学习" Description="A windows 8 text book reader." BackgroundColor="#d74f2a" ForegroundText="light" ToastCapable="true" Square150x150Logo="Assets\Data\Logo150x150.png" Square30x30Logo="Assets\Data\Logo30x30.png">
+        <m2:DefaultTile Wide310x150Logo="Assets\Data\Logo310x150.png">
+          <m2:ShowNameOnTiles>
+            <m2:ShowOn Tile="square150x150Logo" />
+            <m2:ShowOn Tile="wide310x150Logo" />
+          </m2:ShowNameOnTiles>
+        </m2:DefaultTile>
+        <m2:InitialRotationPreference>
+          <m2:Rotation Preference="landscape" />
+        </m2:InitialRotationPreference>
+        <m2:SplashScreen BackgroundColor="#d74f2a" Image="Assets\Data\Logo620x300.png" />
+      </m2:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <Capability Name="picturesLibrary" />
+    <DeviceCapability Name="location" />
+  </Capabilities>
+</Package>
