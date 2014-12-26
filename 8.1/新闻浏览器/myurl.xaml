@@ -1,0 +1,45 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="股票新闻.myurl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+
+    <!--LayoutRoot 包含根网格，其他所有页面内容都位于根网格中-->
+    <Grid x:Name="LayoutRoot">
+        <phone:Panorama  x:Name="panorama">
+            <phone:Panorama.Background>
+                <ImageBrush ImageSource="Assets/PanoramaBackground.png"/>
+            </phone:Panorama.Background>
+
+            <!--Panorama 项目一-->
+            <phone:PanoramaItem x:Name="PanoramaItem1">
+                <phone:WebBrowser x:Name="wb">
+                    
+                </phone:WebBrowser>
+            </phone:PanoramaItem>
+
+            <!--Panorama 项目二-->
+            <phone:PanoramaItem >
+                <phone:LongListSelector LayoutMode="List" x:Name="longlistbox">
+                    <phone:LongListSelector.ItemTemplate>
+                        <DataTemplate>
+                            <Border Tap="Border_Tap" Width="380" Height="65" CornerRadius="5" Background="Orange">
+                                <TextBlock FontSize="30" Foreground="Black" Text="{Binding text}"></TextBlock>
+                            </Border>
+                        </DataTemplate>
+                    </phone:LongListSelector.ItemTemplate>
+                </phone:LongListSelector>
+            </phone:PanoramaItem>
+        </phone:Panorama>
+    </Grid>
+
+</phone:PhoneApplicationPage>
