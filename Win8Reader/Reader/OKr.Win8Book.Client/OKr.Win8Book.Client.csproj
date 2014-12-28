@@ -12,11 +12,13 @@
     <DefaultLanguage>zh-cn</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <PackageCertificateKeyFile>OKr.Win8Book.Client_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>OKr.Win8Book.Client_StoreKey.pfx</PackageCertificateKeyFile>
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     <TargetPlatformVersion>8.1</TargetPlatformVersion>
     <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
     <TargetFrameworkVersion />
+    <PackageCertificateThumbprint>40DC56FFB2BCB74C5157C7B2357AF46044600276</PackageCertificateThumbprint>
+    <AppxBundlePlatforms>x86</AppxBundlePlatforms>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -193,26 +195,23 @@
     <Content Include="Assets\Common\PageBackgroundLight.png" />
     <Content Include="Assets\Data\app\okr-bg-csd.png" />
     <Content Include="Assets\Data\app\okr-bg-nld.png" />
-    <Content Include="Assets\Data\book\1.txt" />
-    <Content Include="Assets\Data\book\10.txt" />
-    <Content Include="Assets\Data\book\11.txt" />
-    <Content Include="Assets\Data\book\12.txt" />
-    <Content Include="Assets\Data\book\15.txt" />
-    <Content Include="Assets\Data\book\19.txt" />
-    <Content Include="Assets\Data\book\2.txt" />
-    <Content Include="Assets\Data\book\22.txt" />
-    <Content Include="Assets\Data\book\23.txt" />
-    <Content Include="Assets\Data\book\24.txt" />
-    <Content Include="Assets\Data\book\25.txt" />
-    <Content Include="Assets\Data\book\3.txt" />
-    <Content Include="Assets\Data\book\30.txt" />
-    <Content Include="Assets\Data\book\31.txt" />
-    <Content Include="Assets\Data\book\36.txt" />
-    <Content Include="Assets\Data\book\5.txt" />
-    <Content Include="Assets\Data\book\6.txt" />
-    <Content Include="Assets\Data\book\8.txt" />
-    <Content Include="Assets\Data\book\9.txt" />
+    <Content Include="Assets\Data\book\beijing.txt" />
     <Content Include="Assets\Data\book\category.txt" />
+    <Content Include="Assets\Data\book\chuguo.txt" />
+    <Content Include="Assets\Data\book\chuguolvyou.txt" />
+    <Content Include="Assets\Data\book\chuxing.txt" />
+    <Content Include="Assets\Data\book\hanguo.txt" />
+    <Content Include="Assets\Data\book\hanguotutechan.txt" />
+    <Content Include="Assets\Data\book\huwai.txt" />
+    <Content Include="Assets\Data\book\lvyoubibeiwupin.txt" />
+    <Content Include="Assets\Data\book\mianfei.txt" />
+    <Content Include="Assets\Data\book\rank.txt" />
+    <Content Include="Assets\Data\book\renshao.txt" />
+    <Content Include="Assets\Data\book\ribenlvyou.txt" />
+    <Content Include="Assets\Data\book\yingguo.txt" />
+    <Content Include="Assets\Data\book\zoubianzhongg.txt" />
+    <Content Include="Assets\Data\book\zuimei.txt" />
+    <Content Include="Assets\Data\LockCover.jpg" />
     <Content Include="Assets\Data\Logo150x150.scale-100.png" />
     <Content Include="Assets\Data\Logo30x30.scale-100.png" />
     <Content Include="Assets\Data\Logo310x150.scale-100.png" />
@@ -221,7 +220,6 @@
     <Content Include="Assets\Home\ChapterIcon1.png" />
     <Content Include="Assets\Home\ChapterIcon2.png" />
     <Content Include="Assets\Home\ChapterIcon3.png" />
-    <Content Include="Assets\Data\LockCover.jpg" />
     <Content Include="Assets\Home\MarkIcon1.png" />
     <Content Include="Assets\Home\MarkProgressBackground.png" />
     <Content Include="Assets\Home\RightArrow.png" />
@@ -247,6 +245,8 @@
     <Content Include="Assets\Data\me.okr">
       <SubType>Designer</SubType>
     </Content>
+    <None Include="OKr.Win8Book.Client_StoreKey.pfx" />
+    <None Include="Package.StoreAssociation.xml" />
     <None Include="OKr.Win8Book.Client_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
@@ -315,11 +315,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="SurfaceAd.SDK.WIN">
-      <HintPath>..\..\..\..\SurfaceAd.SDK.WIN.V1.0.1\libs\SurfaceAd.SDK.WIN.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
     <VisualStudioVersion>11.0</VisualStudioVersion>

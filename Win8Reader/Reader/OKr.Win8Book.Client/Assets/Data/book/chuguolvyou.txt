@@ -1,0 +1,278 @@
+﻿1.(指着相机里的照片问人)抱歉，我迷路了，怎样才能回到这里？
+Excuse me, I lose my way, How can I come back here?
+2.我迷路了,请帮我联系导游,导游的电话是:
+Excuse me, I lose my way, please help me and call my guide at 0086-13912345678, thank you
+3.请问厕所在哪里?谢谢
+Excuse me, where is the toilet? Where is the restroom?
+4.我生病了,请送我到医院一下,谢谢.
+Excuse me, I am injuried, please send me to the hospital, thanks!
+5.我有糖尿病,需要一些食物,谢谢
+Excuse me, I have diabetes mellitus, I need some food, thanks!
+6.我的包掉了请问哪里是失物招领处
+Excuse me, I lose my bag, please tell me where is the Lost and Found, thank you.
+7.请帮我拨打我儿子的电话好吗
+Please call my son at 0086-13812345678,thank you
+8. 你能帮我吗? 哪里可以买到冰箱贴?
+Excuse me,Where can I buy the Refrigerator Magnetism Pastes?
+9. 我需要一些热水.
+Excuse me, Where can I got hot water for drink?
+10. 我需要中文翻译。
+I need a Chinese interpreter. Thank you!
+How much? 多少钱?
+Could you do me a favor?   能够帮我忙吗？
+May I smoke here?  能在这里吸烟吗？
+Could you call for a chinese speaking staff? 能找个中文员工给吗？
+Where can I check in? 在哪里办理登机手续？
+Could you please tell me at which gate I should be boarding? 请问从几号登机口登机？
+Could you please tell me where I can get my baggage? 请问行李提取处在哪里？
+Where is the police station? 警察局在哪？
+I’ve lost my passport. 我的护照丢了
+I’ve lost my purse with my credit card. 我丢了钱包和信用卡
+
+No Smoking 禁止吸烟    No Photos 请勿拍照
+No Visitors 游人止步   No Entry 禁止入内
+No Admittance 闲人免进      SOS 紧急求救信号
+Occupied （厕所）有人         Vacant （厕所）无人
+East 东     South 南     West 西     North 北 
+Left 左     Right 右    Front 前 方    Back 后 方
+
+
+
+
+
+
+遇到紧急情况:
+荷兰大使馆   0031-70-3065061
+Please help me and contact 0031-70-3065061, the number of Chinese consulate 
+法国大使馆 0033-153758856 615742537
+Please help me and contact 0033-153758856 615742537, the number of Chinese consulate 
+瑞士大使馆 0041-313514593
+Please help me and contact 0041-313514593, the number of Chinese consulate 
+意大利大使馆 0039-3939110852
+Please help me and contact0039-3939110852, the number of Chinese consulate 
+
+
+
+
+
+
+
+
+
+机场指示牌
+机场费	airport fee	出站（出港、离开）	departures
+国际机场	international airport	登机手续办理	check-in
+国内机场	domestic airport 	登机牌	boarding pass (card)
+机场候机楼	airport terminal	护照检查处	passport control immigration
+国际候机楼	international terminal	行李领取处	luggage claim; baggage claim
+国际航班出港	international departure	国际航班旅客	international passengers
+国内航班出站	domestic departure	中转	transfers
+卫星楼	satellite	中转旅客	transfer passengers
+入口	in	中转处	transfer correspondence
+出口	exit; out; way out	过境	transit
+进站(进港、到达）	arrivals	报关物品	goods to declare
+不需报关	nothing to declare	贵宾室	V. I. P. room
+海关	customs	购票处	ticket office
+登机口	gate; departure gate	付款处	cash
+候机室	departure lounge	出租车	taxi
+航班号	FLT No (flight number)	出租车乘车点	Taxi pick-up point
+来自......	arriving from	大轿车乘车点	coach pick-up point
+预计时间	scheduled time (SCHED)	航空公司汽车服务处	airline coach service
+实际时间	actual	行李暂存箱	luggage locker
+已降落	landed		
+前往......	departure to 	公用电话	public phone; telephone
+起飞时间	departure time	厕所	toilet; W. C; lavatories; rest room
+延误	delayed	男厕	men‘s; gent‘s; gentlemen‘s
+登机	boarding	女厕	women‘s; lady‘s
+由此乘电梯前往登机	stairs and lifts to departures	餐厅	restaurant
+由此上楼	up; upstairs	咖啡馆	coffee shop; cafe
+由此下楼	down; downstairs	免税店	duty-free shop 
+银行	bank	邮局	post office
+货币兑换处	money exchange; currency exchange	行李牌	luggage tag
+机票 
+飞机票
+(指限定条件) 	endorsements/restrictions 	前往城市 	to 
+旅客姓名	name of passenger	承运人(公司)	carrier
+旅行经停地点	good for passage between	航班号	flight no.
+起点城市	from	座舱等级	class (fare basis)
+起飞日期	date	机号	plane No.
+起飞时间	time	机座号	seat No.
+订座情况	status	登机口	gate
+机票确认	ticket confirm		
+出（入）境卡
+姓	family name	年	year
+名	First (Given) Name	月	month
+性别	sex	偕行人数	accompanying number
+男	male	职业	occupation
+女	female	专业技术人员	professionals & technical
+国籍	nationality	行政管理人员	legislators &administrators
+国籍	country of citizenship	办事员	clerk
+护照号	passport No.	商业人员	commerce (Business People)
+原住地	country of Origin  (Country where you live)	服务人员	service
+前往目的地国	destination country	农民	farmer
+登机城市	city where you boarded	工人	worker
+签证签发地	city where visa was issued	其他	others
+签发日期	date issue	无业	jobless
+前往国家的住址	address while in	签名	signature
+街道及门牌号	number and street	官方填写	official use only
+城市及国家	city and state	日	day
+出生日期	date of Birth  (Birthdate)	　	　
+
+签 证
+姓	surname	失效日期(或必须在...日之前入境)	expiry date ( 或 before)
+名	first (given) name	停留期为......	for stays of
+性别	sex	10天	ten days
+出生日期	birthdate	8周	eight weeks
+国籍	nationality	3个月	three months
+护照号	passport No.	6个月	six months
+编号	control No.	1年	one year
+签发地	Issue At	3年	three years
+签发日期	Issue Date (或On)	签证种类	visa type(class)
+
+出国旅游英语总括-入关常用词 
+Immigration	入境检查	duty-free items	免税品
+Passport control	护照检查	Quarantine	检疫
+Outgoing passenger card	入境登记卡	Residents	本国居民
+Ongoing passenger card	出境登记卡	Non-residents	外国居民
+Customs declaration card	海关申报单	Visa	签证
+Currency declaration	现金申报单	Destination	目的地
+A gift for my friend	送给朋友的礼物	Valid (invalid)	有效（无效）
+Chinese medicine	中药	Cash	现金
+Prohibited articles	违禁品	Yellow card	健康卡
+
+
+
+
+
+
+
+
+
+
+
+我不舒服，我病了。I'm not feeling well, I feel sick. 
+请带我去看医生。Please take me to a doctor. 
+请送我去医院。Please take me to the hospital. 
+我需要中文翻译。I need a Chinese interpreter. 
+PLEASE CALL A DOCTOR 请叫医生
+IS THERE A HOSPITAL NEAR HERE? 这附近有医院吗？
+COULD YOU TAKE ME TO A HOSPITAL, PLEASE? 能带我去医院吗？
+IS THERE A DOCTOR WHO SPEAKS CHINESE? 有会说中文的医生吗？
+I HAVE A FEVER 我发烧
+I FEEL CHILLY 我很冷
+I FEEL LANGUID 我全身无力
+I HAVE A POOR APPETITE 我没有胃口
+I HAVE A DIARRHEA. 我痢疾
+I CAUGHT A COLD 我感冒了
+I HAVE A SORE THROAT. 我嗓子疼
+I HAVE DIFFICULTY BREATHING 我呼吸困难
+I FEEL NAUSEOUS. 我恶心
+I'VE BEEN VOMITING. 我不停的吐
+I GO TO THE TOILET EVERY 10 MINUTES. 我每十分钟去遍厕所
+I CAN'T SLEEP WELL 我睡眠不好
+MY FRIEND IS SERIOUSLY INJURED 我朋友伤的很重
+HE IS BLEEDING HEAVILY 他大量流血
+HE IS UNCONSCIOUS. 他神志不清
+I HAVE ALLERGIES. 我得了敏感症
+一、一般病情: 
+He feels headache, nausea and vomiting. (他觉得头痛、恶心和想吐。)  
+He is under the weather. (他不舒服，生病了。)  
+He began to feel unusually tired. (他感到反常的疲倦。)  
+He feels light-headed. (他觉得头晕。)  
+She has been shut-in for a few days. (她生病在家几天了。)  
+Her head is pounding. (她头痛。)  
+His symptoms include loss of appetite, weight loss, excessive fatigue, fever and chills. (他的症状包括没有食欲、体重减轻、非常疲倦、发烧和发冷。)  
+He feels exhausted or fatigued most of the time. (他大部份时间都觉得非常疲倦。)  
+He has been lacking in energy for some time. (他感到虚弱有段时间了。)   
+He feels drowsy, dizzy and nauseated. (他觉得昏昏欲睡，头晕目眩和想吐。)  
+He feels as though everything around him is spinning. (他感到周围的东西都在打转。)  
+He has noticed some loss of hearing. (他发觉听力差些。)  
+She has some pains and itching around her eyes. (她眼睛四周又痛又痒。) 
+二、伤风感冒：
+He has been coughing up rusty or greenish-yellow phlegm. (他咳嗽带有绿黄色的痰。)  
+His eyes feel itchy and he has been sneezing. (他眼睛发痒，而且一直在打喷嚏。) 
+He has a fever, aching muscles and hacking cough. (hacking = constant) (他有发烧，筋骨酸痛和常常咳嗽。)  
+He coughed with sputum and feeling of malaise. (malaise = debility) (他咳嗽有浓痰，而且觉得很虚弱。) 
+He gets a cold with a deep hacking cough. (他伤风咳嗽。)  
+He has a headache, aching bones and joints. (他头痛，骨头、关节也痛。)  
+He has a persistent cough. (他不停地在咳。)  
+He has bouts of uncontrollable coughing. (他一阵阵的咳嗽，难以控制。) 
+He has hoarse and has lost his voice sometimes. (他声音嘶哑，有时失声。)  
+He has a sore throat and a stuffy nose. (他嗓子疼痛而且鼻子不通。)  
+His breathing is harsh and wheezy. (他呼吸时，有气喘似的呼哧呼哧作响。) 
+He has a stabbing pain that comes on suddenly in one or both temples. (有时突然间太阳穴刺痛。)  
+He has a runny nose, sneezing or a scratchy throat. (他流鼻水，打喷嚏和喉咙沙哑。) 
+三、手脚疾病： 
+His both hands and feet ache all over. (他两手两脚都很酸痛。)  
+He has pain on the sole of his feet. (他脚底很痛。) 
+There is a wart-like lump on the sole of right foot. (我右脚底有个像肉疣般的硬块。) 
+His ankles look puffy and they pit when he presses them with his finger.  (pit = small dent form；句里的 they 和 them 都是指 ankles)(他的足踝好象肿了，用手按，就有小坑痕。)  
+The pain in his left foot is accompanied by redness and swelling. (左脚酸痛，并有红肿。)  
+The joints near his fingernails and knuckles look swollen. (指头和指节旁边的关节，似乎有肿大。)  
+He has numbness and tingling in his hands and fingers. (他的手和指头感到麻木和刺痛。)  
+His legs become painful following strenuous exercise. (激烈运动后，他的腿就痛。) 
+His knee is misshapen or unable to move. (他的膝盖有点畸形，也不能动。) 
+There are some swellings in his armpit. (他的腋窝肿大。)  
+He is troubled with painful muscles and joints. (他的筋骨和关节都痛。)  
+She is troubled by the pains in the back and shoulders. (她的后背和肩膀都痛。)  
+四、泌尿疾病： 
+He urinates more frequently than usual.（他小便比平时多。）  
+He has difficulty controlling his bladder.（他很难控制小便。）(bladder：膀胱)  
+He has had burning or pain when he urinates.（他小便时感到发烫和疼痛。）  
+He is passing less urine than usual.（他小便比平时少。） 
+He has had painless swelling in his scrotum.（他的阴囊有不痛的肿大。）  
+He has difficulty starting his urine flow.（他小便不畅通。） 
+He has a dull heavy ache in the crotch.（他的胯部感到隐痛。）  
+He has a small leakage of urine when he coughs or sneezes.（他咳嗽或打喷嚏时，会有点泄尿。）  
+五、呼吸方面：
+His breathing has become increasingly difficult.（他呼吸越来越困难。） 
+He has to breathe through his mouth.（他要用口呼吸。） 
+He is short of breath, even when he has not been exercising, he is breathless.（他喘气；即使不运动，他也是上气不接下气。） 
+His cough is more like wheezing.（他的咳嗽有呼哧呼哧的响声。）  
+His cough is dry, producing no phlegm.（他是干咳，没有痰。）  
+He has coughed up blood.（他咳嗽有血。）  
+His nose stuffed up when he had a cold.（他感冒时鼻子就不通。）  
+He coughs up a lot of phlegm (thick spit) on most days.（他多半时间咳出浓浓的痰。） 
+He has a feeling of tightness in the chest or a feeling that he is suffocating.（他胸部觉得闷闷的，好象透不过气来。） 
+六、口腔毛病： 
+He has pain in his teeth or jaw. (他的牙齿和下巴疼痛。) 
+He has some problems with his teeth. (他牙齿有问题。)  
+The tooth hurts only when he bites down on it. (他咬东西时，牙齿就痛。)  
+His gums are red and swollen. (他的牙床红肿。) 
+His tongue is red and sore all over. (他的舌头到处红和痛。) 
+His breath smells bad and he has a foul taste in his mouth. (他口里有怪味。)  
+His gums do bleed. (他牙床有出血。)  
+He has some sore swellings on his gum or jaw. (他的牙床和下巴肿痛。)  
+He has sore places on or around the lip. (他的嘴唇和周围都很痛。)  
+There are cracks at the corners of his mouth. (他的嘴巴角落破了。)  
+There are some discolored areas inside on his tongue. (他舌头里边有些地方颜色怪怪的。)  
+
+
+七、肠胃毛病：
+He has a bloated, uncomfortable feeling after meal. (他饭后肚子觉得胀胀的，很不舒服。) 
+He has bouts of abdominal pain. (他有一阵阵的肚痛。)  
+He feels bloated in his abdominal area. (他感到肚子胀胀的。) (注：胀胀的，像「puff up」，但不是真正的肿「swell up」。)  
+The pain is mainly in the lower (upper) right part of the abdomen. (痛是在肚子下半部。)  
+He has nausea and vomiting. (他有恶心和呕吐。)  
+It is difficult or painful for him to swallow. (他吞下食物时会痛。)  
+He has been constipated for a few days. (他便秘了好几天。) 
+He suffers pains when he moves his bowels. (他大便时很痛。)  
+He has some bleeding from his rectum. (他的肛门出血。)  
+He has noticed some blood in his bowel movements. (他发觉大便时有些血。)  
+His bowel movements are pale, greasy and foul smelling. (他大便呈灰白色，含油脂的恶臭。)  
+His bowel movements are grey (or black) in color. (他的大便呈灰白色。)  
+He has trouble with diarrhea. (他拉肚子。) 
+八、血压&感官： 
+His blood pressure is really up. (他的血压很高。)  
+High blood pressure is creeping up on him. 
+He has noticed frequent urination, increased thirst and unexpected tireness. (他发觉常常小便，非常口渴和更加疲倦。)  
+It is a chest pain that gets worse when he bends over or lies down. (他弯腰或躺下时，胸部更痛。)  
+He has noticed excessive sweating and unexplained tireness. (他体会到过度的出汗和难以解释的疲倦。)  
+He has a sharp pain in one area of his spine. (他的脊椎某部位刺痛。)  
+He has pain in other joints including hip, knee and ankle. (其它关节疼痛包括臀部、膝盖和脚踝。)  
+His eyes seem to be bulging. (他的眼睛觉得有点肿胀。)  
+He has double vision. (他的视线有双重影子。) 
+He feels there is a film over his eyes. (他觉得眼里有种薄膜似的东西，挡住视线。) 
+His vision in the right eye blurred. (他右眼视线模糊不清。)  
+He has had some earaches lately. (他近来耳朵有点痛。) 
+He has a repeated buzzing or other noises in his ears. (他耳朵常有嗡嗡的声音。) 

@@ -3,7 +3,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:OKr.Win8Book.Client.View"
-       xmlns:SurfaceAd="using:SurfaceAd.SDK.WIN"   
+     
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:OKrControls="using:OKr.Win8Book.Client.Controls"
@@ -137,10 +137,10 @@
                         </common:RichTextColumns.ColumnTemplate>
                     </common:RichTextColumns>
                 </Grid>
-                <SurfaceAd:SurfaceAdView Grid.Row="0" x:Name="surfaceAdControlVideoFromXaml"    OnAdRequestLoaded="surfaceAdControlVideoFromXaml_OnAdRequestLoaded"       OnAdRequestFailed="surfaceAdControlVideoFromXaml_OnAdRequestFailed"                                  
+                <!--<SurfaceAd:SurfaceAdView Grid.Row="0" x:Name="surfaceAdControlVideoFromXaml"    OnAdRequestLoaded="surfaceAdControlVideoFromXaml_OnAdRequestLoaded"       OnAdRequestFailed="surfaceAdControlVideoFromXaml_OnAdRequestFailed"                                  
                                           AdToken="MF04XWUBNl8wUThaZRc2XzBD" OnApplicationAuthEvent="surfaceAdControlVideoFromXaml_OnApplicationAuthEvent"
                                           AdPosition="d0b5997a5038bfd5bf29f45942c5c093"
-                                          AdRefreshInterval="10"/>
+                                          AdRefreshInterval="10"/>-->
             </Grid>
             
             <OKrControls:BigMark x:Name="bigMark" OnMark="OnMark" IsMarked="False"/>

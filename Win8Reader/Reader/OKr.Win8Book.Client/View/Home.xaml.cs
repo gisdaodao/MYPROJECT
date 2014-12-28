@@ -12,7 +12,7 @@ using Windows.UI.Core;
 using Windows.System;
 using System.Linq;
 using Windows.UI.Xaml.Media.Animation;
-using SurfaceAd.SDK.WIN;
+
 //using SurfaceAd.SDK.WIN;
 
 namespace OKr.Win8Book.Client.View
@@ -37,7 +37,7 @@ namespace OKr.Win8Book.Client.View
         {
             this.InitializeComponent();
             this.TopAppBar = new NavBar(this, false, true, true);
-            this.surfaceAdControlVideoFromXaml.InitAdControl(AdModeType.Normal); 
+            //this.surfaceAdControlVideoFromXaml.InitAdControl(AdModeType.Normal); 
             SettingsPane.GetForCurrentView().CommandsRequested += SettingCommandsRequested;
         }
 

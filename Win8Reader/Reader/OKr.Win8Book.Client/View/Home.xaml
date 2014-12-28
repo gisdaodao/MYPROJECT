@@ -8,7 +8,7 @@
     xmlns:common="using:OKr.Win8Book.Client.Common"
     xmlns:OKrControls="using:OKr.Win8Book.Client.Controls"
     xmlns:controls="using:OKr.Win8Book.Client.Controls"
-    xmlns:SurfaceAd="using:SurfaceAd.SDK.WIN"   
+    
     xmlns:Entitysurfacead="using:SurfaceAd.SDK.WIN.Entity"
     mc:Ignorable="d"
     NavigationCacheMode="Required">
@@ -179,10 +179,10 @@
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="推荐阅读" Style="{StaticResource Home_SectionTileStyle}"/>
                         </StackPanel>
-                        <SurfaceAd:SurfaceAdView Grid.Row="1" x:Name="surfaceAdControlVideoFromXaml"                                           
+                        <!--<SurfaceAd:SurfaceAdView Grid.Row="1" x:Name="surfaceAdControlVideoFromXaml"                                           
                                           AdToken="MF04XWUBNl8wUThaZRc2XzBD"
                                           AdPosition="d0b5997a5038bfd5bf29f45942c5c093"
-                                          AdRefreshInterval="40"/>
+                                          AdRefreshInterval="40"/>-->
                         <!--<ListView Grid.Row="1" Margin="0,20,0,0"
                               Style="{StaticResource NonScrollable_ListViewStyle}"
                             ItemsSource="{Binding OKrApp.Apps}"

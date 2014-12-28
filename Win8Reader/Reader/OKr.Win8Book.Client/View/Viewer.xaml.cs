@@ -20,7 +20,7 @@ using Windows.System;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.Foundation;
 using Windows.UI.Xaml.Media;
-using SurfaceAd.SDK.WIN;
+
 
 namespace OKr.Win8Book.Client.View
 {
@@ -31,7 +31,7 @@ namespace OKr.Win8Book.Client.View
         public Viewer()
         {
             this.InitializeComponent();
-            this.surfaceAdControlVideoFromXaml.InitAdControl(AdModeType.Normal); 
+            //this.surfaceAdControlVideoFromXaml.InitAdControl(AdModeType.Normal); 
             if (this.ScreenWidth == 1366)
             {
                 this.height = 2236;
@@ -705,20 +705,20 @@ namespace OKr.Win8Book.Client.View
 
         #endregion
 
-        private void surfaceAdControlVideoFromXaml_OnApplicationAuthEvent(object sender, string message)
-        {
+        //private void surfaceAdControlVideoFromXaml_OnApplicationAuthEvent(object sender, string message)
+        //{
 
-        }
+        //}
 
-        private void surfaceAdControlVideoFromXaml_OnAdRequestFailed(object sender, SurfaceAdEventArgs e)
-        {
+        //private void surfaceAdControlVideoFromXaml_OnAdRequestFailed(object sender, SurfaceAdEventArgs e)
+        //{
 
-        }
+        //}
 
-        private void surfaceAdControlVideoFromXaml_OnAdRequestLoaded(object sender, EventArgs e)
-        {
+        //private void surfaceAdControlVideoFromXaml_OnAdRequestLoaded(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
     }
 }

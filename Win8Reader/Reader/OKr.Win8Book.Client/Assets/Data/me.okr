@@ -3,13 +3,12 @@
   <appSettings></appSettings>
   <app>
     <appid>cd8b1774-7f9a-4307-a642-c3d3324b2cd6</appid>
-    <name>三国演义</name>
-    <intro>好阅，三国演义</intro>
+    <name>旅游攻略</name>
+    <intro>旅游攻略</intro>
     <v>1.0</v>
     <build>1.0.0.0001</build>
-    <us>2012, OKr Inc.</us>
-    <email>service@okr.me</email>
-    <url>http://okr.me</url>
+    <us>gisyingyong</us>
+    <email>nan06jing06ok@hotmail.com</email>
     <ad>
       <appid>8e71b9d7-5287-44ca-8cef-a52d72352b7b</appid>
       <unitid>80831</unitid>
@@ -17,12 +16,12 @@
     </ad>
   </app>
   <okrbook>
-    <name>三国演义</name>
-    <author>罗贯中</author>
+    <name>旅游攻略</name>
+    <author>旅游攻略</author>
     <status>完本</status>
     <readnum>0</readnum>
     <datapath>_static/data/book</datapath>
     <basepath>_static/data</basepath>
-    <intro>中国古典四大名著之一。滚滚长江东逝水，浪花淘尽英雄。是非成败转头空。青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢。古今多少事，都付笑谈中。</intro>
+    <intro>旅游攻略</intro>
   </okrbook>
 </config>
