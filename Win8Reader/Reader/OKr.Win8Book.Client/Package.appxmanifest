@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
+  <Identity Name="98334759-899B-4776-B416-863F94D1148A" Publisher="CN=Anytao" Version="1.1.0.9" />
+  <Properties>
+    <DisplayName>MXReader</DisplayName>
+    <PublisherDisplayName>Anytao</PublisherDisplayName>
+    <Logo>Assets\Data\Logo50x50.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.3.0</OSMinVersion>
+    <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="zh-cn" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="OKr.Win8Book.Client.App">
+      <m2:VisualElements DisplayName="唱歌技巧" Description="唱歌技巧" BackgroundColor="#d74f2a" ForegroundText="light" ToastCapable="true" Square150x150Logo="Assets\Data\Logo150x150.png" Square30x30Logo="Assets\Data\Logo30x30.png">
+        <m2:DefaultTile Wide310x150Logo="Assets\Data\Logo310x150.png">
+          <m2:ShowNameOnTiles>
+            <m2:ShowOn Tile="square150x150Logo" />
+            <m2:ShowOn Tile="wide310x150Logo" />
+          </m2:ShowNameOnTiles>
+        </m2:DefaultTile>
+        <m2:InitialRotationPreference>
+          <m2:Rotation Preference="landscape" />
+        </m2:InitialRotationPreference>
+        <m2:SplashScreen BackgroundColor="#d74f2a" Image="Assets\Data\Logo620x300.png" />
+      </m2:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <Capability Name="internetClientServer" />
+    <Capability Name="picturesLibrary" />
+    <Capability Name="enterpriseAuthentication" />
+    <Capability Name="videosLibrary" />
+    <Capability Name="musicLibrary" />
+    <Capability Name="privateNetworkClientServer" />
+    <Capability Name="removableStorage" />
+    <Capability Name="sharedUserCertificates" />
+    <DeviceCapability Name="location" />
+    <DeviceCapability Name="microphone" />
+    <DeviceCapability Name="proximity" />
+    <DeviceCapability Name="webcam" />
+  </Capabilities>
+</Package>
