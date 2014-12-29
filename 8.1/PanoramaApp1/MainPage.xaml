@@ -17,8 +17,9 @@
     <!--LayoutRoot 是包含所有页面内容的根网格-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
-            <RowDefinition Height="200"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
               <RowDefinition Height="*"></RowDefinition>
+            
         </Grid.RowDefinitions>
         <!-- 本地化说明:
             若要本地化显示的字符串，请将其值复制到应用程序的非特定语言资源文件(AppResources.resx)
@@ -38,23 +39,28 @@
             与应用程序的 CurrentUICulture 匹配的 .resx 文件中
             提取属性的值。
          -->
-        <Grid>
-            <StackPanel x:Name="adpanel">
-                
-                <oxlad:AdControl x:Name="Ad1Control" ApplicationId="962ca18f-1bb2-4bdc-8d15-5c4bcee4ac09" AdUnitId="27c4e9ce-7bfa-4da4-8eb8-12ead833c25d" Type="Banner"  Height="100" IsCloseIconEnabled="True" />
-                <TextBlock Tap="TextBlock_Tap"  FontSize="25" Foreground="White" Text="点击广告或者评价可以去广告"></TextBlock>
+        <Grid Grid.Row="0">
+            <StackPanel  x:Name="adpanel">
+                  <TextBlock Tap="TextBlock_Tap"  FontSize="22" Foreground="White" Text="点击广告或者评价可以去广告"></TextBlock>
+                <oxlad:AdControl x:Name="Ad1Control"   ApplicationId="962ca18f-1bb2-4bdc-8d15-5c4bcee4ac09" AdUnitId="27c4e9ce-7bfa-4da4-8eb8-12ead833c25d" Type="Banner"    Height="100" IsCloseIconEnabled="False" />
+              
             </StackPanel>
                 
                     
         </Grid>
          <!--Panorama 控件-->
-        <phone:Panorama x:Name="par" Grid.Row="1" Margin="0,-55,0,0">
+        <phone:Panorama x:Name="par" Grid.Row="1" Margin="0,-15,0,0">
+            <phone:Panorama.TitleTemplate>
+                <DataTemplate>
+                    <TextBlock Text="" FontSize="10"></TextBlock>
+                </DataTemplate>
+            </phone:Panorama.TitleTemplate>
             <phone:Panorama.Background>
                 <ImageBrush ImageSource="/PanoramaApp1;component/Assets/bb.png"/>
             </phone:Panorama.Background>
             <phone:Panorama.ItemTemplate>
                 <DataTemplate>
-                    <phone:PanoramaItem Margin="0,-35,0,0" Header="{Binding text}" DataContext="{Binding }">
+                    <phone:PanoramaItem Margin="0,-125,0,0" Header="{Binding text}" DataContext="{Binding }">
                        <phone:WebBrowser IsScriptEnabled="True" Margin="0,-35,0,0" Source="{Binding dataurl}"></phone:WebBrowser>
                     </phone:PanoramaItem>
                    

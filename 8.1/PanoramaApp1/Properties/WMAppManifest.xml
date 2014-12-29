@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2014/deployment" AppPlatformVersion="8.1">
   <DefaultLanguage xmlns="" code="zh-CN" />
-  <App xmlns="" ProductID="{1ee51eb6-0d4f-4339-a444-73776e4e917e}" Title="PanoramaApp1" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="PanoramaApp1 author" Description="Sample description" SDOptOut="false" BackUpOptOut="false" Publisher="PanoramaApp1" PublisherID="{05ca9797-0751-4522-ac33-cf13ecf9acad}">
-    <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
+  <App xmlns="" ProductID="{1ee51eb6-0d4f-4339-a444-73776e4e917e}" Title="爱购物" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="PanoramaApp1 author" Description="爱购物" SDOptOut="false" BackUpOptOut="false" Publisher="PanoramaApp1" PublisherID="{05ca9797-0751-4522-ac33-cf13ecf9acad}">
+    <IconPath IsRelative="true" IsResource="false">aigou.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
       <Capability Name="ID_CAP_MEDIALIB_AUDIO" />
@@ -18,10 +18,10 @@
     <Tokens>
       <PrimaryToken TokenID="PanoramaApp1Token" TaskName="_default">
         <TemplateFlip>
-          <SmallImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileSmall.png</SmallImageURI>
+          <SmallImageURI IsRelative="true" IsResource="false">aigou.png</SmallImageURI>
           <Count>0</Count>
-          <BackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileMedium.png</BackgroundImageURI>
-          <Title>PanoramaApp1</Title>
+          <BackgroundImageURI IsRelative="true" IsResource="false">aigou.png</BackgroundImageURI>
+          <Title>爱购物</Title>
           <BackContent>
           </BackContent>
           <BackBackgroundImageURI>
