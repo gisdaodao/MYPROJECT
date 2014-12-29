@@ -7,7 +7,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-  
+    xmlns:oxlad="clr-namespace:OpenXLive.Advertising;assembly=OpenXLive.Advertising"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -16,7 +16,10 @@
 
     <!--LayoutRoot 是包含所有页面内容的根网格-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"></RowDefinition>
+              <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
         <!-- 本地化说明:
             若要本地化显示的字符串，请将其值复制到应用程序的非特定语言资源文件(AppResources.resx)
             中的适当命名的键，然后
@@ -35,9 +38,17 @@
             与应用程序的 CurrentUICulture 匹配的 .resx 文件中
             提取属性的值。
          -->
-
+        <Grid>
+            <StackPanel x:Name="adpanel">
+                
+                <oxlad:AdControl x:Name="Ad1Control" ApplicationId="962ca18f-1bb2-4bdc-8d15-5c4bcee4ac09" AdUnitId="27c4e9ce-7bfa-4da4-8eb8-12ead833c25d" Type="Banner"  Height="100" IsCloseIconEnabled="True" />
+                <TextBlock Tap="TextBlock_Tap"  FontSize="25" Foreground="White" Text="点击广告或者评价可以去广告"></TextBlock>
+            </StackPanel>
+                
+                    
+        </Grid>
          <!--Panorama 控件-->
-        <phone:Panorama x:Name="par" Margin="0,-85,0,0">
+        <phone:Panorama x:Name="par" Grid.Row="1" Margin="0,-55,0,0">
             <phone:Panorama.Background>
                 <ImageBrush ImageSource="/PanoramaApp1;component/Assets/bb.png"/>
             </phone:Panorama.Background>
