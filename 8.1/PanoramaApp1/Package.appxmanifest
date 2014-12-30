@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-  <Identity Name="aigouwu" Publisher="CN=zhangch" Version="1.0.0.0" />
-  <mp:PhoneIdentity PhoneProductId="1ee51eb6-0d4f-4339-a444-73776e4e917e" PhonePublisherId="05ca9797-0751-4522-ac33-cf13ecf9acad" />
+  <Identity Name="39594.73446302B419" Publisher="CN=90DDBDC4-A017-4E2C-8C39-084293912EF2" Version="1.0.0.0" />
+  <mp:PhoneIdentity PhoneProductId="d7361cdb-cdaa-4948-9aa2-f368829c15df" PhonePublisherId="21c9ac25-7902-4c97-bcd0-7ca3a3080b95" />
   <Properties>
     <DisplayName>爱购物</DisplayName>
     <PublisherDisplayName>星爵</PublisherDisplayName>

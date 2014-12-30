@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2014/deployment" AppPlatformVersion="8.1">
   <DefaultLanguage xmlns="" code="zh-CN" />
-  <App xmlns="" ProductID="{1ee51eb6-0d4f-4339-a444-73776e4e917e}" Title="爱购物" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="PanoramaApp1 author" Description="爱购物" SDOptOut="false" BackUpOptOut="false" Publisher="PanoramaApp1" PublisherID="{05ca9797-0751-4522-ac33-cf13ecf9acad}">
+  <App xmlns="" ProductID="{d7361cdb-cdaa-4948-9aa2-f368829c15df}" Title="爱购物" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="星爵" Description="爱购物" SDOptOut="false" BackUpOptOut="false" Publisher="星爵" PublisherID="{21c9ac25-7902-4c97-bcd0-7ca3a3080b95}">
     <IconPath IsRelative="true" IsResource="false">aigou.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
