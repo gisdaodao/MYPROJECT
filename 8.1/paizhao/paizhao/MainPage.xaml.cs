@@ -10,6 +10,7 @@ using Microsoft.Phone.Shell;
 using paizhao.Resources;
 using 股票新闻;
 using Microsoft.Phone.Tasks;
+using System.IO.IsolatedStorage;
 
 namespace paizhao
 {
@@ -128,5 +129,74 @@ namespace paizhao
         //    ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem(AppResources.AppBarMenuItemText);
         //    ApplicationBar.MenuItems.Add(appBarMenuItem);
         //}
+        IsolatedStorageSettings settings = IsolatedStorageSettings.ApplicationSettings;
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            try
+            {
+                if (e.IsNavigationInitiator == false && e.NavigationMode == NavigationMode.Back)
+                {
+
+                    int i = 1;
+                    if (!settings.Contains("guanggao"))
+                    {
+                        settings.Add("guanggao", i);
+                        settings.Save();
+                    }
+                    else
+                    {
+                        int k = (int)settings["guanggao"];
+                        k = k + i;
+                        settings["guanggao"] = k;
+                        settings.Save();
+                        sethide();
+                    }
+
+
+
+                }
+                if (e.NavigationMode == NavigationMode.New)
+                {
+                    if (!settings.Contains("guanggao"))
+                    {
+                        settings.Add("guanggao", 0);
+                        settings.Save();
+                    }
+                    else
+                    {
+                        int k = (int)settings["guanggao"];
+                        if (k >= 2)
+                        {
+                            sethide();
+
+                        }
+                        //k = k + i;
+                        //settings["guanggao"] = k;
+                        // settings.Save();
+                    }
+
+
+
+                }
+
+                base.OnNavigatedTo(e);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            //this.surfaceAdImageXaml.InitAdControl(AdModeType.Normal);
+            // this.surfaceAdImageXaml.InitAdControl(AdModeType.Debug); 
+        }
+        private void sethide()
+        {
+            adpanel.Visibility = Visibility.Collapsed;
+        }
+        private void TextBlock_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+
+            MarketplaceReviewTask p = new MarketplaceReviewTask(); p.Show();
+        }
     }
 }

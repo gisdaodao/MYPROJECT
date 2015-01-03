@@ -7,6 +7,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+     xmlns:oxlad="clr-namespace:OpenXLive.Advertising;assembly=OpenXLive.Advertising"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -38,27 +39,31 @@
             与应用程序的 CurrentUICulture 匹配的 .resx 文件中
             提取属性的值。
          -->
+        <StackPanel  x:Name="adpanel">
+            <TextBlock Tap="TextBlock_Tap"  FontSize="22" Foreground="White" Text="点击广告或者评价可以去广告"></TextBlock>
+            <oxlad:AdControl x:Name="Ad1Control"   ApplicationId="962ca18f-1bb2-4bdc-8d15-5c4bcee4ac09" AdUnitId="27c4e9ce-7bfa-4da4-8eb8-12ead833c25d" Type="Banner"    Height="100" IsCloseIconEnabled="False" />
+            <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,6,0,0">
+                <TextBlock Text="手机拍照"  Foreground="Red" Margin="0,0"/>
+                <Grid Tap="Grid_Tap">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel>
+                        <Image VerticalAlignment="Top" Width="100" Height="100" Source="/icon512.png"></Image>
+                        <TextBlock FontSize="30" Foreground="Black" HorizontalAlignment="Center" Margin="0,0,0,12">首度</TextBlock>
+                    </StackPanel>
 
-        <!--TitlePanel 包含应用程序的名称和页标题-->
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,6,0,0">
-            <TextBlock Text="手机拍照"  Foreground="Black" Margin="0,0"/>
-            <Grid Tap="Grid_Tap">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="100"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <StackPanel>
-                    <Image VerticalAlignment="Top" Width="100" Height="100" Source="/icon512.png"></Image>
-                    <TextBlock FontSize="30" Foreground="Black" HorizontalAlignment="Center" Margin="0,0,0,12">首度</TextBlock>
-                </StackPanel>
-               
-                <StackPanel Grid.Column="1">
+                    <StackPanel Grid.Column="1">
 
-                    <TextBlock FontSize="22" Foreground="Black" TextWrapping="Wrap" Margin="12,0,6,0">首度是一个全新的摄影社区,包含了摄影作品分享评论,技巧交流,摄影交友,摄影活动和比赛等栏目,基于地理位置的图片记录和分享,足不出户领略世界各地正在发生的精彩.</TextBlock>
-                </StackPanel>
-            </Grid>
-            <!--<TextBlock Foreground="Black" Text="手机拍照" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>-->
+                        <TextBlock FontSize="22" Foreground="Black" TextWrapping="Wrap" Margin="12,0,6,0">首度是一个全新的摄影社区,包含了摄影作品分享评论,技巧交流,摄影交友,摄影活动和比赛等栏目,基于地理位置的图片记录和分享,足不出户领略世界各地正在发生的精彩.</TextBlock>
+                    </StackPanel>
+                </Grid>
+                <!--<TextBlock Foreground="Black" Text="手机拍照" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>-->
+            </StackPanel>
         </StackPanel>
+        <!--TitlePanel 包含应用程序的名称和页标题-->
+   
 
         <!--ContentPanel - 在此处放置其他内容-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
