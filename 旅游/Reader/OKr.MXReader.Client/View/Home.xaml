@@ -76,11 +76,7 @@
                             </Button>
                             <TextBlock Margin="12" Style="{StaticResource okr-text}" TextWrapping="Wrap"><Run Text="作者：" /><Run x:Name="tbAuthor" /></TextBlock>
                             <TextBlock x:Name="tbIntro" Margin="12,0,12,20" Style="{StaticResource okr-text}" Text="" TextWrapping="Wrap" />
-                            <TextBlock Margin="0,200,0,0"  x:Name="tb" Style="{StaticResource okr-text}" Text="评价1次之后广告就不会显示了" TextWrapping="Wrap" />
-                            <Button  Foreground="Orange" BorderBrush="Orange" x:Name="reviewbtn" Content="前去评价" Click="Button_Click_1"></Button>
-                            <oxlad:AdControl  Tap="AdtapControl_Tap" x:Name="Ad1Control" ApplicationId="a9101034-badd-42a0-9131-eb9087a83c3c" AdUnitId="f7d92042-3d49-4f0e-9e54-5906ac4b3567"  VerticalAlignment="Bottom" Height="100" IsCloseIconEnabled="True" />
-                            <MsnAD:AdView Tap="AdtapControl_Tap"  Margin="12,21,0,0" TelCapability="True"  x:Name="Ad2Control" StorePic="True" SecretKey="bfac44ffe5c0477a8f52060c9b09a1f1" Adid="190896" Appid="145012" SizeForAd="Normal"></MsnAD:AdView>
-                            <google:AdView  Tap="AdtapControl_Tap"  AdUnitID="ca-app-pub-1598808565430684/2935759650"   x:Name="Ad3Control" Format="Banner"></google:AdView>
+                        
                         </StackPanel>
                     </ScrollViewer>
                 </Grid>
@@ -201,12 +197,18 @@
 
                             <MsnAD:AdView Tap="AdtapControl_Tap"   x:Name="Ad5Control" Margin="12,21,0,0" TelCapability="True" StorePic="True" SecretKey="bfac44ffe5c0477a8f52060c9b09a1f1" Adid="190896" Appid="145012" SizeForAd="Normal"></MsnAD:AdView>
                             <google:AdView Tap="AdtapControl_Tap"   x:Name="Ad6Control"  AdUnitID="ca-app-pub-1598808565430684/2935759650"  Format="Banner"></google:AdView>
+                            <TextBlock Margin="0,200,0,0"  x:Name="tb" Style="{StaticResource okr-text}" Text="评价1次之后广告就不会显示了" TextWrapping="Wrap" />
+                            <Button  Foreground="Orange" BorderBrush="Orange" x:Name="reviewbtn" Content="前去评价" Click="Button_Click_1"></Button>
+                            <oxlad:AdControl  Tap="AdtapControl_Tap" x:Name="Ad1Control" ApplicationId="a9101034-badd-42a0-9131-eb9087a83c3c" AdUnitId="f7d92042-3d49-4f0e-9e54-5906ac4b3567"  VerticalAlignment="Bottom" Height="100" IsCloseIconEnabled="True" />
+                            <MsnAD:AdView Tap="AdtapControl_Tap"  Margin="12,21,0,0" TelCapability="True"  x:Name="Ad2Control" StorePic="True" SecretKey="bfac44ffe5c0477a8f52060c9b09a1f1" Adid="190896" Appid="145012" SizeForAd="Normal"></MsnAD:AdView>
+                            <google:AdView  Tap="AdtapControl_Tap"  AdUnitID="ca-app-pub-1598808565430684/2935759650"   x:Name="Ad3Control" Format="Banner"></google:AdView>
                         </StackPanel>
                     </StackPanel>
 
                 </StackPanel>
 
             </ctrl:PanoramaItem>
+            
             <ctrl:PanoramaItem>
                 <StackPanel>
                     <Button  BorderBrush="Orange" Height="100" Width="380" Click="Button_Click" Foreground="Black" Content="民族唱法" Tag="http://baike.baidu.com/view/5382.htm"></Button>
@@ -218,7 +220,17 @@
                     <google:AdView  x:Name="Ad10Control"  Tap="AdtapControl_Tap"  AdUnitID="ca-app-pub-1598808565430684/2935759650"  Format="Banner"></google:AdView>
                 </StackPanel>
             </ctrl:PanoramaItem>
-        
+            <phone:PanoramaItem>
+                <phone:LongListSelector LayoutMode="Grid"  x:Name="longlist" GridCellSize="135,135 " x:Name="longlistselector">
+                    <phone:LongListSelector.ItemTemplate>
+                        <DataTemplate>
+                            <Border>
+                                <TextBlock Text="{Binding }"></TextBlock>
+                            </Border>
+                        </DataTemplate>
+                    </phone:LongListSelector.ItemTemplate>
+                </phone:LongListSelector>
+            </phone:PanoramaItem>
             <ctrl:PanoramaItem>
                 <Grid>
                     <Grid.RowDefinitions>
@@ -255,6 +267,20 @@
                 </Grid>
                
             </ctrl:PanoramaItem>
+            <phone:PanoramaItem>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid>
+                        <Button Content="音乐" Click="Button_Click_2"></Button>
+                    </Grid>
+                    <phone:WebBrowser Grid.Row="1" x:Name="wbbaike">
+                        
+                    </phone:WebBrowser>
+                </Grid>
+            </phone:PanoramaItem>
             <ctrl:PanoramaItem>
              
                     <StackPanel Orientation="Vertical">

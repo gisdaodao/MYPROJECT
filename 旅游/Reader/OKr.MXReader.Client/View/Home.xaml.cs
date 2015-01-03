@@ -45,10 +45,20 @@ namespace OKr.MXReader.Client.View
             interstitialAd.LoadAd(adRequest);
             base.Loaded += new RoutedEventHandler(this.OnLoaded);
            // ad.Start();
-
+            groups.Add(new Info() { text = "", dataurl = "" });
+            groups.Add(new Info() { text = "", dataurl = "" }); ;
+            groups.Add(new Info() { text = "", dataurl = "" }); ;
+            groups.Add(new Info() { text = "", dataurl = "" }); ;
+            groups.Add(new Info() { text = "", dataurl = "" }); ;
+            groups.Add(new Info() { text = "", dataurl = "" }); ;
+            groups.Add(new Info() { text = "", dataurl = "" }); ;
+            groups.Add(new Info() { text = "", dataurl = "" }); ;
+            groups.Add(new Info() { text = "", dataurl = "" }); ;
+            groups.Add(new Info() { text = "", dataurl = "" }); ;
+           
             this.surfaceAdImageXaml.InitAdControl(AdModeType.Normal); 
         }
-     
+        List<Info> groups = new List<Info>();
      private void OnAdReceived(object sender, AdEventArgs e)
         {
             Random p = new Random();
@@ -439,6 +449,16 @@ namespace OKr.MXReader.Client.View
         {
             string str = "http://baike.baidu.com/search/word?word=" + box.Text;
             wbsearch.Navigate(new Uri(str,UriKind.RelativeOrAbsolute));
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Button btn = sender as Button;
+            //if (btn.Content.ToString() == "音乐")
+            //{
+                string str = "http://baike.baidu.com/fenlei/"+btn.Content.ToString();
+                wbbaike.Navigate(new Uri(str,UriKind.RelativeOrAbsolute));
+            //}
         }
 
 
