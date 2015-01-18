@@ -11,15 +11,10 @@ using Microsoft.Phone.Shell;
 namespace OKr.MXReader.Client.View
 {
     public partial class PageBa : PhoneApplicationPage
+    {
         public PageBa()
         {
             InitializeComponent();
-        }
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-         string str=    this.NavigationContext.QueryString["name"];
-         wb.Navigate(new Uri(str, UriKind.RelativeOrAbsolute));
-            base.OnNavigatedTo(e);
         }
        // protected
    

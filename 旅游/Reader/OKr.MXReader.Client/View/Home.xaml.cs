@@ -44,9 +44,8 @@ namespace OKr.MXReader.Client.View
             adRequest.ForceTesting = false;
             interstitialAd.LoadAd(adRequest);
             base.Loaded += new RoutedEventHandler(this.OnLoaded);
-           // ad.Start();http://tieba.baidu.com/f?kw
-    {
-            groups.Add(new Info() { text = "歌唱吧", dataurl = "http://tieba.baidu.com/f?kw=歌唱" });
+           // ad.Start();
+            groups.Add(new Info() { text = "", dataurl = "" });
             groups.Add(new Info() { text = "", dataurl = "" }); ;
             groups.Add(new Info() { text = "", dataurl = "" }); ;
             groups.Add(new Info() { text = "", dataurl = "" }); ;
