@@ -1,5 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Items>
+<item text="平邑一中"      des="">
+ <url>http://tieba.baidu.com/f?kw=平邑一中吧</url> 
+  </item> 
+<item text="美女"      des="">
+ <url>http://tieba.baidu.com/f?kw=美女吧</url> 
+  </item>
+<item text="中国之声"      des="">
+ <url>http://tieba.baidu.com/f?kw=中国之声吧</url> 
+  </item>
+<item text="每当夜晚来临的时候"      des="">
+ <url>http://tieba.baidu.com/f?kw=每当夜晚来临的时候吧</url> 
+  </item>
+<item text="学习"      des="">
+ <url>http://tieba.baidu.com/f?kw=学习吧</url> 
+  </item>
+<item text="约会"      des="">
+ <url>http://tieba.baidu.com/f?kw=约会吧</url> 
+  </item>
+<item text="地理"      des="">
+ <url>http://tieba.baidu.com/f?kw=地理吧</url> 
+  </item>
+<item text="游戏"      des="">
+ <url>http://tieba.baidu.com/f?kw=游戏吧</url> 
+  </item>
+<item text="李毅"      des="">
+ <url>http://tieba.baidu.com/f?kw=李毅吧</url> 
+  </item>  
+<item text="文字控吧"      des="">
+ <url>http://tieba.baidu.com/f?kw=文字控</url> 
+  </item> 
  <item text="微小说吧"      des="">
  <url>http://tieba.baidu.com/f?kw=%E5%BE%AE%E5%B0%8F%E8%AF%B4</url> 
   </item> 
