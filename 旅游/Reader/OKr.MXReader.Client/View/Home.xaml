@@ -221,7 +221,7 @@
                 </StackPanel>
             </ctrl:PanoramaItem>
             <phone:PanoramaItem>
-                <phone:LongListSelector LayoutMode="Grid"  x:Name="longlist" GridCellSize="135,135 " x:Name="longlistselector">
+                <phone:LongListSelector LayoutMode="Grid"  x:Name="longlist" GridCellSize="135,135 " >
                     <phone:LongListSelector.ItemTemplate>
                         <DataTemplate>
                             <Border>
