@@ -6,6 +6,21 @@
 <item text="美女"      des="">
  <url>http://tieba.baidu.com/f?kw=美女吧</url> 
   </item>
+<item text="帅哥"      des="">
+ <url>http://tieba.baidu.com/f?kw=帅哥吧</url> 
+  </item>
+<item text="清华大学"      des="">
+ <url>http://tieba.baidu.com/f?kw=清华大学吧</url> 
+  </item>
+<item text="北京大学"      des="">
+ <url>http://tieba.baidu.com/f?kw=北京大学吧</url> 
+  </item>
+<item text="艺术"      des="">
+ <url>http://tieba.baidu.com/f?kw=艺术吧</url> 
+  </item>
+<item text="足球"      des="">
+ <url>http://tieba.baidu.com/f?kw=足球吧</url> 
+  </item>
 <item text="中国之声"      des="">
  <url>http://tieba.baidu.com/f?kw=中国之声吧</url> 
   </item>
@@ -18,8 +33,8 @@
 <item text="约会"      des="">
  <url>http://tieba.baidu.com/f?kw=约会吧</url> 
   </item>
-<item text="地理"      des="">
- <url>http://tieba.baidu.com/f?kw=地理吧</url> 
+<item text="哲理"      des="">
+ <url>http://tieba.baidu.com/f?kw=哲理吧</url> 
   </item>
 <item text="游戏"      des="">
  <url>http://tieba.baidu.com/f?kw=游戏吧</url> 
