@@ -1,7 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Items>
+<item text="hao123"      des="">
+    <url>http://m.hao123.com/</url>
+  </item>
+<item text="中国青年网"      des="">
+    <url>http://m.youth.cn/</url>
+  </item>
+ <item text="知音"      des="">
+    <url>http://wap.zhiyin.cn/</url>
+  </item>
   <item text="cnbeta"      des="">
     <url>http://m.cnbeta.com/</url>
+  </item>
+ <item text="读者"      des="">
+    <url>http://wap.hdz8.cn/</url>
+  </item>
+ <item text="青年文摘"      des="">
+    <url>http://www.qnwz.cn/data/rssmap.html</url>
   </item>
 <item text="百度图说天下"      des="">
     <url>http://image.baidu.com/channel/info</url>
