@@ -6,6 +6,21 @@
 <item text="美女"      des="">
  <url>http://tieba.baidu.com/f?kw=美女吧</url> 
   </item>
+<item text="facebook"      des="">
+ <url>http://tieba.baidu.com/f?kw=facebook</url> 
+  </item>
+<item text="instagram"      des="">
+ <url>http://tieba.baidu.com/f?kw=instagram</url> 
+  </item>
+<item text="百度"      des="">
+ <url>http://tieba.baidu.com/f?kw=百度吧</url> 
+  </item>
+<item text="qq"      des="">
+ <url>http://tieba.baidu.com/f?kw=qq吧</url> 
+  </item>
+<item text="english"      des="">
+ <url>http://tieba.baidu.com/f?kw=english吧</url> 
+  </item>
 <item text="帅哥"      des="">
  <url>http://tieba.baidu.com/f?kw=帅哥吧</url> 
   </item>
