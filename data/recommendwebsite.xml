@@ -33,6 +33,9 @@
  <item text="随便听歌"      des="">
     <url>http://fm.baidu.com/</url>
   </item>
+ <item text="荔枝fm"      des="">
+    <url>http://www.lizhi.fm/#/promo/1</url>
+  </item>
 <item text="百度图说天下"      des="">
     <url>http://image.baidu.com/channel/info</url>
   </item>
