@@ -30,6 +30,9 @@
  <item text="听新闻"      des="">
     <url>http://www.52rkl.cn/tingxinwen/</url>
   </item>
+ <item text="随便听歌"      des="">
+    <url>http://fm.baidu.com/</url>
+  </item>
 <item text="百度图说天下"      des="">
     <url>http://image.baidu.com/channel/info</url>
   </item>
