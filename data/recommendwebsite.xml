@@ -6,6 +6,9 @@
 <item text="中国青年网"      des="">
     <url>http://m.youth.cn/</url>
   </item>
+<item text="中国农业新闻网"      des="">
+    <url>http://www.farmer.com.cn/</url>
+  </item>
 <item text="socl"      des="">
     <url>http://www.so.cl/</url>
   </item>
@@ -29,6 +32,18 @@
   </item>
 <item text="36kr"      des="">
     <url>http://m.36kr.com/</url>
+  </item>
+<item text="中国农业信息网"      des="">
+    <url>http://www.agri.gov.cn/V20/ZX/nyyw/</url>
+  </item>
+<item text="中国农村网"      des="">
+    <url>http://www.crnews.net/</url>
+  </item>
+<item text="兴农网"      des="">
+    <url>http://www.xn121.com/</url>
+  </item>
+<item text="农视网"      des="">
+    <url>http://www.ntv.cn/</url>
   </item>
 <item text="众筹网"      des="">
     <url>http://m.zhongchou.cn/</url>
