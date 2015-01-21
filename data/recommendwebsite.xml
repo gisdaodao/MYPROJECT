@@ -3,6 +3,15 @@
 <item text="hao123"      des="">
     <url>http://m.hao123.com/</url>
   </item>
+<item text="qq导航"      des="">
+    <url>http://m.hao.qq.com/</url>
+  </item>
+<item text="医学导航"      des="">
+    <url>http://go.dxy.cn/</url>
+  </item>
+<item text="360"      des="">
+    <url>http://m.hao.360.cn/</url>
+  </item>
 <item text="中国天气网"      des="">
     <url>http://m.weather.com.cn/</url>
   </item>
