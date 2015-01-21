@@ -51,6 +51,9 @@
 <item text="reddit"      des="">
     <url>http://www.reddit.com/.compact?keep_extension=True</url>
   </item>
+ <item text="女性导航"      des="">
+    <url>http://m.hao.360.cn/simple/female.html</url>
+  </item>
  <item text="知音"      des="">
     <url>http://wap.zhiyin.cn/</url>
   </item>
