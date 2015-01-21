@@ -36,6 +36,21 @@
 <item text="足球"      des="">
  <url>http://tieba.baidu.com/f?kw=足球吧</url> 
   </item>
+<item text="乡村"      des="">
+ <url>http://tieba.baidu.com/f?kw=乡村</url> 
+  </item>
+<item text="农产品"      des="">
+ <url>http://tieba.baidu.com/f?kw=农产品</url> 
+  </item>
+<item text="农业"      des="">
+ <url>http://tieba.baidu.com/f?kw=农业</url> 
+  </item>
+<item text="现代农业吧"      des="">
+ <url>http://tieba.baidu.com/f?kw=现代农业</url> 
+  </item>
+<item text="致富经"      des="">
+ <url>http://tieba.baidu.com/f?kw=致富经</url> 
+  </item>
 <item text="中国之声"      des="">
  <url>http://tieba.baidu.com/f?kw=中国之声吧</url> 
   </item>
