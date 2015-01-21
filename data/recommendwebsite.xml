@@ -9,8 +9,14 @@
 <item text="中国农业新闻网"      des="">
     <url>http://www.farmer.com.cn/</url>
   </item>
+<item text="海外网"      des="">
+    <url>http://m.haiwainet.cn/</url>
+  </item>
 <item text="首都千龙网"      des="">
     <url>http://m.qianlong.com/</url>
+  </item>
+<item text="大粤网"      des="">
+    <url>http://gd.qq.com/</url>
   </item>
 <item text="扬子晚报网"      des="">
     <url>http://m.yangtse.com/</url>
