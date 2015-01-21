@@ -3,17 +3,32 @@
 <item text="hao123"      des="">
     <url>http://m.hao123.com/</url>
   </item>
-<item text="中国青年网"      des="">
-    <url>http://m.youth.cn/</url>
-  </item>
 <item text="中国天气网"      des="">
     <url>http://m.weather.com.cn/</url>
   </item>
 <item text="中国农业新闻网"      des="">
     <url>http://www.farmer.com.cn/</url>
   </item>
+<item text="首都千龙网"      des="">
+    <url>http://m.qianlong.com/</url>
+  </item>
+<item text="扬子晚报网"      des="">
+    <url>http://m.yangtse.com/</url>
+  </item>
+<item text="苏州网"      des="">
+    <url>http://m.subaonet.com/</url>
+  </item>
+<item text="荆楚网"      des="">
+    <url>http://wap.cnhubei.com/</url>
+  </item>
+<item text="文汇网"      des="">
+    <url>http://whb.cn/</url>
+  </item>
 <item text="socl"      des="">
     <url>http://www.so.cl/</url>
+  </item>
+<item text="手机中原网"      des="">
+    <url>http://3g.zynews.com/wap.htm</url>
   </item>
 <item text="pinterest"      des="">
     <url>https://www.pinterest.com/</url>
