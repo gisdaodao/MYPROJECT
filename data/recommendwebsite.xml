@@ -6,6 +6,9 @@
 <item text="中国青年网"      des="">
     <url>http://m.youth.cn/</url>
   </item>
+<item text="中国天气网"      des="">
+    <url>http://m.weather.com.cn/</url>
+  </item>
 <item text="中国农业新闻网"      des="">
     <url>http://www.farmer.com.cn/</url>
   </item>
