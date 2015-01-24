@@ -18,6 +18,24 @@
 <item text="中国农业新闻网"      des="">
     <url>http://www.farmer.com.cn/</url>
   </item>
+<item text="沪江网"      des="">
+    <url>http://m.hujiang.com/</url>
+  </item>
+<item text="图趣"      des="">
+    <url>http://m.tuquu.com/</url>
+  </item>
+<item text="丁香园"      des="">
+    <url>http://3g.dxy.cn/</url>
+  </item>
+<item text="实时热点"      des="">
+    <url>http://top.baidu.com/clip?b=1</url>
+  </item>
+<item text="医学教育网"      des="">
+    <url>http://m.med66.com/</url>
+  </item>
+<item text="医学百科"      des="">
+    <url>http://www.a-hospital.com/</url>
+  </item>
 <item text="海外网"      des="">
     <url>http://m.haiwainet.cn/</url>
   </item>
