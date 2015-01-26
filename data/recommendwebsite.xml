@@ -81,6 +81,9 @@
 <item text="南方周末"      des="">
     <url>http://wap.infzm.com/</url>
   </item>
+<item text="南方周末投票"      des="">
+    <url>http://www.infzm.com/vote.shtml</url>
+  </item>
   <item text="cnbeta"      des="">
     <url>http://m.cnbeta.com/</url>
   </item>
@@ -155,6 +158,24 @@
   </item>
 <item text="csdn"      des="">
     <url>http://m.csdn.net/</url>
+  </item>
+<item text="cnblogs"      des="">
+    <url>http://m.cnblogs.com/</url>
+  </item>
+<item text="Windows Phone Dev Center"      des="">
+    <url>https://dev.windows.com/</url>
+  </item>
+<item text="Windows API "      des="">
+    <url>Whttps://msdn.microsoft.com/zh-cn/library/windows/apps/br211377.aspx</url>
+  </item>
+<item text=".NET API"      des="">
+    <url>https://msdn.microsoft.com/zh-CN/library/windows/apps/br230232.aspx</url>
+  </item>
+<item text="msdn library"      des="">
+    <url>https://msdn.microsoft.com/zh-cn/library/</url>
+  </item>
+<item text="stackoverflow"      des="">
+    <url>http://stackoverflow.com/</url>
   </item>
 <item text="果壳"      des="">
     <url>http://m.guokr.com/</url>
