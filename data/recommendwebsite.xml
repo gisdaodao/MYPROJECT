@@ -93,6 +93,12 @@
 <item text="中国农业信息网"      des="">
     <url>http://www.agri.gov.cn/V20/ZX/nyyw/</url>
   </item>
+<item text="中研网"      des="">
+    <url>http://m.chinairn.com/</url>
+  </item>
+<item text="联商网"      des="">
+    <url>http://m.linkshop.com/</url>
+  </item>
 <item text="中国农村网"      des="">
     <url>http://www.crnews.net/</url>
   </item>
@@ -166,7 +172,7 @@
     <url>https://dev.windows.com/</url>
   </item>
 <item text="Windows API "      des="">
-    <url>Whttps://msdn.microsoft.com/zh-cn/library/windows/apps/br211377.aspx</url>
+    <url>https://msdn.microsoft.com/zh-cn/library/windows/apps/br211377.aspx</url>
   </item>
 <item text=".NET API"      des="">
     <url>https://msdn.microsoft.com/zh-CN/library/windows/apps/br230232.aspx</url>
@@ -177,8 +183,17 @@
 <item text="stackoverflow"      des="">
     <url>http://stackoverflow.com/</url>
   </item>
+<item text="ft中文网"      des="">
+    <url>http://m.ftchinese.com/</url>
+  </item>
 <item text="果壳"      des="">
     <url>http://m.guokr.com/</url>
+  </item>
+<item text="价值中国"      des="">
+    <url>http://m.chinavalue.net/</url>
+  </item>
+<item text="小鱼网"      des="">
+    <url>http://bbs.xmfish.com/wap/</url>
   </item>
 <item text="dospy"      des="">
     <url>http://bbs.dospy.com/?forceMobile=1</url>
