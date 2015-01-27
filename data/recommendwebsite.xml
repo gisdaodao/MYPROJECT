@@ -186,11 +186,17 @@
 <item text="ft中文网"      des="">
     <url>http://m.ftchinese.com/</url>
   </item>
+<item text="chinadaily"      des="">
+    <url>http://language.chinadaily.com.cn/</url>
+  </item>
 <item text="果壳"      des="">
     <url>http://m.guokr.com/</url>
   </item>
 <item text="价值中国"      des="">
     <url>http://m.chinavalue.net/</url>
+  </item>
+<item text="南都网"      des="">
+    <url>http://m.nandu.com/</url>
   </item>
 <item text="小鱼网"      des="">
     <url>http://bbs.xmfish.com/wap/</url>
