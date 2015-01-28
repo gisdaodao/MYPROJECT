@@ -168,6 +168,12 @@
 <item text="cnblogs"      des="">
     <url>http://m.cnblogs.com/</url>
   </item>
+<item text="站长之家"      des="">
+    <url>http://m.chinaz.com/</url>
+  </item>
+<item text="51cto"      des="">
+    <url>http://m.51cto.com/</url>
+  </item>
 <item text="Windows Phone Dev Center"      des="">
     <url>https://dev.windows.com/</url>
   </item>
