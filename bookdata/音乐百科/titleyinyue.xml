@@ -2,26 +2,26 @@
 <titlename>
 <title home="" text="">
   <name>音乐理论</name>
-  <dataurl></dataurl>
+  <dataurl>https://github.com/gisdaodao/MYPROJECT/tree/master/bookdata/%E9%9F%B3%E4%B9%90%E7%99%BE%E7%A7%91/1.xml</dataurl>
 </title>
 <title>
   <name>音乐风格</name>
-  <dataurl></dataurl>
+  <dataurl>https://github.com/gisdaodao/MYPROJECT/tree/master/bookdata/%E9%9F%B3%E4%B9%90%E7%99%BE%E7%A7%91/2.xml</dataurl>
 </title>
 <title>
   <name>各国音乐</name>
-  <dataurl></dataurl>
+  <dataurl>https://github.com/gisdaodao/MYPROJECT/tree/master/bookdata/%E9%9F%B3%E4%B9%90%E7%99%BE%E7%A7%91/3.xml</dataurl>
 </title>
 <title>
   <name>音乐类型</name>
-  <dataurl></dataurl>
+  <dataurl>https://github.com/gisdaodao/MYPROJECT/tree/master/bookdata/%E9%9F%B3%E4%B9%90%E7%99%BE%E7%A7%91/4.xml</dataurl>
 </title>
 <title>
   <name>乐器</name>
-  <dataurl></dataurl>
+  <dataurl>https://github.com/gisdaodao/MYPROJECT/tree/master/bookdata/%E9%9F%B3%E4%B9%90%E7%99%BE%E7%A7%91/5.xml</dataurl>
 </title>
 <title>
   <name>歌唱</name>
-  <dataurl></dataurl>
+  <dataurl>https://github.com/gisdaodao/MYPROJECT/tree/master/bookdata/%E9%9F%B3%E4%B9%90%E7%99%BE%E7%A7%91/6.xml</dataurl>
 </title>
 </titlename>
