@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Items title="nihao"> 
-  <item text="首度 "      des="首度是一个全新的摄影社区，是汇聚了摄影发烧友、专业摄影师、模特和视觉爱好者组成的互动交流平台，包含了摄影作品分享，摄影技巧交流，摄影活动和比赛等栏目。">
-    <url>http://www.windowsphone.com/zh-cn/store/app/%E9%A6%96%E5%BA%A6/b0a1e824-e495-46d0-b0d7-f01a6461c0ea</url>
-    <picurl>http://cdn.marketplaceimages.windowsphone.com/v8/images/03550b13-3b65-46f2-9273-af60fd52b30d?imageType=ws_icon_large</picurl>
+  <item text="博客中国"      des="">
+    <url>http://m.blogchina.com/bc_mobile/index.html</url>    <picurl>http://js1.blogchina.com/newblogchina_cms1/images/index/skin/skin_default/bgimg/logo.png</picurl>
   </item>
 </Items>
 
