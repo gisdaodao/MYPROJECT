@@ -6,11 +6,32 @@
 <item text="qq导航"      des="">
     <url>http://m.hao.qq.com/</url>
   </item>
-<item text="医学导航"      des="">
-    <url>http://go.dxy.cn/</url>
-  </item>
 <item text="360"      des="">
     <url>http://m.hao.360.cn/</url>
+  </item>
+<item text="新华网" des="">
+    <url>http://m.news.cn/html</url>
+  </item>
+<item text="人民网" des="">
+    <url>http://wap.people.com.cn/</url>
+  </item>
+<item text="cctv" des="">
+    <url>http://wap.cctv.com</url>
+  </item>
+<item text="光明网" des="">
+    <url>http://wap.gmw.com</url>
+  </item>
+<item text="羊城晚报" des="">
+    <url>http://wap.ycwb.com</url>
+  </item>
+<item text="参考消息" des="">
+    <url>http://m.cankaoxiaoxi.com</url>
+  </item>
+<item text="yahoo" des="">
+    <url>http://m.yahoo.com</url>
+  </item>
+<item text="bbs" des="">
+    <url>http://m.bbs.com</url>
   </item>
 <item text="中国天气网"      des="">
     <url>http://m.weather.com.cn/</url>
@@ -27,9 +48,6 @@
 <item text="丁香园"      des="">
     <url>http://3g.dxy.cn/</url>
   </item>
-<item text="实时热点"      des="">
-    <url>http://top.baidu.com/clip?b=1</url>
-  </item>
 <item text="医学教育网"      des="">
     <url>http://m.med66.com/</url>
   </item>
@@ -41,9 +59,6 @@
   </item>
 <item text="首都千龙网"      des="">
     <url>http://3g.qianlong.com/</url>
-  </item>
-<item text="大粤网"      des="">
-    <url>http://gd.qq.com/</url>
   </item>
 <item text="扬子晚报网"      des="">
     <url>http://m.yangtse.com/</url>
