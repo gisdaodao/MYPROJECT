@@ -15,6 +15,21 @@
 <item text="人民网" des="">
     <url>http://wap.people.com.cn/</url>
   </item>
+<item text="3gqq" des="">
+    <url>http://info.3g.qq.com</url>
+  </item>
+<item text="腾讯文学" des="">
+    <url>http://ubook.qq.com/5/index.html?g_f=22173&iarea=84&sid=</url>
+  </item>
+<item text="微博" des="">
+    <url>http://weibo.cn/pub/?gsid=</url>
+  </item>
+<item text=""人人 des="">
+    <url>http://m.renren.com/</url>
+  </item>
+<item text="3gqq视频" des="">
+    <url>http://infoapp.3g.qq.com/g/s?aid=video&i_f=251&sid=#hot</url>
+  </item>
 <item text="cctv" des="">
     <url>http://wap.cctv.com</url>
   </item>
