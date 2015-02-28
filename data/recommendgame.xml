@@ -1,9 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Items>
+<item text="美女拼图2" des=""> 
+<url>http://yx8.com/game/mnpt2/</url> 
+</item>
+<item text="打飞机" des=""> 
+<url>http://www.liebao.cn/game/aircraft/?f=gamecenter&v=20141229</url> 
+</item>
+<item text="会飞的鸟" des=""> 
+<url>http://www.liebao.cn/game/flybirdcat/?f=gamecenter</url> 
+</item>
+<item text="会飞的鸟" des=""> 
+<url>http://www.liebao.cn/game/flybirdcat/?f=gamecenter</url> 
+</item>
+<item text="会飞的鸟" des=""> 
+<url>http://www.liebao.cn/game/flybirdcat/?f=gamecenter</url> 
+</item>
 <item text="会飞的鸟" des=""> 
 <url>http://www.liebao.cn/game/flybirdcat/?f=gamecenter</url> 
 </item> 
-<item text="ybzsj" des=""> 
+<item text="摇摆直升机" des=""> 
 <url>http://www.liebao.cn/game/ybzsj/?f=gamecenter</url> 
 </item> 
 <item text="抢包裹" des=""> 
@@ -12,6 +27,9 @@
 <item text="停车入位" des=""> 
 <url>http://yx8.com/game/tingcheruwei/</url> 
 </item> 
+<item text="寻找房祖名" des=""> 
+<url>http://www.liebao.cn/game/find_zm/?f=gamecenter</url> 
+</item>
 <item text="寻找房祖名" des=""> 
 <url>http://www.liebao.cn/game/find_zm/?f=gamecenter</url> 
 </item>
