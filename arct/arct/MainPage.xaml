@@ -41,7 +41,7 @@
          -->
 
         <!--TitlePanel 包含应用程序的名称和页标题-->
-        <StackPanel Orientation="Horizontal" x:Name="TitlePanel" Grid.Row="0" Margin="12,12,0,6">
+        <StackPanel Orientation="Horizontal" x:Name="TitlePanel" Grid.Row="0" Margin="12,6 ,0,6">
             <!--<TextBlock Text="我的应用程序" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>-->
                 <Image HorizontalAlignment="Left" Source="/Assets/arc1.png"  Width="50" Height="50"></Image>
             <Image  HorizontalAlignment="Right" Margin="265,0,0,0" Height="19" Source="Assets/fb.png" x:Name="btn"   Tap="btn_Tap"></Image>
@@ -49,44 +49,74 @@
 
         <!--ContentPanel - 在此处放置其他内容-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-                <ScrollViewer>
+                <!--<ScrollViewer>-->
             <StackPanel>
-                <Border Height="38" Background="#46AF19">
+                <Border Height="30" Background="#46AF19">
                     <TextBlock  Foreground="White" Text="抗震等级"></TextBlock>
                 </Border>
                     <toolkit:ListPicker Margin="-3,-5,0,3" Background="#E0BDA7" Foreground="Black" SelectionChanged="listpickerhantiearthquake_SelectionChanged"  x:Name="listpickerhantiearthquake"></toolkit:ListPicker>
 
-                <Border Height="38" Background="#46AF19">
+                <Border Height="30" Background="#46AF19">
                     <TextBlock  Foreground="White" Text="钢筋种类"></TextBlock>
                 </Border>
                     <toolkit:ListPicker   Margin="-3,-5,0,3"  Background="#E0BDA7"  Foreground="Black" SelectionChanged="listpickerhpbkind_SelectionChanged" x:Name="listpickerhpbkind"></toolkit:ListPicker>
-                    <Border Height="38" Background="#46AF19">
+                    <Border Height="30" Background="#46AF19">
                     <TextBlock  Foreground="White" Text="钢筋规格"></TextBlock>
                 </Border>
-                    <toolkit:ListPicker  Margin="-3,-5,0,3" Background="#E0BDA7" Foreground="Black" SelectionChanged="listpickerhsteelkind_SelectionChanged" x:Name="listpickerhsteelkind"></toolkit:ListPicker>
-                <Border Height="38" Background="#46AF19">
+                    <toolkit:ListPicker  Margin="-3,-5,0,3" Background="#E0BDA7" Foreground="Black" SelectionChanged="listpickerhsteelkind_SelectionChanged" x:Name="listpickerhsteelkind">
+                    <toolkit:ListPicker.FullModeItemTemplate>
+
+                        <DataTemplate >
+                            <Border Background="White" Width="460" Height="50" Margin="0,0,0,21">
+                                <TextBlock Text="{Binding }"  HorizontalAlignment="Center" FontSize="30" Foreground="YellowGreen"></TextBlock>
+                            </Border>
+                        </DataTemplate>
+
+                    </toolkit:ListPicker.FullModeItemTemplate>
+                </toolkit:ListPicker>
+                <Border Height="30" Background="#46AF19">
                     <TextBlock  Foreground="White" Text="商砼等级"></TextBlock>
                 </Border>
-                    <toolkit:ListPicker  Margin="-3,-5,0,3" Background="#E0BDA7" Foreground="Black" SelectionChanged="listpickershanggong_SelectionChanged" x:Name="listpickershanggong"></toolkit:ListPicker>
-                    <Border Height="38" Background="#46AF19">
+                    <toolkit:ListPicker  Margin="-3,-5,0,3" Background="#E0BDA7" Foreground="Black" SelectionChanged="listpickershanggong_SelectionChanged" x:Name="listpickershanggong">
+                    <toolkit:ListPicker.FullModeItemTemplate>
+
+                        <DataTemplate >
+                            <Border Background="White" Width="460" Height="50" Margin="0,0,0,21">
+                                <TextBlock Text="{Binding }"  HorizontalAlignment="Center" FontSize="30" Foreground="YellowGreen"></TextBlock>
+                            </Border>
+                        </DataTemplate>
+
+                    </toolkit:ListPicker.FullModeItemTemplate>
+                </toolkit:ListPicker>
+                    <Border Height="30" Background="#46AF19">
                         <TextBlock  Foreground="White" Text="纵向钢筋搭接接头面积修正参数"></TextBlock>
                     </Border>
                     <toolkit:ListPicker  Margin="-3,-5,0,3"  Background="#E0BDA7" SelectionChanged="listpickerhpercent_SelectionChanged" x:Name="listpickerhpercent"></toolkit:ListPicker>
-                    <Border Height="38" Background="#46AF19">
+                    <Border Height="30" Background="#46AF19">
                         <TextBlock  Foreground="White" Text="受拉钢筋基本锚固长度lab（labE）"></TextBlock>
                     </Border>
-                    <toolkit:ListPicker  Margin="-2,-5,0,3" Background="#E0BDA7"  BorderBrush="#E0BDA7" Foreground="Black" x:Name="listpickerparam"></toolkit:ListPicker>
-                    <Border Height="38" Background="Orange">
+                    <toolkit:ListPicker   Visibility="Collapsed"   Margin="-2,-5,0,3" Background="#E0BDA7"  BorderBrush="#E0BDA7"    Foreground="Black" x:Name="listpickerparam"></toolkit:ListPicker>
+                <Border Background="#E0BDA7" Margin="0,5,0,5" Height="50">
+                    <TextBlock VerticalAlignment="Center"  x:Name="basickinputbox"></TextBlock>
+                </Border>    
+             
+                    <Border Height="30" Background="Orange">
                         <TextBlock   Foreground="White" Text="受拉钢筋（抗震）锚固长度la（laE）"></TextBlock>
                 </Border>
-                    <TextBox  Margin="-15,-10,-20,-10" Background="#E0BDA7" x:Name="shoulabox"></TextBox>
-                    <Border Height="38" Background="#FF4500">
+                <Border Background="#E0BDA7" Margin="0,5,0,5" Height="50" >
+                    <TextBlock  VerticalAlignment="Center" x:Name="shoulabox"></TextBlock>
+                </Border>
+                  
+                    <Border Height="30" Background="#FF4500">
                         <TextBlock  Foreground="White" Text="纵向受拉钢筋绑扎搭接长度ll（llE）"></TextBlock>
                 </Border>
-                    <TextBox  Margin="-15,-10,-20,-10" Background="#E0BDA7" x:Name="zongxiangshoula"></TextBox>
+                <Border Background="#E0BDA7" Margin="0,5,0,5" Height="50">
+                    <TextBlock  VerticalAlignment="Center"  x:Name="zongxiangshoula"></TextBlock>
+                </Border>
+                   
                     <TextBlock  TextWrapping="Wrap" Text="注：详情参照国家建筑标准设计图集11G101-1第53页或附表。本app的开发者不承担任何法律责任" Foreground="#E0BDA7"></TextBlock>
             </StackPanel>
-                </ScrollViewer>
+                <!--</ScrollViewer>-->
             </Grid>
 
         <!--取消注释，以显示对齐网格，从而帮助确保

@@ -161,7 +161,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Phone.Controls.Toolkit">
-      <HintPath>F:\新闻浏览器\libs\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+      <HintPath>..\..\..\..\app\新闻浏览器\libs\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
