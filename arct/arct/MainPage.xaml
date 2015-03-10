@@ -57,7 +57,10 @@
                 <toolkit:ListPicker    Padding="0"    HorizontalContentAlignment="Center"  Margin="-3,-10,0,0" Background="#E0BDA7" Foreground="Black" SelectionChanged="listpickerhantiearthquake_SelectionChanged"  x:Name="listpickerhantiearthquake">
                     <toolkit:ListPicker.ItemTemplate>
                         <DataTemplate>
-                            <TextBlock  FontSize="30" Foreground="#843900" Margin="36,0,0,0" Text="{Binding}"></TextBlock>
+                          
+                                <TextBlock  FontSize="30" Foreground="#843900" Margin="36,0,0,0" Text="{Binding}"></TextBlock>
+                         
+                          
                         </DataTemplate>
                     </toolkit:ListPicker.ItemTemplate>
                     <!--<toolkit:ListPicker.Template>
