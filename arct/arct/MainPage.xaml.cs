@@ -20,6 +20,7 @@ namespace arct
         List<string> HPBkind = new List<string>();
         List<string> antiearrhquakekindlist = new List<string>();
         List<string> shanggonglist = new List<string>();
+        double kangzhen = 1;
         //List<string> HPBkind = new List<string>();
         string[] hpnbkindarrary = new string[4] { "HPB300", "HRB335 HRBF335", "HRB400 HRBF400 RRB400", "HRB500 HRBF500" };
         string[] antiearrhquakekindarrary = new string[4] { "一 二级（LABE）", "三级（LABE）", "四级（LABE）", "非抗震（LAB）" };
@@ -219,6 +220,22 @@ namespace arct
 
         private void listpickerhantiearthquake_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if (listpickerhantiearthquake.SelectedIndex==0)
+            {
+                kangzhen = 1.15;
+            }
+            if (listpickerhantiearthquake.SelectedIndex == 1)
+            {
+                kangzhen = 1.05;
+            }
+            if (listpickerhantiearthquake.SelectedIndex == 2)
+            {
+                kangzhen = 1.0;
+            }
+            if (listpickerhantiearthquake.SelectedIndex == 3)
+            {
+                kangzhen = 1.0;
+            }
             caculate();
         }
 
@@ -240,15 +257,7 @@ namespace arct
             if (listpickerhsteelkind.SelectedItem == null) return;
             if (listpickerhpercent.SelectedItem == null) return;
         sumstr=     listpickerhpbkind.SelectedItem.ToString() + listpickerhantiearthquake.SelectedItem.ToString() + listpickershanggong.SelectedItem.ToString();
-        Debug.WriteLine(sumstr);
-        //if (sumstr.Contains("-"))
-        //    {
-        //        basickinputbox.Text = "0";
-        //        shoulabox.Text = "0";
-        //    zongxiangshoula.Text = "0";
-        //    }
-        //    else
-        //    {
+        Debug.WriteLine(sumstr);      
                 if (datedic.Keys.Contains(sumstr))
                 {
                     string zhijingstr = datedic[sumstr];
@@ -256,46 +265,83 @@ namespace arct
                     if (zhijingstr.Length > 2)
                     {
                         int zhijingint = int.Parse(zhijingstr.Substring(0, 2));
-                        int steelguige = int.Parse(listpickerhsteelkind.SelectedItem.ToString().Substring(1));
-                     
-                        double tempresult = zhijingint * steelguige;
-                        basickinputbox.Text = zhijingstr + "×" + (int.Parse(listpickerhsteelkind.SelectedItem.ToString().Substring(1)) / 1000.0).ToString() + "=" + (tempresult / 1000).ToString();
-                        if (tempresult<200)
+                        if(zhijingint>25)
                         {
-                            shoulabox.Text = (200 / 1000.0).ToString();
-                            if (listpickerhpercent.SelectedIndex == 0)
+                            int steelguige = int.Parse(listpickerhsteelkind.SelectedItem.ToString().Substring(1));
+                            double tempresult = zhijingint * steelguige;
+                            basickinputbox.Text = zhijingstr + "×" + (int.Parse(listpickerhsteelkind.SelectedItem.ToString().Substring(1)) / 1000.0).ToString() + "=" + (tempresult / 1000).ToString();
+                            if (tempresult < 200)
                             {
-                                zongxiangshoula.Text = ((0.2 * 1.2)).ToString();
+                                shoulabox.Text = ((200 * kangzhen )/ 1000.0).ToString();
+                                if (listpickerhpercent.SelectedIndex == 0)
+                                {
+                                    zongxiangshoula.Text = ((0.2 * 1.2*1.1*kangzhen)).ToString();
+                                }
+                                if (listpickerhpercent.SelectedIndex == 1)
+                                {
+                                    zongxiangshoula.Text = ((0.2 * 1.4 * 1.1 * kangzhen)).ToString();
+                                }
+                                if (listpickerhpercent.SelectedIndex == 2)
+                                {
+                                    zongxiangshoula.Text = ((0.2 * 1.6 * 1.1 * kangzhen)).ToString();
+                                }
                             }
-                            if (listpickerhpercent.SelectedIndex == 1)
+                            else
                             {
-                                zongxiangshoula.Text = ((0.2 * 1.4)).ToString();
-                            }
-                            if (listpickerhpercent.SelectedIndex == 2)
-                            {
-                                zongxiangshoula.Text = ((0.2 * 1.6)).ToString();
+                                shoulabox.Text = ((tempresult * kangzhen) / 1000.0).ToString();
+                                if (listpickerhpercent.SelectedIndex == 0)
+                                {
+                                    zongxiangshoula.Text = ((tempresult * 1.2 * 1.1 * kangzhen) / 1000).ToString();
+                                }
+                                if (listpickerhpercent.SelectedIndex == 1)
+                                {
+                                    zongxiangshoula.Text = ((tempresult * 1.4 * 1.1 * kangzhen) / 1000).ToString();
+                                }
+                                if (listpickerhpercent.SelectedIndex == 2 * 1.1)
+                                {
+                                    zongxiangshoula.Text = ((tempresult * 1.6 * 1.1 * kangzhen) / 1000).ToString();
+                                }
                             }
                         }
                         else
                         {
-                              shoulabox.Text = (tempresult / 1000.0).ToString();
-                              if (listpickerhpercent.SelectedIndex == 0)
-                              {
-                                  zongxiangshoula.Text = ((tempresult * 1.2) / 1000).ToString();
-                              }
-                              if (listpickerhpercent.SelectedIndex == 1)
-                              {
-                                  zongxiangshoula.Text = ((tempresult * 1.4) / 1000).ToString();
-                              }
-                              if (listpickerhpercent.SelectedIndex == 2)
-                              {
-                                  zongxiangshoula.Text = ((tempresult * 1.6) / 1000).ToString();
-                              }
+                            int steelguige = int.Parse(listpickerhsteelkind.SelectedItem.ToString().Substring(1));
+                            double tempresult = zhijingint * steelguige;
+                            basickinputbox.Text = zhijingstr + "×" + (int.Parse(listpickerhsteelkind.SelectedItem.ToString().Substring(1)) / 1000.0).ToString() + "=" + (tempresult / 1000).ToString();
+                            if (tempresult < 200)
+                            {
+                                shoulabox.Text = ((200 * kangzhen) / 1000.0).ToString();
+                                if (listpickerhpercent.SelectedIndex == 0)
+                                {
+                                    zongxiangshoula.Text = ((0.2 * 1.2 * kangzhen * kangzhen)).ToString();
+                                }
+                                if (listpickerhpercent.SelectedIndex == 1)
+                                {
+                                    zongxiangshoula.Text = ((0.2 * 1.4 * kangzhen * kangzhen)).ToString();
+                                }
+                                if (listpickerhpercent.SelectedIndex == 2)
+                                {
+                                    zongxiangshoula.Text = ((0.2 * 1.6 * kangzhen * kangzhen)).ToString();
+                                }
+                            }
+                            else
+                            {
+                                shoulabox.Text = ((tempresult * kangzhen) / 1000.0).ToString();
+                                if (listpickerhpercent.SelectedIndex == 0)
+                                {
+                                    zongxiangshoula.Text = ((tempresult * 1.2 * kangzhen) / 1000).ToString();
+                                }
+                                if (listpickerhpercent.SelectedIndex == 1)
+                                {
+                                    zongxiangshoula.Text = ((tempresult * 1.4 * kangzhen) / 1000).ToString();
+                                }
+                                if (listpickerhpercent.SelectedIndex == 2)
+                                {
+                                    zongxiangshoula.Text = ((tempresult * 1.6 * kangzhen) / 1000).ToString();
+                                }
+                            }
                         }
-                      
-                      
-
-
+                       
                     }
                     else
                     {
@@ -318,8 +364,12 @@ namespace arct
                         }
                        
                     }
-                //}
+              
             }
+            else
+             {
+
+             }
           
         }
 

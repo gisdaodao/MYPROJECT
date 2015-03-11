@@ -41,7 +41,7 @@
          -->
 
         <!--TitlePanel 包含应用程序的名称和页标题-->
-        <StackPanel Orientation="Horizontal" x:Name="TitlePanel" Grid.Row="0" Margin="12,0,0,6">
+        <StackPanel Visibility="Collapsed" Orientation="Horizontal" x:Name="TitlePanel" Grid.Row="0" Margin="12,0,0,6">
             <!--<TextBlock Text="我的应用程序" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>-->
                 <Image HorizontalAlignment="Left" Source="/Assets/arc1.png"  Width="50" Height="50"></Image>
             <Image  HorizontalAlignment="Right" Margin="338,30,0,0" Height="15" Source="Assets/fb.png" x:Name="btn"   Tap="btn_Tap"></Image>
@@ -141,17 +141,23 @@
                     <TextBlock  Margin="36,0,0,0" FontSize="30"  Foreground="White" Text="受拉钢筋（抗震）锚固长度LA（LAE）"></TextBlock>
                 </Border>
                 <Border Background="#E0BDA7" Margin="0,5,0,5" Height="38" >
-                    <TextBlock  FontSize="30" Foreground="#843900" Margin="36,0,0,0" VerticalAlignment="Center" x:Name="shoulabox"></TextBlock>
-                </Border>
-                  
+                    <StackPanel>
+                        <TextBlock  FontSize="30" Foreground="#843900" Margin="36,0,0,0" VerticalAlignment="Center" x:Name="shoulabox"></TextBlock>
+                        <TextBlock  FontSize="30" Foreground="#843900" Margin="36,0,0,0" VerticalAlignment="Center" x:Name="jisuanshoulabox"></TextBlock>
+                    </StackPanel>                  
+                </Border>                  
                     <Border Height="38" Background="#FF4500">
                     <TextBlock FontSize="30" Margin="36,0,0,0" Foreground="White" Text="纵向受拉钢筋绑扎搭接长度LL（LLE）"></TextBlock>
                 </Border>
                 <Border Background="#E0BDA7" Margin="0,5,0,5" Height="38">
-                    <TextBlock  FontSize="30" Foreground="#843900" Margin="36,0,0,0" VerticalAlignment="Center"  x:Name="zongxiangshoula"></TextBlock>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock  FontSize="30" Foreground="#843900" Margin="36,0,0,0" VerticalAlignment="Center"  x:Name="zongxiangshoula"></TextBlock>
+                        <TextBlock  FontSize="30" Foreground="Black" Margin="36,0,0,0" VerticalAlignment="Center"  x:Name="jisuanzongxiangshoula"></TextBlock>
+                    </StackPanel>
+                   
                 </Border>
 
-                <TextBlock Margin="6,0,0,0" FontSize="15" TextWrapping="Wrap" Text="注：详情参照国家建筑标准设计图集11G101-1第53页或附表。本app的开发者不承担任何法律责任" Foreground="#E0BDA7"></TextBlock>
+                <TextBlock Margin="6,0,0,0" FontSize="13" TextWrapping="Wrap" Text="注:本计算式中不含环氧树脂涂层带肋钢筋和易受扰动钢筋的修正系数计算值" Foreground="#E0BDA7"></TextBlock>
             </StackPanel>
                 <!--</ScrollViewer>-->
             </Grid>
