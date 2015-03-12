@@ -1,16 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Items>
+  <item text="台球天王" des="">
+    <url>http://yx8.com/game/taiqiutianwang/</url>
+  </item>
+  <item text="极速飞球" des="">
+    <url>http://yx8.com/game/jisufeiqiu/</url>
+  </item>
+  <item text="新年连连看" des="">
+    <url>http://yx8.com/game/xinnianlianliankan/</url>
+  </item>
+  <item text="超级卡丁车" des="">
+    <url>http://yx8.com/game/supersprintkarts/</url>
+  </item>
+  <item text="躲开五仁" des="">
+    <url>http://yx8.com/game/wuren/</url>
+  </item>
 <item text="明星冰桶挑战" des=""> 
 <url>http://www.liebao.cn/game/ice_bucket2/?f=ice_bucket</url> 
 </item>
 <item text="扔纸团" des=""> 
 <url>http://yx8.com/game/rengzhituan/</url> 
 </item>
-<item text="卡通飞行" des=""> 
-<url>http://yx8.com/game/katongfeixing/</url> 
-</item>
 <item text="变态测试题" des=""> 
-<url>hhttp://yx8.com/game/biantaiceshiti/</url> 
+<url>http://yx8.com/game/biantaiceshiti/</url> 
 </item>
 <item text="你受异性欢迎吗" des=""> 
 <url>http://yx8.com/game/nishouyixinghuanyingma/</url> 
