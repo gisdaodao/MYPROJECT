@@ -1,5 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Items>
+  <item text="水果消消乐" des="">
+    <url>http://www.liebao.cn/game/fruitqut/</url>
+  </item>
+  <item text="泡泡龙" des="">
+    <url>http://www.liebao.cn/game/bubble-shooter/?f=gamecenter</url>
+  </item>
+  <item text="掀美女被子" des="">
+    <url>http://www.liebao.cn/game/xianbeizi/?f=gamecenter</url>
+  </item>
+  <item text="中国象棋" des="">
+    <url>http://www.liebao.cn/game/chinese_chess2/?f=gamecenter</url>
+  </item>
   <item text="双车" des="">
     <url>http://yx8.com/game/shuangche/</url>
   </item>
