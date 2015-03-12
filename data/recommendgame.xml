@@ -1,5 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Items>
+  <item text="双车" des="">
+    <url>http://yx8.com/game/shuangche/</url>
+  </item>
+  <item text="我的小英雄" des="">
+    <url>http://yx8.com/game/wodexiaoyingxiong/</url>
+  </item>
+  <item text="smarty-bubbles" des="">
+    <url>http://play.famobi.com/smarty-bubbles</url>
+  </item>
+  <item text="sweet-candies" des="">
+    <url>http://play.famobi.com/sweet-candies</url>
+  </item>
+  <item text="nut-rush" des="">
+    <url>http://play.famobi.com/nut-rush</url>
+  </item>
  <item text="变形机大乱斗" des="">
     <url>http://yx8.com/game/bianxingjidaluandou/</url>
   </item>
