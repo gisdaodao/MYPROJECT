@@ -268,8 +268,8 @@ namespace arct
                         if(zhijingint>25)
                         {
                             int steelguige = int.Parse(listpickerhsteelkind.SelectedItem.ToString().Substring(1));
-                            double tempresult = zhijingint * steelguige * kangzhen;
-                            basickinputbox.Text = zhijingstr + "×" + (int.Parse(listpickerhsteelkind.SelectedItem.ToString().Substring(1)) / 1000.0).ToString() + "×"+kangzhen.ToString()+ "=" + (tempresult / 1000).ToString();
+                            double tempresult = zhijingint * steelguige ;
+                            basickinputbox.Text = zhijingstr + "×" + (int.Parse(listpickerhsteelkind.SelectedItem.ToString().Substring(1)) / 1000.0).ToString() +  "=" + (tempresult / 1000).ToString();
                             if (tempresult < 200)
                             {
                                 shoulabox.Text = ((200 )/ 1000.0).ToString();
