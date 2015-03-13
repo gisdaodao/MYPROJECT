@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Items>
-<item text="英雄难过美人关" des="">
-    <url>http://yx8.com/game/meiren/</url>
-  </item>
 <item text="果蔬达人" des="">
     <url>http://yx8.com/game/guoshudaren/</url>
   </item>
-<item text="校花来找茬" des="">
-    <url>http://yx8.com/game/xiaohualaizhaocha/</url>
+<item text="魔女宅急便" des="">
+    <url>http://yx8.com/game/monvzhaijibian/</url>
+  </item>
+<item text="重返糖果大陆3" des="">
+    <url>http://yx8.com/game/chongfantangguodalu3/</url>
   </item>
   <item text="水果消消乐" des="">
     <url>http://www.liebao.cn/game/fruitqut/</url>
@@ -15,8 +15,8 @@
   <item text="泡泡龙" des="">
     <url>http://www.liebao.cn/game/bubble-shooter/?f=gamecenter</url>
   </item>
-  <item text="掀美女被子" des="">
-    <url>http://www.liebao.cn/game/xianbeizi/?f=gamecenter</url>
+  <item text="喷射越狱" des="">
+    <url>http://yx8.com/game/pensheyueyu/</url>
   </item>
   <item text="中国象棋" des="">
     <url>http://www.liebao.cn/game/chinese_chess2/?f=gamecenter</url>
