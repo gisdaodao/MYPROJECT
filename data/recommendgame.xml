@@ -1,8 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Items>
-<item text="BrowserQuest" des="">
-    <url>http://browserquest.mozilla.org/</url>
-  </item>
 <item text="果蔬达人" des="">
     <url>http://yx8.com/game/guoshudaren/</url>
   </item>
@@ -99,6 +96,12 @@
 <item text="纸飞机" des=""> 
 <url>http://9g.idods.cn/zfj/game.html</url> 
 </item>
+<item text="BrowserQuest" des="">
+    <url>http://browserquest.mozilla.org/</url>
+  </item>
+<item text="输入文字试试" des="">
+    <url>http://www.html5tricks.com/demo/html5-canvas-side-text/index.html</url>
+  </item>
   <item text="smarty-bubbles" des="">
     <url>http://play.famobi.com/smarty-bubbles</url>
   </item>
