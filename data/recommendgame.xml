@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Items>
+<item text="BrowserQuest" des="">
+    <url>http://browserquest.mozilla.org/</url>
+  </item>
 <item text="果蔬达人" des="">
     <url>http://yx8.com/game/guoshudaren/</url>
   </item>
