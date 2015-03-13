@@ -270,7 +270,8 @@ namespace arct
                             int steelguige = int.Parse(listpickerhsteelkind.SelectedItem.ToString().Substring(1));
                             double tempresult = zhijingint * steelguige ;
                             basickinputbox.Text = zhijingstr + "×" + (int.Parse(listpickerhsteelkind.SelectedItem.ToString().Substring(1)) / 1000.0).ToString() +  "=" + (tempresult / 1000).ToString();
-                            if (tempresult < 200)
+                            double tempkangzhenresult = tempresult * kangzhen;
+                            if (tempkangzhenresult < 200)
                             {
                                 shoulabox.Text = ((200 )/ 1000.0).ToString();
                                 jisuanshoulabox.Text = zhijingint.ToString() + "D×" + (steelguige / 1000.0).ToString() + "×" + kangzhen.ToString();
@@ -292,21 +293,21 @@ namespace arct
                             }
                             else
                             {
-                                shoulabox.Text = ((tempresult) / 1000.0).ToString();
+                                shoulabox.Text = ((tempkangzhenresult) / 1000.0).ToString();
                                 jisuanshoulabox.Text = zhijingint.ToString() + "D×" + (steelguige / 1000.0).ToString() + "×" + kangzhen.ToString();
                                 if (listpickerhpercent.SelectedIndex == 0)
                                 {
-                                    zongxiangshoula.Text = ((tempresult * 1.2 * 1.1 ) / 1000).ToString();
+                                    zongxiangshoula.Text = ((tempkangzhenresult * 1.2 * 1.1) / 1000).ToString();
                                     jisuanzongxiangshoula.Text = zhijingint.ToString() + "D×" + (steelguige / 1000.0).ToString() + "×" + kangzhen.ToString() + "×1.2×1.1";
                                 }
                                 if (listpickerhpercent.SelectedIndex == 1)
                                 {
-                                    zongxiangshoula.Text = ((tempresult * 1.4 * 1.1 ) / 1000).ToString();
+                                    zongxiangshoula.Text = ((tempkangzhenresult * 1.4 * 1.1) / 1000).ToString();
                                     jisuanzongxiangshoula.Text = zhijingint.ToString() + "D×" + (steelguige / 1000.0).ToString() + "×" + kangzhen.ToString() + "×1.4×1.1";
                                 }
                                 if (listpickerhpercent.SelectedIndex == 2 * 1.1)
                                 {
-                                    zongxiangshoula.Text = ((tempresult * 1.6 * 1.1) / 1000).ToString();
+                                    zongxiangshoula.Text = ((tempkangzhenresult * 1.6 * 1.1) / 1000).ToString();
                                     jisuanzongxiangshoula.Text = zhijingint.ToString() + "D×" + (steelguige / 1000.0).ToString() + "×" + kangzhen.ToString() + "×1.6×1.1";
                                 }
                             }
@@ -314,9 +315,10 @@ namespace arct
                         else
                         {
                             int steelguige = int.Parse(listpickerhsteelkind.SelectedItem.ToString().Substring(1));
-                            double tempresult = zhijingint * steelguige * kangzhen;
-                            basickinputbox.Text = zhijingstr + "D×" + (int.Parse(listpickerhsteelkind.SelectedItem.ToString().Substring(1)) / 1000.0).ToString() + "×"+kangzhen.ToString()+"=" + (tempresult / 1000).ToString();
-                            if (tempresult < 200)
+                            double tempresult = zhijingint * steelguige;
+                            double tempkangzhenresult = tempresult * kangzhen;
+                            basickinputbox.Text = zhijingstr + "D×" + (int.Parse(listpickerhsteelkind.SelectedItem.ToString().Substring(1)) / 1000.0).ToString() + "=" + (tempresult / 1000).ToString();
+                            if (tempkangzhenresult < 200)
                             {
                                 shoulabox.Text = ((200) / 1000.0).ToString();
                                 jisuanshoulabox.Text = zhijingint.ToString() + "D×" + (steelguige / 1000.0).ToString() + "×" + kangzhen.ToString();
@@ -338,21 +340,21 @@ namespace arct
                             }
                             else
                             {
-                                shoulabox.Text = ((tempresult) / 1000.0).ToString();
+                                shoulabox.Text = ((tempkangzhenresult) / 1000.0).ToString();
                                 jisuanshoulabox.Text = zhijingint.ToString() + "D×" + (steelguige / 1000.0).ToString() + "×" + kangzhen.ToString();
                                 if (listpickerhpercent.SelectedIndex == 0)
                                 {
-                                    zongxiangshoula.Text = ((tempresult * 1.2 ) / 1000).ToString();
+                                    zongxiangshoula.Text = ((tempkangzhenresult * 1.2) / 1000).ToString();
                                     jisuanzongxiangshoula.Text = zhijingint.ToString() + "D×" + (steelguige / 1000.0).ToString() + "×" + kangzhen.ToString() + "×1.2";
                                 }
                                 if (listpickerhpercent.SelectedIndex == 1)
                                 {
-                                    zongxiangshoula.Text = ((tempresult * 1.4 ) / 1000).ToString();
+                                    zongxiangshoula.Text = ((tempkangzhenresult * 1.4) / 1000).ToString();
                                     jisuanzongxiangshoula.Text = zhijingint.ToString() + "D×" + (steelguige/1000.0).ToString() + "×" + kangzhen.ToString() + "×1.4";
                                 }
                                 if (listpickerhpercent.SelectedIndex == 2)
                                 {
-                                    zongxiangshoula.Text = ((tempresult * 1.6 ) / 1000).ToString();
+                                    zongxiangshoula.Text = ((tempkangzhenresult * 1.6) / 1000).ToString();
                                     jisuanzongxiangshoula.Text = zhijingint.ToString() + "D×" + (steelguige / 1000.0).ToString() + "×" + kangzhen.ToString() + "×1.6";
                                 }
                             }
@@ -403,6 +405,11 @@ namespace arct
         private void btn_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("/PicPage.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void SendBar_Click(object sender, EventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("/aboutPage.xaml", UriKind.RelativeOrAbsolute));
         }
         // 用于生成本地化 ApplicationBar 的示例代码
         //private void BuildLocalizedApplicationBar()
