@@ -165,19 +165,22 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="JiuYouAd">
-      <HintPath>..\..\..\..\..\Downloads\Jywp8.0\九幽广告SDK80\JiuYouSDK80\JiuYouAd.dll</HintPath>
+      <HintPath>C:\Users\zhangch\Downloads\Jywp8.0\九幽广告SDK80\JiuYouSDK80\JiuYouAd.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http">
-      <HintPath>..\..\..\..\..\Downloads\Jywp8.0\九幽广告SDK80\JiuYouSDK80\System.Net.Http.dll</HintPath>
+      <HintPath>C:\Users\zhangch\Downloads\Jywp8.0\九幽广告SDK80\JiuYouSDK80\System.Net.Http.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http.Extensions">
-      <HintPath>..\..\..\..\..\Downloads\Jywp8.0\九幽广告SDK80\JiuYouSDK80\System.Net.Http.Extensions.dll</HintPath>
+      <HintPath>C:\Users\zhangch\Downloads\Jywp8.0\九幽广告SDK80\JiuYouSDK80\System.Net.Http.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http.Primitives">
-      <HintPath>..\..\..\..\..\Downloads\Jywp8.0\九幽广告SDK80\JiuYouSDK80\System.Net.Http.Primitives.dll</HintPath>
+      <HintPath>C:\Users\zhangch\Downloads\Jywp8.0\九幽广告SDK80\JiuYouSDK80\System.Net.Http.Primitives.dll</HintPath>
     </Reference>
     <Reference Include="UmengAnalyticsWP8">
-      <HintPath>..\..\..\..\..\Downloads\UmengAnalyticsWP\WP8\UmengAnalyticsWP8.dll</HintPath>
+      <HintPath>..\..\..\..\app\新闻浏览器\libs\UmengAnalyticsWP8.dll</HintPath>
+    </Reference>
+    <Reference Include="uuchat">
+      <HintPath>C:\Users\zhangch\Documents\Tencent Files\1020684770\FileRecv\uuchat.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />

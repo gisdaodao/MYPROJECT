@@ -12,6 +12,7 @@ using System.Xml.Linq;
 using System.Diagnostics;
 using 股票新闻;
 using Microsoft.Phone.Tasks;
+using uuchat;
 
 namespace gamesites
 {
@@ -101,6 +102,11 @@ namespace gamesites
         private void paramenu_Click(object sender, EventArgs e)
         {
             MarketplaceReviewTask marketplaceReviewTask = new MarketplaceReviewTask(); marketplaceReviewTask.Show();    
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Initchat.Show("玩游戏", "玩游戏01", true);
         }
     }
 }

@@ -170,13 +170,13 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="HtmlAgilityPack">
-      <HintPath>F:\新闻浏览器\libs\HtmlAgilityPack.dll</HintPath>
+      <HintPath>..\..\..\..\app\新闻浏览器\libs\HtmlAgilityPack.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Phone.Controls.Toolkit">
-      <HintPath>F:\新闻浏览器\libs\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+      <HintPath>..\..\..\..\app\新闻浏览器\libs\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.XPath">
-      <HintPath>F:\新闻浏览器\libs\System.Xml.XPath.dll</HintPath>
+      <HintPath>..\..\..\..\app\新闻浏览器\libs\System.Xml.XPath.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
