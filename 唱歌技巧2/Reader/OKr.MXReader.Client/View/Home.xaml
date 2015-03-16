@@ -77,10 +77,10 @@
                             </Button>
                             <TextBlock Margin="12" Style="{StaticResource okr-text}" TextWrapping="Wrap"><Run Text="作者：" /><Run x:Name="tbAuthor" /></TextBlock>
                             <TextBlock x:Name="tbIntro" Margin="12,0,12,20" Style="{StaticResource okr-text}" Text="" TextWrapping="Wrap" />
-                            <StackPanel>
-                                <TextBlock Margin="12,0,0,0" FontSize="30" Text="输入聊天昵称"></TextBlock>
-                                <TextBox x:Name="box"></TextBox>
-                                <Button x:Name="chatbtn" Click="chatbtn_Click" Content="启动聊天室"></Button>
+                            <StackPanel Width="380">
+                                <TextBlock Margin="12,0,0,0" FontSize="30"  Foreground="Orange" Text="输入聊天昵称"></TextBlock>
+                                <TextBox BorderBrush="Orange"  x:Name="nbox"></TextBox>
+                                <Button Foreground="Orange" BorderBrush="Orange" x:Name="chatbtn" Click="chatbtn_Click" Content="启动交友聊天室"></Button>
                                 <!--<XAML:AdControl 
             x:Name="xx"
             ApplicationKey="0cb480f9fa27f2cde6e495b98168c8f7"

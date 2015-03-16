@@ -150,6 +150,9 @@
     <Reference Include="SurfaceAd.SDK.WP">
       <HintPath>..\..\..\新闻浏览器\libs\SurfaceAd.SDK.WP.dll</HintPath>
     </Reference>
+    <Reference Include="uuchat">
+      <HintPath>C:\Users\admin\Desktop\WP聊天室Silverlight_SDK\uuchat.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">

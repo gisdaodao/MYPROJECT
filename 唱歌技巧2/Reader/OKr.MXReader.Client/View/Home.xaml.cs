@@ -24,6 +24,7 @@ using System.IO;
 using System.Xml.Linq;
 using 股票新闻;
 using System.Windows.Navigation;
+using uuchat;
 
 namespace OKr.MXReader.Client.View
 {
@@ -489,7 +490,7 @@ namespace OKr.MXReader.Client.View
         }
         private void Ad1Control_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
-            Ad15Control.Visibility = Visibility.Collapsed;
+           // Ad15Control.Visibility = Visibility.Collapsed;
         }
         private void AdtapControl_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
@@ -553,6 +554,18 @@ namespace OKr.MXReader.Client.View
 
         private void chatbtn_Click(object sender, RoutedEventArgs e)
         {
+            if (string.IsNullOrEmpty(nbox.Text))
+            {
+                string nn = "唱歌技巧";
+                Random p = new Random();
+                int k = p.Next(1, 100000);
+               Initchat.Show("唱歌技巧", nn+k.ToString(), false
+                   ,50);
+            }
+            else
+            {
+                Initchat.Show("唱歌技巧", nbox.Text, false, 50);
+            }
             //Initchat.Show("玩游戏", "玩游戏01", true);
         }
 
