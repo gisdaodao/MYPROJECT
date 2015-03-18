@@ -64,7 +64,10 @@ namespace OKr.MXReader.Client.View
             //groups.Add(new Info() { text = "", dataurl = "" }); ;
             //groups.Add(new Info() { text = "", dataurl = "" }); ;
             //groups.Add(new Info() { text = "", dataurl = "" }); ;
-           
+            if (settings.Contains("userchatname"))
+            {
+                nbox.Text = settings["userchatname"].ToString();
+            }
             this.surfaceAdImageXaml.InitAdControl(AdModeType.Normal); 
         }
 
@@ -415,6 +418,12 @@ namespace OKr.MXReader.Client.View
         {
             try
             {
+                if (settings.Contains("userchatname"))
+                {
+                  string str = settings["userchatname"].ToString();
+                  Debug.WriteLine(str + "str");
+                  nbox.Text = str;
+                }
                 if (e.IsNavigationInitiator == false && e.NavigationMode == NavigationMode.Back)
                 {
                     //if (isguanggao)
@@ -559,14 +568,41 @@ namespace OKr.MXReader.Client.View
                 string nn = "唱歌技巧";
                 Random p = new Random();
                 int k = p.Next(1, 100000);
+             if(settings.Contains("userchatname"))
+             {
+                 //nbox.Text = settings["userchatname"].ToString();
+                 settings["userchatname"] =nbox.Text;
+             }
+          else
+             {
+                 settings.Add("userchatname", nbox.Text);
+                 settings.Save();
+             }
                Initchat.Show("唱歌技巧", nn+k.ToString(), false
                    ,50);
             }
             else
             {
+                if (settings.Contains("userchatname"))
+                {
+                    //nbox.Text = settings["userchatname"].ToString();
+                    settings["userchatname"] = nbox.Text;
+                }
+                else
+                {
+                    {
+                        settings.Add("userchatname", nbox.Text);
+                        settings.Save();
+                    }
+                }
                 Initchat.Show("唱歌技巧", nbox.Text, false, 50);
             }
             //Initchat.Show("玩游戏", "玩游戏01", true);
+        }
+
+        private void sharebtn_Click(object sender, RoutedEventArgs e)
+        {
+
         }
 
 
