@@ -119,6 +119,9 @@
     <Reference Include="GoogleAds">
       <HintPath>..\..\..\新闻浏览器\libs\GoogleAds.dll</HintPath>
     </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\..\..\..\..\app\新闻浏览器\libs\HtmlAgilityPack.dll</HintPath>
+    </Reference>
     <Reference Include="ImageTools">
       <HintPath>..\..\..\新闻浏览器\libs\msnaiasdk\MSNADSDK\ImageTools.dll</HintPath>
     </Reference>
@@ -150,8 +153,11 @@
     <Reference Include="SurfaceAd.SDK.WP">
       <HintPath>..\..\..\新闻浏览器\libs\SurfaceAd.SDK.WP.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml.XPath">
+      <HintPath>..\..\..\..\..\app\新闻浏览器\libs\System.Xml.XPath.dll</HintPath>
+    </Reference>
     <Reference Include="uuchat">
-      <HintPath>C:\Users\admin\Desktop\WP聊天室Silverlight_SDK\uuchat.dll</HintPath>
+      <HintPath>C:\Users\zhangch\Desktop\WP聊天室Silverlight_SDK(2015-3-16 9.36.25 8061)\uuchat.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -168,6 +174,9 @@
     </Compile>
     <Compile Include="View\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\OneVideoinfoPage.xaml.cs">
+      <DependentUpon>OneVideoinfoPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\PageBa.xaml.cs">
       <DependentUpon>PageBa.xaml</DependentUpon>
@@ -253,6 +262,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\OneVideoinfoPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

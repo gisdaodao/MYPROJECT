@@ -287,10 +287,10 @@ namespace OKr.MXReader.Client.View
             //App.tranferinfo = info;
             isguanggao = false;
             // return;
-            WebBrowserTask task = new WebBrowserTask();
-            task.Uri = new Uri(info.dataurl, UriKind.RelativeOrAbsolute);
-            task.Show();
-           
+            //WebBrowserTask task = new WebBrowserTask();
+            //task.Uri = new Uri(info.dataurl, UriKind.RelativeOrAbsolute);
+            //task.Show();
+            this.NavigationService.Navigate(new Uri("/View/OneVideoinfoPage.xaml?url="+info.dataurl, UriKind.RelativeOrAbsolute));
             //Debug.WriteLine(info.dataurl);
         }
 
@@ -327,7 +327,7 @@ namespace OKr.MXReader.Client.View
             {
                 if (txtPclient.IsBusy) return;
                 txtPclient.OpenReadCompleted += txtPclient_OpenReadCompleted;
-                txtPclient.OpenReadAsync(new Uri("https://raw.githubusercontent.com/commonusechina/data/master/data/music.xml", UriKind.Absolute));
+                txtPclient.OpenReadAsync(new Uri("https://raw.githubusercontent.com/commonusechina/data/master/data/videomusiclist.xml", UriKind.Absolute));
 
                 indicator.Text = "请求中...";
                 indicator.IsVisible = true;
@@ -578,8 +578,7 @@ namespace OKr.MXReader.Client.View
                  settings.Add("userchatname", nbox.Text);
                  settings.Save();
              }
-               Initchat.Show("唱歌技巧", nn+k.ToString(), false
-                   ,50);
+              Initchat.Show("唱歌技巧", nn+k.ToString(), false ,50);
             }
             else
             {
@@ -595,14 +594,16 @@ namespace OKr.MXReader.Client.View
                         settings.Save();
                     }
                 }
-                Initchat.Show("唱歌技巧", nbox.Text, false, 50);
+            Initchat.Show("唱歌技巧", nbox.Text, false, 50);
             }
             //Initchat.Show("玩游戏", "玩游戏01", true);
         }
 
         private void sharebtn_Click(object sender, RoutedEventArgs e)
         {
-
+              
+            EmailComposeTask pmel = new EmailComposeTask(); pmel.To = "youyouchina@hotmail.com";
+            pmel.Show();
         }
 
 

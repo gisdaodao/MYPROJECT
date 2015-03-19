@@ -81,7 +81,7 @@
                                 <TextBlock Margin="12,0,0,0" FontSize="30"  Foreground="Orange" Text="输入聊天昵称"></TextBlock>
                                 <TextBox BorderBrush="Orange"  x:Name="nbox"></TextBox>
                                 <Button Foreground="Orange" BorderBrush="Orange" x:Name="chatbtn" Click="chatbtn_Click" Content="启动交友聊天室"></Button>
-                                <Button Foreground="Orange" BorderBrush="Orange" x:Name="sharebtn" Click="sharebtn_Click" Content="分享你的原创"></Button>
+                                <Button Foreground="Orange" BorderBrush="Orange" x:Name="sharebtn" Click="sharebtn_Click" Content="分享你的原创/提建议"></Button>
                                 <!--<XAML:AdControl 
             x:Name="xx"
             ApplicationKey="0cb480f9fa27f2cde6e495b98168c8f7"
@@ -241,35 +241,37 @@
             </ctrl:PanoramaItem>
             
             <ctrl:PanoramaItem>
-                <Grid>
+                <Grid Margin="0,-0,-12,0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"></RowDefinition>
                         <RowDefinition Height="50"></RowDefinition>
                     </Grid.RowDefinitions>
-                    
-                    <phone:LongListSelector Grid.Row="0" x:Name="txtlstbox" LayoutMode="List"  >
-                        <phone:LongListSelector.ItemTemplate>
-                            <DataTemplate>
-                                <Border  Margin="0,0,0,12" Width="460" HorizontalAlignment="Left" Height="100" x:Name="txtborder" Background="Orange" Tap="txtborder_Tap">
-                                    <Grid>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="100"></ColumnDefinition>
-                                            <ColumnDefinition Width="*"></ColumnDefinition>
-                                        </Grid.ColumnDefinitions>
-                                        <!--<Image Stretch="Fill" Height="100"   Grid.Column="0" Source="{Binding picurl}"></Image>-->
-                                        <Grid Grid.Column="1" Margin="12,0,0,0">
-                                            <Grid.RowDefinitions>
-                                                <RowDefinition Height="65"></RowDefinition>
-                                                <!--<RowDefinition Height="*"></RowDefinition>-->
-                                            </Grid.RowDefinitions>
-                                            <TextBlock FontSize="30" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center" Text="{Binding text}"></TextBlock>
-                                            <TextBlock   Grid.Row="1" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding info}"></TextBlock>
+                    <StackPanel Orientation="Vertical" VerticalAlignment="Top" Margin="0,-28,-12,0">
+                        <TextBlock Text="视频" VerticalAlignment="Top" HorizontalAlignment="Left" Style="{StaticResource okr-subtitle-yellow}" />
+                        <phone:LongListSelector Grid.Row="0" x:Name="txtlstbox" LayoutMode="List"  >
+                            <phone:LongListSelector.ItemTemplate>
+                                <DataTemplate>
+                                    <Border  Margin="0,0,0,12" Width="399" HorizontalAlignment="Left" Height="100" x:Name="txtborder" Background="Orange" Tap="txtborder_Tap">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="10"></ColumnDefinition>
+                                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                            <!--<Image Stretch="Fill" Height="100"   Grid.Column="0" Source="{Binding picurl}"></Image>-->
+                                            <Grid Grid.Column="1" Margin="12,0,0,0">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="65"></RowDefinition>
+                                                    <!--<RowDefinition Height="*"></RowDefinition>-->
+                                                </Grid.RowDefinitions>
+                                                <TextBlock HorizontalAlignment="Left" FontSize="25" Grid.Row="0"  TextWrapping="Wrap" VerticalAlignment="Center" Text="{Binding text}"></TextBlock>
+                                                <TextBlock   Grid.Row="1" TextWrapping="Wrap" HorizontalAlignment="Left"  VerticalAlignment="Center" Text="{Binding info}"></TextBlock>
+                                            </Grid>
                                         </Grid>
-                                    </Grid>
-                                </Border>
-                            </DataTemplate>
-                        </phone:LongListSelector.ItemTemplate>
-                    </phone:LongListSelector>
+                                    </Border>
+                                </DataTemplate>
+                            </phone:LongListSelector.ItemTemplate>
+                        </phone:LongListSelector>
+                    </StackPanel>
                     <StackPanel Grid.Row="1">
                         <google:AdView  Tap="AdtapControl_Tap"  x:Name="Ad9Control"  AdUnitID="ca-app-pub-1598808565430684/2935759650"  Format="Banner"></google:AdView>
                     </StackPanel>
