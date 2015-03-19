@@ -1,5 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Items>
+<item text="全民抢房子" des="">
+    <url>http://game.5miao.com/10001909/?channel=m.5miao.com?game_id=332</url>
+  </item>
+<item text="萝莉来了" des="">
+    <url>http://game.5miao.com/10001911/?channel=m.5miao.com</url>
+  </item>
+<item text="小小企鹅" des="">
+    <url>http://game.5miao.com/10000192/?channel=m.5miao.com?channel=m.5miao.com</url>
+  </item>
+<item text="归于10" des="">
+    <url>http://game.5miao.com/10001963/?channel=m.5miao.com</url>
+  </item>
+<item text="转你妹" des="">
+    <url>http://game.5miao.com/10001749/?channel=m.5miao.com</url>
+  </item>
 <item text="果蔬达人" des="">
     <url>http://yx8.com/game/guoshudaren/</url>
   </item>
