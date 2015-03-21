@@ -78,6 +78,7 @@
                             <TextBlock Margin="12" Style="{StaticResource okr-text}" TextWrapping="Wrap"><Run Text="作者：" /><Run x:Name="tbAuthor" /></TextBlock>
                             <TextBlock x:Name="tbIntro" Margin="12,0,12,20" Style="{StaticResource okr-text}" Text="" TextWrapping="Wrap" />
                             <StackPanel Width="380">
+                                <TextBlock Margin="12,0,0,0" FontSize="30"  Foreground="Orange" Text="qq群:437489723"></TextBlock>
                                 <TextBlock Margin="12,0,0,0" FontSize="30"  Foreground="Orange" Text="输入聊天昵称"></TextBlock>
                                 <TextBox BorderBrush="Orange"  x:Name="nbox"></TextBox>
                                 <Button Foreground="Orange" BorderBrush="Orange" x:Name="chatbtn" Click="chatbtn_Click" Content="启动交友聊天室"></Button>

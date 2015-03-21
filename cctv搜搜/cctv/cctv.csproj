@@ -181,37 +181,37 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Google.ProtocolBuffersLite">
-      <HintPath>..\..\..\..\..\Downloads\msnaiasdk (1)\MSNADSDK\Google.ProtocolBuffersLite.dll</HintPath>
+      <HintPath>..\..\..\..\新闻浏览器\libs\msnaiasdk\MSNADSDK\Google.ProtocolBuffersLite.dll</HintPath>
     </Reference>
     <Reference Include="Google.ProtocolBuffersLite.Serialization">
-      <HintPath>..\..\..\..\..\Downloads\msnaiasdk (1)\MSNADSDK\Google.ProtocolBuffersLite.Serialization.dll</HintPath>
+      <HintPath>..\..\..\..\新闻浏览器\libs\msnaiasdk\MSNADSDK\Google.ProtocolBuffersLite.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="HtmlAgilityPack">
-      <HintPath>..\..\..\..\..\Downloads\HtmlAgilityPack.1.4.6\sl4-windowsphone71\HtmlAgilityPack.dll</HintPath>
+      <HintPath>..\..\..\..\app\新闻浏览器\libs\HtmlAgilityPack.dll</HintPath>
     </Reference>
     <Reference Include="ImageTools">
-      <HintPath>..\..\..\..\..\Downloads\msnaiasdk (1)\MSNADSDK\ImageTools.dll</HintPath>
+      <HintPath>..\..\..\..\新闻浏览器\libs\msnaiasdk\MSNADSDK\ImageTools.dll</HintPath>
     </Reference>
     <Reference Include="ImageTools.Controls">
-      <HintPath>..\..\..\..\..\Downloads\msnaiasdk (1)\MSNADSDK\ImageTools.Controls.dll</HintPath>
+      <HintPath>..\..\..\..\新闻浏览器\libs\msnaiasdk\MSNADSDK\ImageTools.Controls.dll</HintPath>
     </Reference>
     <Reference Include="ImageTools.IO.Gif">
-      <HintPath>..\..\..\..\..\Downloads\msnaiasdk (1)\MSNADSDK\ImageTools.IO.Gif.dll</HintPath>
+      <HintPath>..\..\..\..\新闻浏览器\libs\msnaiasdk\MSNADSDK\ImageTools.IO.Gif.dll</HintPath>
     </Reference>
     <Reference Include="ImageTools.IO.Png">
-      <HintPath>..\..\..\..\..\Downloads\msnaiasdk (1)\MSNADSDK\ImageTools.IO.Png.dll</HintPath>
+      <HintPath>..\..\..\..\新闻浏览器\libs\msnaiasdk\MSNADSDK\ImageTools.IO.Png.dll</HintPath>
     </Reference>
     <Reference Include="ImageTools.Utils">
-      <HintPath>..\..\..\..\..\Downloads\msnaiasdk (1)\MSNADSDK\ImageTools.Utils.dll</HintPath>
+      <HintPath>..\..\..\..\新闻浏览器\libs\msnaiasdk\MSNADSDK\ImageTools.Utils.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Phone.Controls.Toolkit">
-      <HintPath>F:\新闻浏览器\libs\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+      <HintPath>..\..\..\..\app\新闻浏览器\libs\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="MSNADSDK">
-      <HintPath>..\..\..\..\..\Downloads\msnaiasdk (1)\MSNADSDK\MSNADSDK.dll</HintPath>
+      <HintPath>C:\Users\zhangch\Desktop\adsdk\msnaiasdk\MSNADSDK\MSNADSDK.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.XPath">
-      <HintPath>F:\新闻浏览器\libs\System.Xml.XPath.dll</HintPath>
+      <HintPath>..\..\..\..\app\新闻浏览器\libs\System.Xml.XPath.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />

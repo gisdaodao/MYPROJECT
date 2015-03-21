@@ -712,5 +712,11 @@ namespace OKr.MXReader.Client.View
         {
             synth.CancelAll();
         }
+
+        private void Appcopy_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(text_text2.Text);
+            MessageBox.Show("复制成功");
+        }
     }
 }
