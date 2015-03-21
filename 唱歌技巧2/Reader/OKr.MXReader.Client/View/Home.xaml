@@ -224,7 +224,7 @@
                 <phone:LongListSelector LayoutMode="Grid"  x:Name="otherlonglist" GridCellSize="135,135 " >
                     <phone:LongListSelector.ItemTemplate>
                         <DataTemplate>
-                            <Border Tap="txtborder_Tap" Background="Orange" Margin="12,0,0,12">
+                            <Border Tap="Border_Tap" Background="Orange" Margin="12,0,0,12">
                                 <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" Text="{Binding text}"></TextBlock>
                             </Border>
                         </DataTemplate>
@@ -297,7 +297,7 @@
                 <phone:LongListSelector LayoutMode="Grid"  x:Name="longlist" GridCellSize="200,150 " >
                     <phone:LongListSelector.ItemTemplate>
                         <DataTemplate>
-                            <Border Margin="12,0,0,12" Tap="txtborder_Tap" Background="Orange">
+                            <Border Margin="12,0,0,12" Tap="Border_Tap" Background="Orange">
                                 <TextBlock VerticalAlignment="Center" FontSize="25" HorizontalAlignment="Center" Text="{Binding text}"></TextBlock>
                             </Border>
                         </DataTemplate>
