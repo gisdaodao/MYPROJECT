@@ -175,6 +175,9 @@
     <Compile Include="View\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\newsdetailPage.xaml.cs">
+      <DependentUpon>newsdetailPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\OneVideoinfoPage.xaml.cs">
       <DependentUpon>OneVideoinfoPage.xaml</DependentUpon>
     </Compile>
@@ -262,6 +265,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\newsdetailPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

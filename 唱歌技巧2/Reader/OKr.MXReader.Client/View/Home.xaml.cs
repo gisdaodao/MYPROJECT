@@ -90,9 +90,13 @@ namespace OKr.MXReader.Client.View
                     {
                         XName xname = XName.Get("url");
                         XName xcontetnname = XName.Get("content");
+                        XName xtitlenname = XName.Get("title");
+                        XName xfilepathname = XName.Get("filepath");
+                        //XName xtitlenname = XName.Get("title");
+                        //XName xtitlenname = XName.Get("title");
                         //   XName xpicname = XName.Get("picurl");
                         //List<Info> groupmusicinfo = new List<Info>();
-                        newsmusicinfo.Add(new NewsInfo() { title = b.FirstAttribute.Value, content = b.Descendants(xcontetnname).First().Value, dataurl = b.Descendants(xname).First().Value, });
+                        newsmusicinfo.Add(new NewsInfo() { title = b.Descendants(xtitlenname).First().Value, content = b.Descendants(xcontetnname).First().Value, filepath = b.Descendants(xfilepathname).First().Value, });
                     }
                     Deployment.Current.Dispatcher.BeginInvoke(() =>
                     {
@@ -647,7 +651,10 @@ namespace OKr.MXReader.Client.View
         {
             StackPanel border = sender as StackPanel;
             NewsInfo datanews = border.DataContext as NewsInfo;
-            isguanggao = false;
+            App.onenews = datanews;
+            NavigationService.Navigate(new Uri("/View/newsdetailPage.xaml", UriKind.RelativeOrAbsolute));
+            return;
+            //isguanggao = false;
             WebBrowserTask task = new WebBrowserTask();
             task.Uri = new Uri(datanews.filepath, UriKind.RelativeOrAbsolute);
             task.Show();
