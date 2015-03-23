@@ -43,6 +43,18 @@
         </Rectangle>
 
         <ctrl:Panorama x:Name="pano" TitleTemplate="{StaticResource okr-panoheader}" SelectionChanged="pano_SelectionChanged">
+            <ctrl:PanoramaItem>
+                <phone:LongListSelector LayoutMode="List"  x:Name="newslonglist"  >
+                    <phone:LongListSelector.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel  Background="LightGray" Margin="12,0,0,12">
+                                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" Text="{Binding title}"></TextBlock>
+                                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" Text="{Binding content}"></TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </phone:LongListSelector.ItemTemplate>
+                </phone:LongListSelector>
+            </ctrl:PanoramaItem>
             <ctrl:PanoramaItem Margin="12,10,0,0">
                 <Grid Margin="0,-28,-20,0" VerticalAlignment="Top" >
 
@@ -79,6 +91,7 @@
                             <TextBlock x:Name="tbIntro" Margin="12,0,12,20" Style="{StaticResource okr-text}" Text="" TextWrapping="Wrap" />
                             <StackPanel Width="380">
                                 <TextBlock Margin="12,0,0,0" FontSize="30"  Foreground="Orange" Text="qq群:437489723"></TextBlock>
+                                <TextBlock Margin="12,0,0,0" FontSize="30"  Foreground="Orange" Text="招募新闻编辑：加群"></TextBlock>
                                 <TextBlock Margin="12,0,0,0" FontSize="30"  Foreground="Orange" Text="输入聊天昵称"></TextBlock>
                                 <TextBox BorderBrush="Orange"  x:Name="nbox"></TextBox>
                                 <Button Foreground="Orange" BorderBrush="Orange" x:Name="chatbtn" Click="chatbtn_Click" Content="启动交友聊天室"></Button>
