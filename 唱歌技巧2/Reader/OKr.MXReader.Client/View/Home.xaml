@@ -82,7 +82,7 @@
                                 <TextBlock Margin="12,0,0,0" FontSize="30"  Foreground="Orange" Text="输入聊天昵称"></TextBlock>
                                 <TextBox BorderBrush="Orange"  x:Name="nbox"></TextBox>
                                 <Button Foreground="Orange" BorderBrush="Orange" x:Name="chatbtn" Click="chatbtn_Click" Content="启动交友聊天室"></Button>
-                                <Button Foreground="Orange" BorderBrush="Orange" x:Name="sharebtn" Click="sharebtn_Click" Content="分享你的原创/提建议"></Button>
+                                <Button Foreground="Orange" BorderBrush="Orange" x:Name="sharebtn" Click="sharebtn_Click" Content="分享你的原创/建议/合作"></Button>
                                 <!--<XAML:AdControl 
             x:Name="xx"
             ApplicationKey="0cb480f9fa27f2cde6e495b98168c8f7"
