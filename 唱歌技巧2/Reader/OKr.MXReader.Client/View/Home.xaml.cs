@@ -40,7 +40,7 @@ namespace OKr.MXReader.Client.View
         List<NewsInfo> newsmusicinfo = new List<NewsInfo>();
         WebClient newsmusicclient = new WebClient();
         string gourpmusic="https://raw.githubusercontent.com/commonusechina/data/master/data/groupmusic.xml";
-        string newsmusic = "https://raw.githubusercontent.com/commonusechina/data/master/data/groupmusic.xml";
+        string newsmusic = "https://raw.githubusercontent.com/gisdaodao/MYPROJECT/master/data/newsmusic.xml";
         List<Info> othermusic = new List<Info>();
         string oterhmusic = "https://raw.githubusercontent.com/commonusechina/data/master/data/othermusic.xml";
         public Home()
@@ -92,7 +92,7 @@ namespace OKr.MXReader.Client.View
                         XName xcontetnname = XName.Get("content");
                         //   XName xpicname = XName.Get("picurl");
                         //List<Info> groupmusicinfo = new List<Info>();
-                        newsmusicinfo.Add(new NewsInfo() { title = b.FirstAttribute.Value, content = b.Descendants(xname).First().Value, dataurl = b.Descendants(xname).First().Value, });
+                        newsmusicinfo.Add(new NewsInfo() { title = b.FirstAttribute.Value, content = b.Descendants(xcontetnname).First().Value, dataurl = b.Descendants(xname).First().Value, });
                     }
                     Deployment.Current.Dispatcher.BeginInvoke(() =>
                     {
@@ -641,6 +641,16 @@ namespace OKr.MXReader.Client.View
               
             EmailComposeTask pmel = new EmailComposeTask(); pmel.To = "youyouchina@hotmail.com";
             pmel.Show();
+        }
+
+        private void newsst_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            StackPanel border = sender as StackPanel;
+            NewsInfo datanews = border.DataContext as NewsInfo;
+            isguanggao = false;
+            WebBrowserTask task = new WebBrowserTask();
+            task.Uri = new Uri(datanews.filepath, UriKind.RelativeOrAbsolute);
+            task.Show();
         }
 
 

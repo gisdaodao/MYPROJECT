@@ -47,9 +47,9 @@
                 <phone:LongListSelector LayoutMode="List"  x:Name="newslonglist"  >
                     <phone:LongListSelector.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel  Background="LightGray" Margin="12,0,0,12">
+                            <StackPanel x:Name="newsst"  Tap="newsst_Tap" Background="LightGray" Margin="12,0,0,12">
                                 <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" Text="{Binding title}"></TextBlock>
-                                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" Text="{Binding content}"></TextBlock>
+                                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap" FontSize="18" Text="{Binding content}"></TextBlock>
                             </StackPanel>
                         </DataTemplate>
                     </phone:LongListSelector.ItemTemplate>

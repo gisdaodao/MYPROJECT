@@ -23,5 +23,6 @@ namespace 股票新闻
         public string picurl { get; set; }
 
         public string dataurl { get; set; }
+        public string filepath { get; set; }
     } 
 }
