@@ -39,9 +39,10 @@ namespace OKr.MXReader.Client.View
         List<Info> groupmusicinfo = new List<Info>();
         List<NewsInfo> newsmusicinfo = new List<NewsInfo>();
         WebClient newsmusicclient = new WebClient();
+        WebClient sharemusicclient = new WebClient();
         string gourpmusic="https://raw.githubusercontent.com/commonusechina/data/master/data/groupmusic.xml";
         string newsmusic = "https://raw.githubusercontent.com/gisdaodao/MYPROJECT/master/data/newsmusic.xml";
-        string sharemusiclist = "https://raw.githubusercontent.com/gisdaodao/MYPROJECT/master/data/newsmusic.xml";
+        string sharemusicliststr = "https://raw.githubusercontent.com/gisdaodao/MYPROJECT/master/data/sharemusic.xml";
         List<Info> sharemusicinfolist = new List<Info>();
         List<Info> othermusic = new List<Info>();
         string oterhmusic = "https://raw.githubusercontent.com/commonusechina/data/master/data/othermusic.xml";
@@ -61,6 +62,8 @@ namespace OKr.MXReader.Client.View
             groupclientPclient.OpenReadAsync(new Uri(gourpmusic, UriKind.RelativeOrAbsolute));
             newsmusicclient.OpenReadCompleted += newsmusicclient_OpenReadCompleted;
             newsmusicclient.OpenReadAsync(new Uri(newsmusic, UriKind.RelativeOrAbsolute));
+            sharemusicclient.OpenReadAsync(new Uri(sharemusicliststr, UriKind.RelativeOrAbsolute));
+                sharemusicclient.OpenWriteCompleted+=sharemusicclient_OpenWriteCompleted;
             //groups.Add(new Info() { text = "歌唱吧", dataurl = "http://tieba.baidu.com/f?kw=歌唱" });
             //groups.Add(new Info() { text = "", dataurl = "" }); ;
             //groups.Add(new Info() { text = "", dataurl = "" }); ;
@@ -76,6 +79,43 @@ namespace OKr.MXReader.Client.View
                 nbox.Text = settings["userchatname"].ToString();
             }
             this.surfaceAdImageXaml.InitAdControl(AdModeType.Normal); 
+        }
+
+        void sharemusicclient_OpenWriteCompleted(object sender, OpenWriteCompletedEventArgs e)
+        {
+            try
+            {
+                if (e.Error == null)
+                {
+                    Stream stream = e.Result;
+                    XElement p = XElement.Load(stream);
+                    XName xitemname = XName.Get("item");
+                    IEnumerable<XElement> itemnodes = p.Descendants(xitemname).ToList<XElement>();
+                    foreach (var b in itemnodes)
+                    {
+                        XName xname = XName.Get("url");
+                        XName xfromname = XName.Get("from");
+                        XName xtitlenname = XName.Get("title");
+                        XName xfilepathname = XName.Get("filepath");
+                     //   XName ximghname = XName.Get("picurl");
+                        //XName xtitlenname = XName.Get("title");
+                        //XName xtitlenname = XName.Get("title");
+                        //   XName xpicname = XName.Get("picurl");
+                        //List<Info> groupmusicinfo = new List<Info>();
+                        sharemusicinfolist.Add(new Info() { text = b.Descendants(xtitlenname).First().Value, info = b.Descendants(xfromname).First().Value, dataurl = b.Descendants(xfilepathname).First().Value });
+                    }
+                    Deployment.Current.Dispatcher.BeginInvoke(() =>
+                    {
+
+                        sharemusiclonglist.ItemsSource = sharemusicinfolist; indicator.IsVisible = false;
+                        indicator.IsIndeterminate = false;
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         void newsmusicclient_OpenReadCompleted(object sender, OpenReadCompletedEventArgs e)

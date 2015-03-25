@@ -126,9 +126,9 @@
                                         <ColumnDefinition Width="*"></ColumnDefinition>
                                     </Grid.ColumnDefinitions>
                                     <Image Visibility="Collapsed" Width="120" Height="120" VerticalAlignment="Top" Grid.Column="0" Source="{Binding picurl}"></Image>
-                                    <StackPanel VerticalAlignment="Top" Grid.Column="1"     Margin="12,-0,0,12">
-                                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="25" Foreground="Black" Text="{Binding title}"></TextBlock>
-                                        <TextBlock VerticalAlignment="Top" TextTrimming="WordEllipsis" Foreground="LightGray" HorizontalAlignment="Left" TextWrapping="Wrap" FontSize="18" Text="{Binding content}"></TextBlock>
+                                    <StackPanel Background="White" VerticalAlignment="Top" Grid.Column="1"     Margin="12,-0,0,12">
+                                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="25" Foreground="Black" Text="{Binding text}"></TextBlock>
+                                        <TextBlock VerticalAlignment="Top" TextTrimming="WordEllipsis" Foreground="LightGray" HorizontalAlignment="Left" TextWrapping="Wrap" FontSize="18" Text="{Binding info}"></TextBlock>
                                     </StackPanel>
                                 </Grid>
                             </DataTemplate>
