@@ -705,7 +705,10 @@ namespace OKr.MXReader.Client.View
 
         private void sharemusicpanel_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
-
+            Grid obk = sender as Grid;
+            Info datecontext = obk.DataContext as Info;
+            App.musicfilepath = datecontext.dataurl;
+            NavigationService.Navigate(new Uri("/View/MusicPlayPage.xam", UriKind.RelativeOrAbsolute));
         }
 
 

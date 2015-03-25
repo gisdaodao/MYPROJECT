@@ -27,7 +27,7 @@ namespace OKr.MXReader.Client
         /// <returns>The root frame of the Phone Application.</returns>
         public PhoneApplicationFrame RootFrame { get; private set; }
         public static NewsInfo onenews { get; set; }
-
+        public static string musicfilepath { get; set; }
         /// <summary>
         /// Constructor for the Application object.
         /// </summary>
