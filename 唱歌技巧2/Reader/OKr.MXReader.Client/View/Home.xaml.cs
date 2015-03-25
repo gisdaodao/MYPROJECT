@@ -63,7 +63,7 @@ namespace OKr.MXReader.Client.View
             newsmusicclient.OpenReadCompleted += newsmusicclient_OpenReadCompleted;
             newsmusicclient.OpenReadAsync(new Uri(newsmusic, UriKind.RelativeOrAbsolute));
             sharemusicclient.OpenReadAsync(new Uri(sharemusicliststr, UriKind.RelativeOrAbsolute));
-                sharemusicclient.OpenWriteCompleted+=sharemusicclient_OpenWriteCompleted;
+            sharemusicclient.OpenReadCompleted += sharemusicclient_OpenReadCompleted;
             //groups.Add(new Info() { text = "歌唱吧", dataurl = "http://tieba.baidu.com/f?kw=歌唱" });
             //groups.Add(new Info() { text = "", dataurl = "" }); ;
             //groups.Add(new Info() { text = "", dataurl = "" }); ;
@@ -81,7 +81,7 @@ namespace OKr.MXReader.Client.View
             this.surfaceAdImageXaml.InitAdControl(AdModeType.Normal); 
         }
 
-        void sharemusicclient_OpenWriteCompleted(object sender, OpenWriteCompletedEventArgs e)
+        void sharemusicclient_OpenReadCompleted(object sender, OpenReadCompletedEventArgs e)
         {
             try
             {
@@ -93,7 +93,7 @@ namespace OKr.MXReader.Client.View
                     IEnumerable<XElement> itemnodes = p.Descendants(xitemname).ToList<XElement>();
                     foreach (var b in itemnodes)
                     {
-                        XName xname = XName.Get("url");
+                        //XName xname = XName.Get("url");
                         XName xfromname = XName.Get("from");
                         XName xtitlenname = XName.Get("title");
                         XName xfilepathname = XName.Get("filepath");
@@ -708,7 +708,7 @@ namespace OKr.MXReader.Client.View
             Grid obk = sender as Grid;
             Info datecontext = obk.DataContext as Info;
             App.musicfilepath = datecontext.dataurl;
-            NavigationService.Navigate(new Uri("/View/MusicPlayPage.xam", UriKind.RelativeOrAbsolute));
+            NavigationService.Navigate(new Uri("/View/MusicPlayPage.xaml", UriKind.RelativeOrAbsolute));
         }
 
 

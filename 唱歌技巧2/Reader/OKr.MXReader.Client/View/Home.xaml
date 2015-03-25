@@ -115,25 +115,33 @@
                 </Grid>
             </ctrl:PanoramaItem>
             <ctrl:PanoramaItem   Height="711">
-                <Grid Margin="0,-25,0,0">
-                    <TextBlock Text="歌友分享" VerticalAlignment="Top" HorizontalAlignment="Left" Style="{StaticResource okr-subtitle-yellow}" />
-                    <phone:LongListSelector LayoutMode="List"  Margin="0,-36,0,0" x:Name="sharemusiclonglist"  >
-                        <phone:LongListSelector.ItemTemplate>
-                            <DataTemplate>
-                                <Grid Background="Orange" Opacity="0.8" Tap="sharemusicpanel_Tap" x:Name="sharemusicpanel" MaxHeight="250">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="0"></ColumnDefinition>
-                                        <ColumnDefinition Width="*"></ColumnDefinition>
-                                    </Grid.ColumnDefinitions>
-                                    <Image Visibility="Collapsed" Width="120" Height="120" VerticalAlignment="Top" Grid.Column="0" Source="{Binding picurl}"></Image>
-                                    <StackPanel Background="White" VerticalAlignment="Top" Grid.Column="1"     Margin="12,-0,0,12">
-                                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="25" Foreground="Black" Text="{Binding text}"></TextBlock>
-                                        <TextBlock VerticalAlignment="Top" TextTrimming="WordEllipsis" Foreground="LightGray" HorizontalAlignment="Left" TextWrapping="Wrap" FontSize="18" Text="{Binding info}"></TextBlock>
-                                    </StackPanel>
-                                </Grid>
-                            </DataTemplate>
-                        </phone:LongListSelector.ItemTemplate>
-                    </phone:LongListSelector>
+                <Grid Margin="0,-36,0,0">
+                    <StackPanel>
+                        <TextBlock Text="歌友分享" VerticalAlignment="Top" HorizontalAlignment="Left" Style="{StaticResource okr-subtitle-yellow}" />
+                        <phone:LongListSelector LayoutMode="List"  Margin="0,-0,0,0" x:Name="sharemusiclonglist"  >
+                            <phone:LongListSelector.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Background="Transparent" Opacity="0.8" Tap="sharemusicpanel_Tap" x:Name="sharemusicpanel" MaxHeight="250">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="0"></ColumnDefinition>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <Image Visibility="Collapsed" Width="120" Height="120" VerticalAlignment="Top" Grid.Column="0" Source="{Binding picurl}"></Image>
+                                        <StackPanel MinHeight="100" Background="White" VerticalAlignment="Top" Grid.Column="1"     Margin="12,-0,0,12">
+                                           
+                                            <TextBlock TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="25" Foreground="Black" Text="{Binding text}"></TextBlock>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock VerticalAlignment="Top" TextTrimming="WordEllipsis" Foreground="LightGray" HorizontalAlignment="Left" TextWrapping="Wrap" FontSize="18" Text="分享者："></TextBlock>
+                                                <TextBlock Margin="250,0,0,0" VerticalAlignment="Top" TextTrimming="WordEllipsis" Foreground="LightGray" HorizontalAlignment="Left" TextWrapping="Wrap" FontSize="18" Text="{Binding info}"></TextBlock>
+                                            </StackPanel>
+                                           
+                                        </StackPanel>
+                                    </Grid>
+                                </DataTemplate>
+                            </phone:LongListSelector.ItemTemplate>
+                        </phone:LongListSelector>
+                    </StackPanel>
+                  
                 </Grid>
             
             </ctrl:PanoramaItem>
