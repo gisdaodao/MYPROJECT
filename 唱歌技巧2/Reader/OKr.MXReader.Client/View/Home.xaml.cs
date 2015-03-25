@@ -708,8 +708,8 @@ namespace OKr.MXReader.Client.View
             Grid obk = sender as Grid;
             Info datecontext = obk.DataContext as Info;
             App.musicfilepath = datecontext.dataurl;
-            WebBrowserTask task = new WebBrowserTask(); task.Uri = new Uri(App.musicfilepath, UriKind.RelativeOrAbsolute);
-            task.Show(); return;
+            //WebBrowserTask task = new WebBrowserTask(); task.Uri = new Uri(App.musicfilepath, UriKind.RelativeOrAbsolute);
+            //task.Show(); return;
             NavigationService.Navigate(new Uri("/View/MusicPlayPage.xaml", UriKind.RelativeOrAbsolute));
         }
 

@@ -30,7 +30,7 @@
 
         <!--ContentPanel - 在此处放置其他内容-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <Button Content="播放" Click="Button_Click"></Button>
+            <Button Content="暂停" Click="Button_Click"></Button>
         </Grid>
     </Grid>
 

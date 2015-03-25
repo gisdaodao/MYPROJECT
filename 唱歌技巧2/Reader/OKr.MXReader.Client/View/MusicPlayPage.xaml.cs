@@ -22,10 +22,10 @@ namespace OKr.MXReader.Client.View
         WebClient p = new WebClient();
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            p.OpenReadAsync(new Uri(App.musicfilepath, UriKind.RelativeOrAbsolute));p.OpenReadCompleted+=p_OpenReadCompleted;
-            
-            //mediaplay.Source = new Uri(App.musicfilepath, UriKind.RelativeOrAbsolute);
-            //mediaplay.Play();
+            //p.OpenReadAsync(new Uri(App.musicfilepath, UriKind.RelativeOrAbsolute));p.OpenReadCompleted+=p_OpenReadCompleted;
+
+            mediaplay.Source = new Uri(App.musicfilepath, UriKind.RelativeOrAbsolute);
+            mediaplay.Play();
             base.OnNavigatedTo(e);
         }
         string tem = "filerrecord.mp3";
@@ -136,23 +136,23 @@ namespace OKr.MXReader.Client.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-  
+     mediaplay.Pause();
 
-    using (IsolatedStorageFile myIsolatedStorage = IsolatedStorageFile.GetUserStoreForApplication())  
+    //using (IsolatedStorageFile myIsolatedStorage = IsolatedStorageFile.GetUserStoreForApplication())  
 
-    {
+    //{
 
-        using (IsolatedStorageFileStream fileStream = myIsolatedStorage.OpenFile(tem, FileMode.Open, FileAccess.Read))  
+    //    using (IsolatedStorageFileStream fileStream = myIsolatedStorage.OpenFile(tem, FileMode.Open, FileAccess.Read))  
 
-        {
+    //    {
 
-            this.mediaplay.SetSource(fileStream);  
+    //        this.mediaplay.SetSource(fileStream);  
 
-        }  
+    //    }  
 
-    }  
+    //}  
 
 
-        }
+        //}
     }
 }
