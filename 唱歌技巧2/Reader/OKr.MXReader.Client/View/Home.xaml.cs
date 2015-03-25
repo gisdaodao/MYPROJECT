@@ -41,6 +41,8 @@ namespace OKr.MXReader.Client.View
         WebClient newsmusicclient = new WebClient();
         string gourpmusic="https://raw.githubusercontent.com/commonusechina/data/master/data/groupmusic.xml";
         string newsmusic = "https://raw.githubusercontent.com/gisdaodao/MYPROJECT/master/data/newsmusic.xml";
+        string sharemusiclist = "https://raw.githubusercontent.com/gisdaodao/MYPROJECT/master/data/newsmusic.xml";
+        List<Info> sharemusicinfolist = new List<Info>();
         List<Info> othermusic = new List<Info>();
         string oterhmusic = "https://raw.githubusercontent.com/commonusechina/data/master/data/othermusic.xml";
         public Home()
@@ -92,11 +94,12 @@ namespace OKr.MXReader.Client.View
                         XName xcontetnname = XName.Get("content");
                         XName xtitlenname = XName.Get("title");
                         XName xfilepathname = XName.Get("filepath");
+                        XName ximghname = XName.Get("picurl");
                         //XName xtitlenname = XName.Get("title");
                         //XName xtitlenname = XName.Get("title");
                         //   XName xpicname = XName.Get("picurl");
                         //List<Info> groupmusicinfo = new List<Info>();
-                        newsmusicinfo.Add(new NewsInfo() { title = b.Descendants(xtitlenname).First().Value, content = b.Descendants(xcontetnname).First().Value, filepath = b.Descendants(xfilepathname).First().Value, });
+                        newsmusicinfo.Add(new NewsInfo() { title = b.Descendants(xtitlenname).First().Value, content = b.Descendants(xcontetnname).First().Value, filepath = b.Descendants(xfilepathname).First().Value, picurl = b.Descendants(ximghname).First().Value });
                     }
                     Deployment.Current.Dispatcher.BeginInvoke(() =>
                     {
@@ -658,6 +661,11 @@ namespace OKr.MXReader.Client.View
             WebBrowserTask task = new WebBrowserTask();
             task.Uri = new Uri(datanews.filepath, UriKind.RelativeOrAbsolute);
             task.Show();
+        }
+
+        private void sharemusicpanel_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+
         }
 
 
