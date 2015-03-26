@@ -606,15 +606,6 @@ namespace OKr.MXReader.Client.View
             pmel.Show();
         }
 
-        private void Border_Tap(object sender, System.Windows.Input.GestureEventArgs e)
-        {
-             Border border = sender as Border;
-             Info info = border.DataContext as Info;
-            WebBrowserTask task = new WebBrowserTask();
-            task.Uri = new Uri(info.dataurl, UriKind.RelativeOrAbsolute);
-           task.Show();
-        }
-
 
     }
 }

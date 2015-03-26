@@ -16,10 +16,5 @@ namespace OKr.MXReader.Client.View
         {
             InitializeComponent();
         }
-
-        private void StackPanel_Tap(object sender, System.Windows.Input.GestureEventArgs e)
-        {
-
-        }
     }
 }
