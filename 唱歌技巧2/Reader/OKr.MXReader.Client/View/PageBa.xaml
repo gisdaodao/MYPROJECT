@@ -21,8 +21,8 @@
         </Grid.RowDefinitions>
 
         <!--TitlePanel 包含应用程序的名称和页标题-->
-        <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="我的应用程序" Style="{StaticResource PhoneTextNormalStyle}"/>
+        <StackPanel Grid.Row="0" Margin="6,0,0,0">
+            <TextBlock Visibility="Collapsed" Text="" Style="{StaticResource PhoneTextNormalStyle}"/>
            </StackPanel>
 
         <!--ContentPanel - 在此处放置其他内容-->

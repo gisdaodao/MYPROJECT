@@ -43,6 +43,25 @@
         </Rectangle>
 
         <ctrl:Panorama x:Name="pano" TitleTemplate="{StaticResource okr-panoheader}" SelectionChanged="pano_SelectionChanged">
+            <ctrl:PanoramaItem  Background="White" Height="711">
+                <phone:LongListSelector LayoutMode="List"  Margin="0,-36,0,0" x:Name="newslonglist"  >
+                    <phone:LongListSelector.ItemTemplate>
+                        <DataTemplate>
+                            <Grid  MaxHeight="250">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="120"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Image Width="120" Height="120" VerticalAlignment="Top" Grid.Column="0" Source="{Binding picurl}"></Image>
+                            <StackPanel VerticalAlignment="Top" Grid.Column="1" x:Name="newsst"  Tap="newsst_Tap"  Margin="12,-0,0,12">
+                                <TextBlock TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="25" Foreground="Black" Text="{Binding title}"></TextBlock>
+                                <TextBlock VerticalAlignment="Top" TextTrimming="WordEllipsis" Foreground="LightGray" HorizontalAlignment="Left" TextWrapping="Wrap" FontSize="18" Text="{Binding content}"></TextBlock>
+                            </StackPanel>
+                            </Grid>
+                        </DataTemplate>
+                    </phone:LongListSelector.ItemTemplate>
+                </phone:LongListSelector>
+            </ctrl:PanoramaItem>
             <ctrl:PanoramaItem Margin="12,10,0,0">
                 <Grid Margin="0,-28,-20,0" VerticalAlignment="Top" >
 
@@ -79,10 +98,11 @@
                             <TextBlock x:Name="tbIntro" Margin="12,0,12,20" Style="{StaticResource okr-text}" Text="" TextWrapping="Wrap" />
                             <StackPanel Width="380">
                                 <TextBlock Margin="12,0,0,0" FontSize="30"  Foreground="Orange" Text="qq群:437489723"></TextBlock>
+                                <TextBlock Margin="12,0,0,0" FontSize="30"  Foreground="Orange" Text="招募新闻编辑：加群"></TextBlock>
                                 <TextBlock Margin="12,0,0,0" FontSize="30"  Foreground="Orange" Text="输入聊天昵称"></TextBlock>
                                 <TextBox BorderBrush="Orange"  x:Name="nbox"></TextBox>
                                 <Button Foreground="Orange" BorderBrush="Orange" x:Name="chatbtn" Click="chatbtn_Click" Content="启动交友聊天室"></Button>
-                                <Button Foreground="Orange" BorderBrush="Orange" x:Name="sharebtn" Click="sharebtn_Click" Content="分享你的原创/提建议"></Button>
+                                <Button Foreground="Orange" BorderBrush="Orange" x:Name="sharebtn" Click="sharebtn_Click" Content="分享你的原创/建议/合作"></Button>
                                 <!--<XAML:AdControl 
             x:Name="xx"
             ApplicationKey="0cb480f9fa27f2cde6e495b98168c8f7"
@@ -94,7 +114,37 @@
                     </ScrollViewer>
                 </Grid>
             </ctrl:PanoramaItem>
-
+            <ctrl:PanoramaItem   Height="711">
+                <Grid Margin="0,-36,0,0">
+                    <StackPanel>
+                        <TextBlock Text="歌友分享" VerticalAlignment="Top" HorizontalAlignment="Left" Style="{StaticResource okr-subtitle-yellow}" />
+                        <phone:LongListSelector LayoutMode="List"  Margin="0,-0,0,0" x:Name="sharemusiclonglist"  >
+                            <phone:LongListSelector.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Background="Transparent" Opacity="0.8" Tap="sharemusicpanel_Tap" x:Name="sharemusicpanel" MaxHeight="250">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="0"></ColumnDefinition>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <Image Visibility="Collapsed" Width="120" Height="120" VerticalAlignment="Top" Grid.Column="0" Source="{Binding picurl}"></Image>
+                                        <StackPanel MinHeight="100" Background="White" VerticalAlignment="Top" Grid.Column="1"     Margin="12,-0,0,12">
+                                           
+                                            <TextBlock TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="25" Foreground="Black" Text="{Binding text}"></TextBlock>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock VerticalAlignment="Top" TextTrimming="WordEllipsis" Foreground="LightGray" HorizontalAlignment="Left" TextWrapping="Wrap" FontSize="18" Text="分享者："></TextBlock>
+                                                <TextBlock Margin="250,0,0,0" VerticalAlignment="Top" TextTrimming="WordEllipsis" Foreground="LightGray" HorizontalAlignment="Left" TextWrapping="Wrap" FontSize="18" Text="{Binding info}"></TextBlock>
+                                            </StackPanel>
+                                           
+                                        </StackPanel>
+                                    </Grid>
+                                </DataTemplate>
+                            </phone:LongListSelector.ItemTemplate>
+                        </phone:LongListSelector>
+                    </StackPanel>
+                  
+                </Grid>
+            
+            </ctrl:PanoramaItem>
             <ctrl:PanoramaItem Margin="12,10,0,0" Foreground="{StaticResource okr-color-blue}">
                 <!--<StackPanel Orientation="Vertical" VerticalAlignment="Top" Margin="0,-28,-12,0">
                     <TextBlock Text="目录" VerticalAlignment="Top" HorizontalAlignment="Left" Style="{StaticResource okr-subtitle-yellow}" />
@@ -201,16 +251,16 @@
 
                         <StackPanel x:Name="spAbout" Height="290" Orientation="Vertical">
                             <StackPanel HorizontalAlignment="Left" Width="10" Margin="0,10,0,10" Background="{StaticResource okr-color-blue}" />
-                            <SurfaceAdw:SurfaceAdControl Grid.Row="0" Name="surfaceAdImageXaml"
+                            <!--<SurfaceAdw:SurfaceAdControl Grid.Row="0" Name="surfaceAdImageXaml"
                              AdPosition="a2973e47900596f139670faa3dd6ccaf" Tap="AdtapControl_Tap" 
                              AdToken="MF04XWUBNl8wUThaZRc2XzBD"
                              IsShowCloseIcon="True"
-                             AdRefreshInterval="10"/>
+                             AdRefreshInterval="10"/>-->
                           
                             <google:AdView Tap="AdtapControl_Tap"   x:Name="Ad6Control"  AdUnitID="ca-app-pub-1598808565430684/2935759650"  Format="Banner"></google:AdView>
                             <TextBlock Margin="0,200,0,0"  x:Name="tb" Style="{StaticResource okr-text}" Text="评价1次之后广告就不会显示了" TextWrapping="Wrap" />
                             <Button  Foreground="Orange" BorderBrush="Orange" x:Name="reviewbtn" Content="前去评价" Click="Button_Click_1"></Button>
-                            <oxlad:AdControl  Tap="AdtapControl_Tap" x:Name="Ad1Control" ApplicationId="a9101034-badd-42a0-9131-eb9087a83c3c" AdUnitId="f7d92042-3d49-4f0e-9e54-5906ac4b3567"  VerticalAlignment="Bottom" Height="100" IsCloseIconEnabled="True" />
+                            <!--<oxlad:AdControl  Tap="AdtapControl_Tap" x:Name="Ad1Control" ApplicationId="a9101034-badd-42a0-9131-eb9087a83c3c" AdUnitId="f7d92042-3d49-4f0e-9e54-5906ac4b3567"  VerticalAlignment="Bottom" Height="100" IsCloseIconEnabled="True" />-->
                             <!--<MsnAD:AdView Tap="AdtapControl_Tap"  Margin="12,21,0,0" TelCapability="True"  x:Name="Ad2Control" StorePic="True" SecretKey="bfac44ffe5c0477a8f52060c9b09a1f1" Adid="190896" Appid="145012" SizeForAd="Normal"></MsnAD:AdView>-->
                             <google:AdView  Tap="AdtapControl_Tap"  AdUnitID="ca-app-pub-1598808565430684/2935759650"   x:Name="Ad3Control" Format="Banner"></google:AdView>
                         </StackPanel>
@@ -224,7 +274,7 @@
                 <phone:LongListSelector LayoutMode="Grid"  x:Name="otherlonglist" GridCellSize="135,135 " >
                     <phone:LongListSelector.ItemTemplate>
                         <DataTemplate>
-                            <Border Tap="txtborder_Tap" Background="Orange" Margin="12,0,0,12">
+                            <Border Tap="Border_Tap" Background="Orange" Margin="12,0,0,12">
                                 <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" Text="{Binding text}"></TextBlock>
                             </Border>
                         </DataTemplate>
@@ -297,7 +347,7 @@
                 <phone:LongListSelector LayoutMode="Grid"  x:Name="longlist" GridCellSize="200,150 " >
                     <phone:LongListSelector.ItemTemplate>
                         <DataTemplate>
-                            <Border Margin="12,0,0,12" Tap="txtborder_Tap" Background="Orange">
+                            <Border Margin="12,0,0,12"  Tap="Border_Tap" Background="Orange">
                                 <TextBlock VerticalAlignment="Center" FontSize="25" HorizontalAlignment="Center" Text="{Binding text}"></TextBlock>
                             </Border>
                         </DataTemplate>

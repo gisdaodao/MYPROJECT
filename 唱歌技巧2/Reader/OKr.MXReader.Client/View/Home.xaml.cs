@@ -17,7 +17,7 @@ using OKr.MXReader.Client.View.Shared;
 using OKr.MXReader.Client.Core.Context;
 using At.Phone.Common.Utils;
 using GoogleAds;
-using SurfaceAd.SDK.WP;
+//using SurfaceAd.SDK.WP;
 using Microsoft.Phone.Tasks;
 using System.Diagnostics;
 using System.IO;
@@ -37,13 +37,19 @@ namespace OKr.MXReader.Client.View
         IsolatedStorageSettings settings = IsolatedStorageSettings.ApplicationSettings;
         List<Info> txtinfo = new List<Info>();
         List<Info> groupmusicinfo = new List<Info>();
+        List<NewsInfo> newsmusicinfo = new List<NewsInfo>();
+        WebClient newsmusicclient = new WebClient();
+        WebClient sharemusicclient = new WebClient();
         string gourpmusic="https://raw.githubusercontent.com/commonusechina/data/master/data/groupmusic.xml";
+        string newsmusic = "https://raw.githubusercontent.com/gisdaodao/MYPROJECT/master/data/newsmusic.xml";
+        string sharemusicliststr = "https://raw.githubusercontent.com/gisdaodao/MYPROJECT/master/data/sharemusic.xml";
+        List<Info> sharemusicinfolist = new List<Info>();
         List<Info> othermusic = new List<Info>();
         string oterhmusic = "https://raw.githubusercontent.com/commonusechina/data/master/data/othermusic.xml";
         public Home()
         {
             InitializeComponent();
-            interstitialAd = new InterstitialAd("ca-app-pub-1598808565430684/4412492859");
+            interstitialAd = new InterstitialAd("ca-app-pub-1598808565430684/7508983658");
             // NOTE: You can edit the event handler to do something custom here. Once the
             // interstitial is received it can be shown whenever you want.
             interstitialAd.ReceivedAd += OnAdReceived;
@@ -54,6 +60,10 @@ namespace OKr.MXReader.Client.View
            // ad.Start();http://tieba.baidu.com/f?kw
             groupclientPclient.OpenReadCompleted += groupclientPclient_OpenReadCompleted;
             groupclientPclient.OpenReadAsync(new Uri(gourpmusic, UriKind.RelativeOrAbsolute));
+            newsmusicclient.OpenReadCompleted += newsmusicclient_OpenReadCompleted;
+            newsmusicclient.OpenReadAsync(new Uri(newsmusic, UriKind.RelativeOrAbsolute));
+            sharemusicclient.OpenReadAsync(new Uri(sharemusicliststr, UriKind.RelativeOrAbsolute));
+            sharemusicclient.OpenReadCompleted += sharemusicclient_OpenReadCompleted;
             //groups.Add(new Info() { text = "歌唱吧", dataurl = "http://tieba.baidu.com/f?kw=歌唱" });
             //groups.Add(new Info() { text = "", dataurl = "" }); ;
             //groups.Add(new Info() { text = "", dataurl = "" }); ;
@@ -68,7 +78,81 @@ namespace OKr.MXReader.Client.View
             {
                 nbox.Text = settings["userchatname"].ToString();
             }
-            this.surfaceAdImageXaml.InitAdControl(AdModeType.Normal); 
+            //this.surfaceAdImageXaml.InitAdControl(AdModeType.Normal); 
+        }
+
+        void sharemusicclient_OpenReadCompleted(object sender, OpenReadCompletedEventArgs e)
+        {
+            try
+            {
+                if (e.Error == null)
+                {
+                    Stream stream = e.Result;
+                    XElement p = XElement.Load(stream);
+                    XName xitemname = XName.Get("item");
+                    IEnumerable<XElement> itemnodes = p.Descendants(xitemname).ToList<XElement>();
+                    foreach (var b in itemnodes)
+                    {
+                        //XName xname = XName.Get("url");
+                        XName xfromname = XName.Get("from");
+                        XName xtitlenname = XName.Get("title");
+                        XName xfilepathname = XName.Get("filepath");
+                     //   XName ximghname = XName.Get("picurl");
+                        //XName xtitlenname = XName.Get("title");
+                        //XName xtitlenname = XName.Get("title");
+                        //   XName xpicname = XName.Get("picurl");
+                        //List<Info> groupmusicinfo = new List<Info>();
+                        sharemusicinfolist.Add(new Info() { text = b.Descendants(xtitlenname).First().Value, info = b.Descendants(xfromname).First().Value, dataurl = b.Descendants(xfilepathname).First().Value });
+                    }
+                    Deployment.Current.Dispatcher.BeginInvoke(() =>
+                    {
+
+                        sharemusiclonglist.ItemsSource = sharemusicinfolist; indicator.IsVisible = false;
+                        indicator.IsIndeterminate = false;
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        void newsmusicclient_OpenReadCompleted(object sender, OpenReadCompletedEventArgs e)
+        {
+            try
+            {
+                if (e.Error == null)
+                {
+                    Stream stream = e.Result;
+                    XElement p = XElement.Load(stream);
+                    XName xitemname = XName.Get("item");
+                    IEnumerable<XElement> itemnodes = p.Descendants(xitemname).ToList<XElement>();
+                    foreach (var b in itemnodes)
+                    {
+                        XName xname = XName.Get("url");
+                        XName xcontetnname = XName.Get("content");
+                        XName xtitlenname = XName.Get("title");
+                        XName xfilepathname = XName.Get("filepath");
+                        XName ximghname = XName.Get("picurl");
+                        //XName xtitlenname = XName.Get("title");
+                        //XName xtitlenname = XName.Get("title");
+                        //   XName xpicname = XName.Get("picurl");
+                        //List<Info> groupmusicinfo = new List<Info>();
+                        newsmusicinfo.Add(new NewsInfo() { title = b.Descendants(xtitlenname).First().Value, content = b.Descendants(xcontetnname).First().Value, filepath = b.Descendants(xfilepathname).First().Value, picurl = b.Descendants(ximghname).First().Value });
+                    }
+                    Deployment.Current.Dispatcher.BeginInvoke(() =>
+                    {
+
+                        newslonglist.ItemsSource = newsmusicinfo; indicator.IsVisible = false;
+                        indicator.IsIndeterminate = false;
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         void groupclientPclient_OpenReadCompleted(object sender, OpenReadCompletedEventArgs e)
@@ -106,7 +190,7 @@ namespace OKr.MXReader.Client.View
         {
             Random p = new Random();
             int j = p.Next(1, 100);
-         if(j>=88)
+         if(j>=50)
          {
              interstitialAd.ShowAd();
          }          
@@ -524,7 +608,7 @@ namespace OKr.MXReader.Client.View
             Ad6Control.Visibility = Visibility.Collapsed;
             Ad9Control.Visibility = Visibility.Collapsed;
             //Ad10Control.Visibility = Visibility.Collapsed;
-            surfaceAdImageXaml.Visibility = Visibility.Collapsed;
+            //surfaceAdImageXaml.Visibility = Visibility.Collapsed;
           //  ContentPanel.Children.Remove(AdControl);
            // adpanel.Children.Remove(Ad1Control);
            // adpanel.Children.Remove(Ad2Control);
@@ -604,6 +688,39 @@ namespace OKr.MXReader.Client.View
               
             EmailComposeTask pmel = new EmailComposeTask(); pmel.To = "youyouchina@hotmail.com";
             pmel.Show();
+        }
+
+        private void newsst_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            StackPanel border = sender as StackPanel;
+            NewsInfo datanews = border.DataContext as NewsInfo;
+            App.onenews = datanews;
+            NavigationService.Navigate(new Uri("/View/newsdetailPage.xaml", UriKind.RelativeOrAbsolute));
+            return;
+            //isguanggao = false;
+            WebBrowserTask task = new WebBrowserTask();
+            task.Uri = new Uri(datanews.filepath, UriKind.RelativeOrAbsolute);
+            task.Show();
+        }
+
+        private void sharemusicpanel_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            Grid obk = sender as Grid;
+            Info datecontext = obk.DataContext as Info;
+            App.musicfilepath = datecontext.dataurl;
+            //WebBrowserTask task = new WebBrowserTask(); task.Uri = new Uri(App.musicfilepath, UriKind.RelativeOrAbsolute);
+            //task.Show(); return;
+            NavigationService.Navigate(new Uri("/View/MusicPlayPage.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void Border_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            Border obk = sender as Border;
+            Info datecontext = obk.DataContext as Info;
+         //   App.musicfilepath = datecontext.dataurl;
+            //WebBrowserTask task = new WebBrowserTask(); task.Uri = new Uri(App.musicfilepath, UriKind.RelativeOrAbsolute);
+            //task.Show(); return;
+            NavigationService.Navigate(new Uri("/View/PageBa.xaml?name=" + datecontext.dataurl, UriKind.RelativeOrAbsolute));
         }
 
 

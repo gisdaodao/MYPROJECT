@@ -7,7 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-using MSNADSDK.AD;
+//using MSNADSDK.AD;
 using 股票新闻;
 using System.Diagnostics;
 using HtmlAgilityPack;
@@ -27,19 +27,19 @@ namespace OKr.MXReader.Client.View
             int ji = pr.Next(1, 10);
             if (ji > 5)
             {
-                AdView adView = new AdView();
+                //AdView adView = new AdView();
 
-                adView.Appid = "145444";
+                //adView.Appid = "145444";
 
-                adView.SecretKey = "165feb8707004e6da3b3cdb1584e6515";
+                //adView.SecretKey = "165feb8707004e6da3b3cdb1584e6515";
 
 
 
-                adView.SizeForAd = AdSize.Large;
-                adView.IsInterstitial = true;
-                adView.Adid = "191332";
-                adView.GetInterstitialAd();
-                this.LayoutRoot.Children.Add(adView);
+                //adView.SizeForAd = AdSize.Large;
+                //adView.IsInterstitial = true;
+                //adView.Adid = "191332";
+                //adView.GetInterstitialAd();
+                //this.LayoutRoot.Children.Add(adView);
 
             }
            

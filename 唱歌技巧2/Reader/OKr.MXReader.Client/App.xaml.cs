@@ -15,6 +15,7 @@ using Microsoft.Phone.Shell;
 using OKr.MXReader.Client.Core.Data;
 using System.IO.IsolatedStorage;
 using OKr.MXReader.Client.Core.Config;
+using 股票新闻;
 
 namespace OKr.MXReader.Client
 {
@@ -25,7 +26,8 @@ namespace OKr.MXReader.Client
         /// </summary>
         /// <returns>The root frame of the Phone Application.</returns>
         public PhoneApplicationFrame RootFrame { get; private set; }
-
+        public static NewsInfo onenews { get; set; }
+        public static string musicfilepath { get; set; }
         /// <summary>
         /// Constructor for the Application object.
         /// </summary>
