@@ -17,7 +17,7 @@ using System.Windows.Media.Imaging;
 using OKr.MXReader.Client.Core.File;
 using OKr.MXReader.Client.Core;
 using System.Text.RegularExpressions;
-using Microsoft.Advertising.Mobile.UI;
+//using Microsoft.Advertising.Mobile.UI;
 using At.Phone.Common;
 using OKr.MXReader.Client.Core.Context;
 using OKr.MXReader.Client.Core.Config;
@@ -675,7 +675,7 @@ namespace OKr.MXReader.Client.View
         private TranslateTransform trans;
 
         private Ad ad;
-        private AdControl adBar;
+        //private AdControl adBar;
         private Canvas container1;
         private Canvas container2;
         private Canvas wrapper1;

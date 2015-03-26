@@ -136,7 +136,8 @@ namespace OKr.MXReader.Client.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-     mediaplay.Pause();
+            mediaplay.Pause();
+        }
 
     //using (IsolatedStorageFile myIsolatedStorage = IsolatedStorageFile.GetUserStoreForApplication())  
 

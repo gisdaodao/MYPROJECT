@@ -17,7 +17,7 @@ using OKr.MXReader.Client.View.Shared;
 using OKr.MXReader.Client.Core.Context;
 using At.Phone.Common.Utils;
 using GoogleAds;
-using SurfaceAd.SDK.WP;
+//using SurfaceAd.SDK.WP;
 using Microsoft.Phone.Tasks;
 using System.Diagnostics;
 using System.IO;
@@ -49,7 +49,7 @@ namespace OKr.MXReader.Client.View
         public Home()
         {
             InitializeComponent();
-            interstitialAd = new InterstitialAd("ca-app-pub-1598808565430684/4412492859");
+            interstitialAd = new InterstitialAd("ca-app-pub-1598808565430684/7508983658");
             // NOTE: You can edit the event handler to do something custom here. Once the
             // interstitial is received it can be shown whenever you want.
             interstitialAd.ReceivedAd += OnAdReceived;
@@ -78,7 +78,7 @@ namespace OKr.MXReader.Client.View
             {
                 nbox.Text = settings["userchatname"].ToString();
             }
-            this.surfaceAdImageXaml.InitAdControl(AdModeType.Normal); 
+            //this.surfaceAdImageXaml.InitAdControl(AdModeType.Normal); 
         }
 
         void sharemusicclient_OpenReadCompleted(object sender, OpenReadCompletedEventArgs e)
@@ -190,7 +190,7 @@ namespace OKr.MXReader.Client.View
         {
             Random p = new Random();
             int j = p.Next(1, 100);
-         if(j>=88)
+         if(j>=50)
          {
              interstitialAd.ShowAd();
          }          
@@ -608,7 +608,7 @@ namespace OKr.MXReader.Client.View
             Ad6Control.Visibility = Visibility.Collapsed;
             Ad9Control.Visibility = Visibility.Collapsed;
             //Ad10Control.Visibility = Visibility.Collapsed;
-            surfaceAdImageXaml.Visibility = Visibility.Collapsed;
+            //surfaceAdImageXaml.Visibility = Visibility.Collapsed;
           //  ContentPanel.Children.Remove(AdControl);
            // adpanel.Children.Remove(Ad1Control);
            // adpanel.Children.Remove(Ad2Control);
@@ -711,6 +711,16 @@ namespace OKr.MXReader.Client.View
             //WebBrowserTask task = new WebBrowserTask(); task.Uri = new Uri(App.musicfilepath, UriKind.RelativeOrAbsolute);
             //task.Show(); return;
             NavigationService.Navigate(new Uri("/View/MusicPlayPage.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void Border_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            Border obk = sender as Border;
+            Info datecontext = obk.DataContext as Info;
+         //   App.musicfilepath = datecontext.dataurl;
+            //WebBrowserTask task = new WebBrowserTask(); task.Uri = new Uri(App.musicfilepath, UriKind.RelativeOrAbsolute);
+            //task.Show(); return;
+            NavigationService.Navigate(new Uri("/View/PageBa.xaml?name=" + datecontext.dataurl, UriKind.RelativeOrAbsolute));
         }
 
 
