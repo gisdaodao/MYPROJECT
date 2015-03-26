@@ -1,5 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Items title="nihao">
+<item text="邓紫棋开讲 "      des="">
+    <title>边走边爱</title>
+    <content></content>
+    <text></text>
+    <filepath>http://wp.uuchat.net:8080/mp3/bzbp_by_xy.mp3</filepath>
+    <date>2015/03/22</date>
+    <from>雄燕</from>
+    <url>http://ent.qq.com/a/20150313/053673.htm</url>
+    <picurl>http://img1.gtimg.com/ent/pics/hv1/14/63/1803/117256154.png</picurl>
+  </item>
   <item text="邓紫棋开讲 "      des="">
     <title>这曲你绝对找不到</title>
     <content></content>
@@ -35,16 +45,6 @@
     <content></content>
     <text>       </text>
     <filepath>https://github.com/gisdaodao/itsites/blob/gh-pages/musicfile/%E7%83%9B%E5%85%89%E9%87%8C%E7%9A%84%E5%A6%88%E5%A6%88%20by%E9%9B%84%E7%87%95.mp3</filepath>
-    <date>2015/03/22</date>
-    <from>雄燕</from>
-    <url>http://ent.qq.com/a/20150313/053673.htm</url>
-    <picurl>http://img1.gtimg.com/ent/pics/hv1/14/63/1803/117256154.png</picurl>
-  </item>
-<item text="邓紫棋开讲 "      des="">
-    <title>边走边爱</title>
-    <content></content>
-    <text></text>
-    <filepath>http://wp.uuchat.net:8080/mp3/bzbp_by_xy.mp3</filepath>
     <date>2015/03/22</date>
     <from>雄燕</from>
     <url>http://ent.qq.com/a/20150313/053673.htm</url>
