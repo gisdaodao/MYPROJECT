@@ -4,7 +4,7 @@
   <Languages xmlns="">
     <Language code="zh-Hans" />
   </Languages>
-  <App xmlns="" ProductID="{f7a27227-afa9-43b4-9eca-fd5ada3c7675}" Title="唱歌技巧2" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="OKr Works" Description="唱歌技巧2" Publisher="OKr Inc." PublisherID="{6cd5d726-7844-4804-82c5-dfdf1488d162}">
+  <App xmlns="" ProductID="{f7a27227-afa9-43b4-9eca-fd5ada3c7675}" Title="音乐学院" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="OKr Works" Description="音乐学院" Publisher="OKr Inc." PublisherID="{6cd5d726-7844-4804-82c5-dfdf1488d162}">
     <IconPath IsRelative="true" IsResource="false">chang2.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_IDENTITY_DEVICE" />
@@ -28,7 +28,7 @@
           <SmallImageURI IsResource="false" IsRelative="true">chang2.png</SmallImageURI>
           <Count>0</Count>
           <BackgroundImageURI IsResource="false" IsRelative="true">chang2.png</BackgroundImageURI>
-          <Title>唱歌技巧2</Title>
+          <Title>音乐学院</Title>
           <BackContent>
           </BackContent>
           <BackBackgroundImageURI>
