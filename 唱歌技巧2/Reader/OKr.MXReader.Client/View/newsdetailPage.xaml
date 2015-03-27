@@ -27,7 +27,7 @@
 
         <!--ContentPanel - 在此处放置其他内容-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <phone:WebBrowser x:Name="wb"></phone:WebBrowser>
+            <phone:WebBrowser IsScriptEnabled="True" x:Name="wb"></phone:WebBrowser>
         </Grid>
     </Grid>
 
