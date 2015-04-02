@@ -1,5 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Items title="nihao">
+<item text="邓紫棋开讲 "      des="">
+    <title>环球音乐</title>
+    <content>环球音乐</content>
+    <text> 
+    </text>
+    <filepath>http://ent.huanqiu.com/</filepath>
+    <date>2015/03/22</date>
+    <from>tx</from>
+    <url>http://ent.qq.com/a/20150313/053673.htm</url>
+    <picurl>http://img1.gtimg.com/ent/pics/hv1/14/63/1803/117256154.png</picurl>
+  </item>
+  <item text="邓紫棋开讲 "      des="">
+    <title>网易音乐</title>
+    <content>网易音乐</content>
+    <text> 
+    </text>
+    <filepath>http://ent.163.com/music/</filepath>
+    <date>2015/03/22</date>
+    <from>tx</from>
+    <url>http://ent.qq.com/a/20150313/053673.htm</url>
+    <picurl>http://img1.gtimg.com/ent/pics/hv1/14/63/1803/117256154.png</picurl>
+  </item>
   <item text="邓紫棋开讲 "      des="">
     <title>实体唱片被取代是必然趋势</title>
     <content>音乐产业和其它类型产业一样都要与时俱进。在新的媒介诞生并迅猛发展的今天，音乐产业应该思考如何更好地依附新媒介，而不是如何对抗。但想要吃好新媒介这块蛋糕并不是件容易的事。</content>
@@ -57,22 +79,11 @@
     <picurl>http://img1.gtimg.com/ent/pics/hv1/14/63/1803/117256154.png</picurl>
   </item>
 <item text="邓紫棋开讲 "      des="">
-    <title>视频: 彼岸 汪峰 翻唱</title>
-    <content>视频: 彼岸 汪峰 翻唱</content>
+    <title>音乐周</title>
+    <content>音乐周</content>
     <text> 
     </text>
-    <filepath>http://v.youku.com/v_show/id_XOTIwNDA3MjYw.html?qq-pf-to=pcqq.group</filepath>
-    <date>2015/03/22</date>
-    <from>tx</from>
-    <url>http://ent.qq.com/a/20150313/053673.htm</url>
-    <picurl>http://img1.gtimg.com/ent/pics/hv1/14/63/1803/117256154.png</picurl>
-  </item>
-<item text="邓紫棋开讲 "      des="">
-    <title>视频: 彼岸 汪峰 翻唱</title>
-    <content>视频: 彼岸 汪峰 翻唱</content>
-    <text> 
-    </text>
-    <filepath>http://v.youku.com/v_show/id_XOTIwNDA3MjYw.html?qq-pf-to=pcqq.group</filepath>
+    <filepath>http://www.musicweek.com/</filepath>
     <date>2015/03/22</date>
     <from>tx</from>
     <url>http://ent.qq.com/a/20150313/053673.htm</url>
