@@ -1,5 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Items>
+<item text="听,声音"      des="">
+    <url>http://www.zuixifeng.com/</url>
+  </item>
+<item text="搞技术·屮生活"      des="">
+    <url>http://xifengzui.com</url>
+  </item>
 <item text="hao123"      des="">
     <url>http://m.hao123.com/</url>
   </item>
