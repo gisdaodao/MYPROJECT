@@ -51,7 +51,7 @@
             <StackPanel x:Name="st">
                 <MsnAD:AdView  AdExpanded="AdView_AdExpanded"  Appid="145456" Adid="191336" SecretKey="db1196a55e984251bcaddf37575a8464" SizeForAd="Large" Grid.Row="0"></MsnAD:AdView>
                 <TextBlock Text="点击广告可消失" Foreground="Gray" ></TextBlock>
-                <Button x:Name="btn" Content="评价" Foreground="Gray" Click="Button_Click" ></Button>
+                <Button x:Name="btn"  Visibility="Collapsed" Content="评价" Foreground="Gray" Click="Button_Click" ></Button>
             </StackPanel>
         </StackPanel>
 
@@ -77,8 +77,8 @@
         <shell:ApplicationBar Opacity="0.7" BackgroundColor="Gray" x:Name="appbar" Mode="Minimized">
             <shell:ApplicationBarIconButton Text="play" x:Name="paramBar" Click="paramBar_Click" IconUri="/Assets/AppBar/transport.play.png"></shell:ApplicationBarIconButton>
             <shell:ApplicationBarIconButton Text="pause" x:Name="likeBar" Click="likeBar_Click" IconUri="/Assets/AppBar/transport.pause.png"></shell:ApplicationBarIconButton>
-            <shell:ApplicationBarIconButton Text="stop" x:Name="SendCommentsBar" Click="SendCommentsBar_Click" IconUri="/Assets/AppBar/stop.png"></shell:ApplicationBarIconButton>
-            <shell:ApplicationBarIconButton Text="refresh"   x:Name="SendzanBar"  Click="SendzanBar_Click" IconUri="/Assets/AppBar/refresh.png"></shell:ApplicationBarIconButton>
+            <shell:ApplicationBarIconButton Text="全屏" x:Name="SendCommentsBar" Click="SendCommentsBar_Click" IconUri="/Assets/AppBar/stop.png"></shell:ApplicationBarIconButton>
+            <shell:ApplicationBarIconButton Text="下载"   x:Name="SendzanBar"  Click="SendzanBar_Click" IconUri="/Assets/AppBar/refresh.png"></shell:ApplicationBarIconButton>
             
             <!--<shell:ApplicationBarIconButton Text="共享"  x:Name="ZhuanfaBar" Click="ZhuanfaBar_Click" IconUri="/Assets/share.png"></shell:ApplicationBarIconButton>-->
             <!--

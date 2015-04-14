@@ -27,7 +27,7 @@ namespace cctv
         string requesturl = string.Empty;
 
 
-        string videourl = "http://v.cctv.com/flash/mp4video40/TMS/";
+        string videourl = "http://v.cctv.com/flash/mp4video41/TMS/";
         string datestr = string.Empty;
         string fileid = string.Empty;
         string commonstr = "_h264418000nero_aac32-";
@@ -194,6 +194,7 @@ namespace cctv
         List<Info> infolist = new List<Info>();
         IEnumerable<HtmlAgilityPack.HtmlNode> ullist = null;
         HtmlNode ulhtmlnode = null;
+        DateTime slectedtime;
 
         private void mediaelent_MediaEnded(object sender, RoutedEventArgs e)
         {
@@ -222,6 +223,16 @@ namespace cctv
             {
                 if (e.NewDateTime.HasValue)
                 {
+                   
+                    slectedtime = e.NewDateTime.Value;
+                    if(slectedtime>DateTime.Parse("2015/04/09"))
+                    {
+                        videourl = "http://v.cctv.com/flash/mp4video41/TMS/";
+                    }
+                    else
+                    {
+                        videourl = "http://v.cctv.com/flash/mp4video40/TMS/";
+                    }
                     rquestdate = e.NewDateTime.Value.Date.ToString("yyyyMMdd"); ;
                     requesturl = lmstr + rquestdate + requestformat;
                     Debug.WriteLine(requesturl);
@@ -295,13 +306,18 @@ namespace cctv
 
         private void SendCommentsBar_Click(object sender, EventArgs e)
         {
-            mediaelent.Stop();
+//            mediaelent.Stop();
+            TitlePanel.Visibility =Visibility.Collapsed;
         }
 
         private void SendzanBar_Click(object sender, EventArgs e)
         {
-            requesturl = lmstr + rquestdate + requestformat;
-            todayclient.OpenReadAsync(new Uri(lmstr, UriKind.RelativeOrAbsolute));
+            WebBrowserTask webtask = new WebBrowserTask();
+            webtask.Uri = mediaelent.Source;
+            webtask.Show();
+
+            //requesturl = lmstr + rquestdate + requestformat;
+            //todayclient.OpenReadAsync(new Uri(lmstr, UriKind.RelativeOrAbsolute));
         }
         // 用于生成本地化 ApplicationBar 的示例代码
         //private void BuildLocalizedApplicationBar()

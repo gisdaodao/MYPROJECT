@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Items>
+<item text="互联网资讯"      des="">
+    <url>http://www.anzii.com/</url>
+  </item>
 <item text="听,声音"      des="">
     <url>http://www.zuixifeng.com/</url>
   </item>
