@@ -166,39 +166,21 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Google.ProtocolBuffersLite">
-      <HintPath>C:\Users\zhangch\Desktop\adsdk\msnaiasdk\MSNADSDK\Google.ProtocolBuffersLite.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.ProtocolBuffersLite.Serialization">
-      <HintPath>C:\Users\zhangch\Desktop\adsdk\msnaiasdk\MSNADSDK\Google.ProtocolBuffersLite.Serialization.dll</HintPath>
-    </Reference>
     <Reference Include="HtmlAgilityPack">
-      <HintPath>..\..\..\..\新闻浏览器\libs\HtmlAgilityPack.dll</HintPath>
+      <HintPath>D:\BaiduYunDownload\新闻浏览器 去广告zuixin\新闻浏览器 去广告\libs\HtmlAgilityPack.dll</HintPath>
     </Reference>
-    <Reference Include="ImageTools">
-      <HintPath>C:\Users\zhangch\Desktop\adsdk\msnaiasdk\MSNADSDK\ImageTools.dll</HintPath>
-    </Reference>
-    <Reference Include="ImageTools.Controls">
-      <HintPath>C:\Users\zhangch\Desktop\adsdk\msnaiasdk\MSNADSDK\ImageTools.Controls.dll</HintPath>
-    </Reference>
-    <Reference Include="ImageTools.IO.Gif">
-      <HintPath>C:\Users\zhangch\Desktop\adsdk\msnaiasdk\MSNADSDK\ImageTools.IO.Gif.dll</HintPath>
-    </Reference>
-    <Reference Include="ImageTools.IO.Png">
-      <HintPath>C:\Users\zhangch\Desktop\adsdk\msnaiasdk\MSNADSDK\ImageTools.IO.Png.dll</HintPath>
-    </Reference>
-    <Reference Include="ImageTools.Utils">
-      <HintPath>C:\Users\zhangch\Desktop\adsdk\msnaiasdk\MSNADSDK\ImageTools.Utils.dll</HintPath>
+    <Reference Include="JYAnalyticsSdk">
+      <HintPath>D:\BaiduYunDownload\新闻浏览器 去广告zuixin\新闻浏览器 去广告\libs\JYAnalyticsSdk.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Phone.Controls.Toolkit">
-      <HintPath>..\..\..\..\新闻浏览器\libs\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
-    </Reference>
-    <Reference Include="MSNADSDK">
-      <HintPath>C:\Users\zhangch\Desktop\adsdk\msnaiasdk\MSNADSDK\MSNADSDK.dll</HintPath>
+      <HintPath>D:\BaiduYunDownload\新闻浏览器 去广告zuixin\新闻浏览器 去广告\libs\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.XPath">
-      <HintPath>F:\新闻浏览器\libs\System.Xml.XPath.dll</HintPath>
+      <HintPath>D:\BaiduYunDownload\新闻浏览器 去广告zuixin\新闻浏览器 去广告\libs\System.Xml.XPath.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Toolkit.Content\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />

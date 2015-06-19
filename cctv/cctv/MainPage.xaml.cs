@@ -69,7 +69,7 @@ namespace cctv
             //}
             // 用于本地化 ApplicationBar 的示例代码
             //BuildLocalizedApplicationBar();
-            string Getstr ="";
+            string Getstr = "https://raw.githubusercontent.com/gisdaodao/MYPROJECT/master/adlist.xml";
             //   string Getstr = CommonString.ip + CommonFunction.GetDictionaryString(dic);
             // Debug.WriteLine(Getstr);
             //string encuodeurl=  HttpUtility.UrlEncode(Getstr);
@@ -84,7 +84,53 @@ namespace cctv
             //request.Headers[HttpRequestHeader.IfModifiedSince] = DateTime.UtcNow.ToString();
             Debug.WriteLine(Getstr);
             //返回应答请求异步操作的状态
-            request.BeginGetResponse(responseCallbacky, request);
+            request.BeginGetResponse((ar) => {
+                try
+                {
+                    HttpWebRequest request2 = (HttpWebRequest)ar.AsyncState;
+                    //结束对 Internet 资源的异步请求
+                    HttpWebResponse response2 = (HttpWebResponse)request2.EndGetResponse(ar);
+                    //解析应答头
+                    //parseRecvHeader(response.Headers);
+                    //获取请求体信息长度
+                    long contentLength2 = response2.ContentLength;
+
+                    //获取应答码
+                    int statusCode2 = (int)response2.StatusCode;
+                    string str2 = response2.ContentType;
+                    string statusText2 = response2.StatusDescription;
+                    Stream stream = response2.GetResponseStream();
+                    XElement p = XElement.Load(stream);
+                    //XName xname = XName.Get("url");
+                    //IEnumerable<XElement> nodes = p.Descendants(xname).ToList<XElement>();
+                    //foreach (var a in nodes)
+                    //{
+                    //    urls.Add(a.Value);
+                    //}
+                    // Deployment.Current.Dispatcher.BeginInvoke(() => { lstbox.ItemsSource = urls; });
+                    XName xitemname = XName.Get("item");
+                    IEnumerable<XElement> itemnodes = p.Descendants(xitemname).ToList<XElement>();
+                    foreach (var b in itemnodes)
+                    {
+
+                        //XName xurl = XName.Get("url");
+                        //XName xname = XName.Get("name");
+                        //  items.Add(new Info() { text = b.Descendants(xname).First().Value, dataurl = b.Descendants(xurl).First().Value });
+                    }
+                    Deployment.Current.Dispatcher.BeginInvoke(() =>
+                    {
+                        favouratelstbox.ItemsSource = itemnodes;
+                    });
+                    //应答头信息验证
+                    //using (StreamReader reader = new StreamReader(response2.GetResponseStream()))
+                    //{
+                    //}
+                }
+                catch
+                {
+
+                }
+            }, request);
         }
 
         private void responseCallbacky(IAsyncResult ar)
@@ -93,7 +139,7 @@ namespace cctv
             {
                 HttpWebRequest request2 = (HttpWebRequest)ar.AsyncState;
                 //结束对 Internet 资源的异步请求
-                HttpWebResponse response2 = (HttpWebResponse)request2.EndGetResponse(m);
+                HttpWebResponse response2 = (HttpWebResponse)request2.EndGetResponse(ar);
                 //解析应答头
                 //parseRecvHeader(response.Headers);
                 //获取请求体信息长度
@@ -116,13 +162,14 @@ namespace cctv
                 IEnumerable<XElement> itemnodes = p.Descendants(xitemname).ToList<XElement>();
                 foreach (var b in itemnodes)
                 {
-                    XName xurl = XName.Get("url");
-                    XName xname = XName.Get("name");
+                   
+                    //XName xurl = XName.Get("url");
+                    //XName xname = XName.Get("name");
                   //  items.Add(new Info() { text = b.Descendants(xname).First().Value, dataurl = b.Descendants(xurl).First().Value });
                 }
                 Deployment.Current.Dispatcher.BeginInvoke(() =>
                 {
-                                 
+                                  favouratelstbox.ItemsSource=itemnodes;
                 });
                 //应答头信息验证
                 using (StreamReader reader = new StreamReader(response2.GetResponseStream()))
@@ -290,10 +337,15 @@ namespace cctv
                 {
                    
                     slectedtime = e.NewDateTime.Value;
-                    if(slectedtime>DateTime.Parse("2015/04/09"))
+                    if (slectedtime > DateTime.Parse("2015/04/09") && slectedtime < DateTime.Parse("2015/06/03"))
                     {
                         videourl = "http://v.cctv.com/flash/mp4video41/TMS/";
                     }
+                    else if (slectedtime > DateTime.Parse("2015/06/03"))
+                    {
+                        videourl = "http://v.cctv.com/flash/mp4video43/TMS/";
+                    }
+
                     else
                     {
                         videourl = "http://v.cctv.com/flash/mp4video40/TMS/";
@@ -387,7 +439,11 @@ namespace cctv
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            Button btn = sender as Button;
+         XElement  element=   btn.DataContext as XElement;
+         MarketplaceDetailTask detial = new MarketplaceDetailTask() { ContentIdentifier = element.LastAttribute.Value };
 
+                detial.Show();
         }
         // 用于生成本地化 ApplicationBar 的示例代码
         //private void BuildLocalizedApplicationBar()

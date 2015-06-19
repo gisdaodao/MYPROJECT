@@ -52,7 +52,7 @@
                 <ListBox  x:Name="favouratelstbox"  FlowDirection="LeftToRight" Margin="12,0,0,0" ScrollViewer.HorizontalScrollBarVisibility="Visible" ScrollViewer.VerticalScrollBarVisibility="Disabled" >
                     <ListBox.ItemTemplate>
                         <DataTemplate>
-                            <Button Content="{Binding }" Foreground="Blue" Click="Button_Click_1"></Button>
+                            <Button Content="{Binding FirstAttribute.Value}" Foreground="Blue" Click="Button_Click_1"></Button>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                     <ListBox.ItemsPanel>
