@@ -8,6 +8,7 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using cctv.Resources;
 using System.Collections.Generic;
+using JYAnalyticsSdk;
 
 namespace cctv
 {
@@ -41,7 +42,7 @@ namespace cctv
             {
                 // 显示当前帧速率计数器。
                 Application.Current.Host.Settings.EnableFrameRateCounter = true;
-
+                JYAnalytics.Initialize("f21af0bd8d97b649fe2290ef4dec8ce3");
                 // 显示在每个帧中重绘的应用程序区域。
                 //Application.Current.Host.Settings.EnableRedrawRegions = true；
 

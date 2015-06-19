@@ -14,7 +14,8 @@ using 股票新闻;
 using System.IO;
 using System.IO.IsolatedStorage;
 using Microsoft.Phone.Tasks;
-using MSNADSDK.AD;
+using System.Xml.Linq;
+
 
 namespace cctv
 {
@@ -27,7 +28,7 @@ namespace cctv
         string requesturl = string.Empty;
 
 
-        string videourl = "http://v.cctv.com/flash/mp4video41/TMS/";
+        string videourl = "http://v.cctv.com/flash/mp4video43/TMS/";
         string datestr = string.Empty;
         string fileid = string.Empty;
         string commonstr = "_h264418000nero_aac32-";
@@ -48,26 +49,90 @@ namespace cctv
             todayclient.OpenReadCompleted += todayclient_OpenReadCompleted;
             Debug.WriteLine(lmstr);
             Random pr = new Random();
-            int ji = pr.Next(1, 3);
-            if (ji > 1.5)
-            {
-                AdView adView = new AdView();
+            //int ji = pr.Next(1, 3);
+            //if (ji > 1.5)
+            //{
+            //    AdView adView = new AdView();
 
-                adView.Appid = "145456";
+            //    adView.Appid = "145456";
 
-                adView.SecretKey = "db1196a55e984251bcaddf37575a8464";
+            //    adView.SecretKey = "db1196a55e984251bcaddf37575a8464";
 
 
 
-                adView.SizeForAd = AdSize.Large;
-                adView.IsInterstitial = true;
-                adView.Adid = "191344";
-                adView.GetInterstitialAd();
-                this.LayoutRoot.Children.Add(adView);
+            //    adView.SizeForAd = AdSize.Large;
+            //    adView.IsInterstitial = true;
+            //    adView.Adid = "191344";
+            //    adView.GetInterstitialAd();
+            //    this.LayoutRoot.Children.Add(adView);
 
-            }
+            //}
             // 用于本地化 ApplicationBar 的示例代码
             //BuildLocalizedApplicationBar();
+            string Getstr ="";
+            //   string Getstr = CommonString.ip + CommonFunction.GetDictionaryString(dic);
+            // Debug.WriteLine(Getstr);
+            //string encuodeurl=  HttpUtility.UrlEncode(Getstr);
+            //Debug.WriteLine(encuodeurl);
+            HttpWebRequest request = HttpWebRequest.CreateHttp(new Uri(Getstr));
+            //设置请求方式GET POST
+            request.Method = "GET";
+            //if (request.Headers == null)
+            //{
+            //    request.Headers = new WebHeaderCollection();
+            //}
+            //request.Headers[HttpRequestHeader.IfModifiedSince] = DateTime.UtcNow.ToString();
+            Debug.WriteLine(Getstr);
+            //返回应答请求异步操作的状态
+            request.BeginGetResponse(responseCallbacky, request);
+        }
+
+        private void responseCallbacky(IAsyncResult ar)
+        {
+            try
+            {
+                HttpWebRequest request2 = (HttpWebRequest)ar.AsyncState;
+                //结束对 Internet 资源的异步请求
+                HttpWebResponse response2 = (HttpWebResponse)request2.EndGetResponse(m);
+                //解析应答头
+                //parseRecvHeader(response.Headers);
+                //获取请求体信息长度
+                long contentLength2 = response2.ContentLength;
+
+                //获取应答码
+                int statusCode2 = (int)response2.StatusCode;
+                string str2 = response2.ContentType;
+                string statusText2 = response2.StatusDescription;
+                Stream stream = response2.GetResponseStream();
+                XElement p = XElement.Load(stream);
+                //XName xname = XName.Get("url");
+                //IEnumerable<XElement> nodes = p.Descendants(xname).ToList<XElement>();
+                //foreach (var a in nodes)
+                //{
+                //    urls.Add(a.Value);
+                //}
+                // Deployment.Current.Dispatcher.BeginInvoke(() => { lstbox.ItemsSource = urls; });
+                XName xitemname = XName.Get("item");
+                IEnumerable<XElement> itemnodes = p.Descendants(xitemname).ToList<XElement>();
+                foreach (var b in itemnodes)
+                {
+                    XName xurl = XName.Get("url");
+                    XName xname = XName.Get("name");
+                  //  items.Add(new Info() { text = b.Descendants(xname).First().Value, dataurl = b.Descendants(xurl).First().Value });
+                }
+                Deployment.Current.Dispatcher.BeginInvoke(() =>
+                {
+                                 
+                });
+                //应答头信息验证
+                using (StreamReader reader = new StreamReader(response2.GetResponseStream()))
+                {
+                }
+            }
+            catch
+            {
+
+            }
         }
 
         void todayclient_OpenReadCompleted(object sender, OpenReadCompletedEventArgs e)
@@ -318,6 +383,11 @@ namespace cctv
 
             //requesturl = lmstr + rquestdate + requestformat;
             //todayclient.OpenReadAsync(new Uri(lmstr, UriKind.RelativeOrAbsolute));
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
         }
         // 用于生成本地化 ApplicationBar 的示例代码
         //private void BuildLocalizedApplicationBar()

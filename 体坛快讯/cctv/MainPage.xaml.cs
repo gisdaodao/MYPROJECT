@@ -14,8 +14,8 @@ using 股票新闻;
 using System.IO;
 using System.IO.IsolatedStorage;
 using Microsoft.Phone.Tasks;
-using JiuYouAd;
-using JiuYouAd.Models;
+//using JiuYouAd;
+//using JiuYouAd.Models;
 //using MSNADSDK.AD;
 
 namespace cctv
@@ -29,7 +29,7 @@ namespace cctv
         string requesturl = string.Empty;
 
 
-        string videourl = "http://v.cctv.com/flash/mp4video40/TMS/";
+        string videourl = "http://v.cctv.com/flash/mp4video43/TMS/";
         string datestr = string.Empty;
         string fileid = string.Empty;
         string commonstr = "_h264418000nero_aac32-";
@@ -53,21 +53,21 @@ namespace cctv
             Debug.WriteLine(requesturl);
             Random pr = new Random();
             int ji = pr.Next(1, 10);
-            if (ji > 8)
-            {
-                JiuYouAd.AdControl adView = new AdControl();
+            //if (ji > 8)
+            //{
+            //    JiuYouAd.AdControl adView = new AdControl();
 
-                adView.ApplicationKey = "f21af0bd8d97b649fe2290ef4dec8ce3";
+            //    adView.ApplicationKey = "f21af0bd8d97b649fe2290ef4dec8ce3";
 
-                adView.AdType = AdType.FullScreen;
+            //    adView.AdType = AdType.FullScreen;
 
 
 
-                adView.Visibility = Visibility.Visible;
+            //    adView.Visibility = Visibility.Visible;
 
-                this.LayoutRoot.Children.Add(adView);
+            //    this.LayoutRoot.Children.Add(adView);
 
-            }
+            //}
             // 用于本地化 ApplicationBar 的示例代码
             //BuildLocalizedApplicationBar();
         }
@@ -255,15 +255,16 @@ namespace cctv
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            st.Visibility = Visibility.Collapsed;
-            var settings = IsolatedStorageSettings.ApplicationSettings;
-            if (!settings.Contains("clicked"))
-            {
-                settings.Add("clicked", DateTime.Now.Date.ToString());
-                settings.Save();
-            }
-            MarketplaceReviewTask p = new MarketplaceReviewTask();
-
+            //st.Visibility = Visibility.Collapsed;
+            //var settings = IsolatedStorageSettings.ApplicationSettings;
+            //if (!settings.Contains("clicked"))
+            //{
+            //    settings.Add("clicked", DateTime.Now.Date.ToString());
+            //    settings.Save();
+            //}
+            //MarketplaceReviewTask p = new MarketplaceReviewTask();
+            MarketplaceDetailTask p = new MarketplaceDetailTask();
+            p.ContentIdentifier = "fa09f586-cf51-4c6a-af19-03c39d149464";
             p.Show();
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -306,16 +307,16 @@ namespace cctv
             todayclient.OpenReadAsync(new Uri(lmstr, UriKind.RelativeOrAbsolute));
         }
 
-        private void AdControl_AdClick(object sender, AdClickEventArgs e)
-        {
-            st.Visibility = Visibility.Collapsed;
-            var settings = IsolatedStorageSettings.ApplicationSettings;
-            if (!settings.Contains("clicked"))
-            {
-                settings.Add("clicked", DateTime.Now.Date.ToString());
-                settings.Save();
-            }
-        }
+        //private void AdControl_AdClick(object sender, AdClickEventArgs e)
+        //{
+        //    st.Visibility = Visibility.Collapsed;
+        //    var settings = IsolatedStorageSettings.ApplicationSettings;
+        //    if (!settings.Contains("clicked"))
+        //    {
+        //        settings.Add("clicked", DateTime.Now.Date.ToString());
+        //        settings.Save();
+        //    }
+        //}
 
         private void paramenu_Click(object sender, EventArgs e)
         {

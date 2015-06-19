@@ -48,11 +48,11 @@
                 <TextBlock x:Name="currenttb"></TextBlock>
             </StackPanel>           
             <toolkit:DatePicker   ValueChanged="DatePicker_ValueChanged" BorderThickness="1" Margin="12,-5,0,0"></toolkit:DatePicker>
-            <StackPanel x:Name="st">
-                <MsnAD:AdControl Tap="AdControl_Tap"  AdClick="AdControl_AdClick" ApplicationKey="f21af0bd8d97b649fe2290ef4dec8ce3" AdType="Banner"> </MsnAD:AdControl>
+            <StackPanel x:Name="st" Visibility="Visible">
+                <!--<MsnAD:AdControl Tap="AdControl_Tap"  AdClick="AdControl_AdClick" ApplicationKey="f21af0bd8d97b649fe2290ef4dec8ce3" AdType="Banner"> </MsnAD:AdControl>-->
                 <!--<MsnAD:AdView  AdExpanded="AdView_AdExpanded"  Appid="145456" Adid="191336" SecretKey="db1196a55e984251bcaddf37575a8464" SizeForAd="Large" Grid.Row="0"></MsnAD:AdView>-->
-                <TextBlock Text="点击广告可消失" Foreground="Gray" ></TextBlock>
-                <Button x:Name="btn" Content="评价" Foreground="Gray" Click="Button_Click" ></Button>
+                <TextBlock Visibility="Collapsed" Text="点击广告可消失" Foreground="Gray" ></TextBlock>
+                <Button x:Name="btn" Content="多彩浏览器,来多彩浏览器也可以看" Foreground="Gray" Click="Button_Click" ></Button>
             </StackPanel>
         </StackPanel>
 

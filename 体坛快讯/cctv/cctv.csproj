@@ -169,25 +169,16 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="HtmlAgilityPack">
-      <HintPath>..\..\..\..\app\新闻浏览器\libs\HtmlAgilityPack.dll</HintPath>
+      <HintPath>D:\BaiduYunDownload\新闻浏览器 去广告zuixin\新闻浏览器 去广告\libs\HtmlAgilityPack.dll</HintPath>
     </Reference>
-    <Reference Include="JiuYouAd">
-      <HintPath>C:\Users\zhangch\Downloads\Jywp8.0\九幽广告SDK80\JiuYouSDK80\JiuYouAd.dll</HintPath>
+    <Reference Include="JYAnalyticsSdk">
+      <HintPath>D:\BaiduYunDownload\新闻浏览器 去广告zuixin\新闻浏览器 去广告\libs\JYAnalyticsSdk.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Phone.Controls.Toolkit">
-      <HintPath>..\..\..\..\app\新闻浏览器\libs\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.Http">
-      <HintPath>C:\Users\zhangch\Downloads\Jywp8.0\九幽广告SDK80\JiuYouSDK80\System.Net.Http.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.Http.Extensions">
-      <HintPath>C:\Users\zhangch\Downloads\Jywp8.0\九幽广告SDK80\JiuYouSDK80\System.Net.Http.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.Http.Primitives">
-      <HintPath>C:\Users\zhangch\Downloads\Jywp8.0\九幽广告SDK80\JiuYouSDK80\System.Net.Http.Primitives.dll</HintPath>
+      <HintPath>D:\BaiduYunDownload\新闻浏览器 去广告zuixin\新闻浏览器 去广告\libs\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.XPath">
-      <HintPath>..\..\..\..\app\新闻浏览器\libs\System.Xml.XPath.dll</HintPath>
+      <HintPath>D:\BaiduYunDownload\新闻浏览器 去广告zuixin\新闻浏览器 去广告\libs\System.Xml.XPath.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
